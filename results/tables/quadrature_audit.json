@@ -1,0 +1,100 @@
+{
+  "coarse": {
+    "bao": {
+      "mean": 69.02144404405253,
+      "std": 0.514932104431168
+    },
+    "omega_grid_points": 401,
+    "pantheon": {
+      "mean": 73.24532442536582,
+      "median": 73.2393309374955,
+      "q16": 72.31003582667893,
+      "q84": 74.18048020736606,
+      "std": 0.940523354427741
+    }
+  },
+  "fine": {
+    "bao": {
+      "mean": 69.02144404405216,
+      "std": 0.5149321044302849
+    },
+    "omega_grid_points": 801,
+    "pantheon": {
+      "mean": 73.24532442536575,
+      "median": 73.23933093749547,
+      "q16": 72.31003582667884,
+      "q84": 74.18048020736603,
+      "std": 0.940523354429675
+    }
+  },
+  "grid_differences": {
+    "bao": {
+      "mean": -3.694822225952521e-13,
+      "std": -8.830713937868495e-13
+    },
+    "pantheon": {
+      "mean": -7.105427357601002e-14,
+      "median": -2.842170943040401e-14,
+      "q16": -8.526512829121202e-14,
+      "q84": -2.842170943040401e-14,
+      "std": 1.9340085088970227e-12
+    }
+  },
+  "method": "independent_quadrature_including_H0rd_prior_Jacobian",
+  "production_checks": {
+    "bao": {
+      "H0_sampling_minus_quadrature": {
+        "mean": -0.00015295650126745386,
+        "std": 0.0006012619739047542
+      },
+      "calibration_prior_checks": {
+        "r_d": {
+          "mean": 147.09098750455695,
+          "mean_shift": 0.0009875045569458507,
+          "std": 0.2626185201324943
+        }
+      },
+      "derived_coordinate_check": "passed",
+      "effective_sample_size": 10188.047754222385,
+      "posterior_draws": 13568
+    },
+    "joint": {
+      "calibration_prior_checks": {
+        "M_B": {
+          "mean": -19.252900508814697,
+          "mean_shift": 9.949118530272472e-05,
+          "std": 0.02718557147842562
+        },
+        "r_d": {
+          "mean": 147.09137899460742,
+          "mean_shift": 0.0013789946074211912,
+          "std": 0.2599828043723894
+        }
+      },
+      "derived_coordinate_check": "passed",
+      "effective_sample_size": 10033.22757467712,
+      "posterior_draws": 16896
+    },
+    "pantheon": {
+      "H0_quantile_differences": {
+        "median": -0.008232111681920173,
+        "q16": 0.007231432840242746,
+        "q84": 0.0011263999953428083
+      },
+      "H0_sampling_minus_quadrature": {
+        "mean": -0.00332340318561819,
+        "std": 0.005322786362808252
+      },
+      "calibration_prior_checks": {
+        "M_B": {
+          "mean": -19.253071380679714,
+          "mean_shift": -7.1380679713684e-05,
+          "std": 0.027148281621424193
+        }
+      },
+      "derived_coordinate_check": "passed",
+      "effective_sample_size": 10210.34509550842,
+      "posterior_draws": 14336
+    }
+  }
+}

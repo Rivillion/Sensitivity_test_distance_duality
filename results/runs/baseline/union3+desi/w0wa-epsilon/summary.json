@@ -1,0 +1,189 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": null,
+  "constraints_68_equal_tail": {
+    "H0rd": {
+      "lower_68": 9418.079483644226,
+      "median": 9639.923751821774,
+      "minus": 221.84426817754866,
+      "plus": 233.69448557839496,
+      "upper_68": 9873.61823740017
+    },
+    "Omega_m": {
+      "lower_68": 0.31470196236849146,
+      "median": 0.33833473225321675,
+      "minus": 0.02363276988472529,
+      "plus": 0.021653096389849913,
+      "upper_68": 0.35998782864306667
+    },
+    "epsilon": {
+      "lower_68": -0.017184703239664256,
+      "median": 0.019930407843431586,
+      "minus": 0.03711511108309584,
+      "plus": 0.03669760903646563,
+      "upper_68": 0.056628016879897214
+    },
+    "nu": {
+      "lower_68": 43.022503611473866,
+      "median": 43.1161787438706,
+      "minus": 0.09367513239673286,
+      "plus": 0.09070774013953553,
+      "upper_68": 43.206886484010134
+    },
+    "w0": {
+      "lower_68": -0.7997348126861596,
+      "median": -0.6288874262078776,
+      "minus": 0.17084738647828202,
+      "plus": 0.17427345740656985,
+      "upper_68": -0.4546139688013078
+    },
+    "wa": {
+      "lower_68": -1.877927050631973,
+      "median": -1.2019621008559978,
+      "minus": 0.6759649497759752,
+      "plus": 0.6815264162365016,
+      "upper_68": -0.5204356846194962
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:26.023034+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10266.756985163036,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 128768,
+  "exploration_seconds": 1102.6426002350636,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0
+  },
+  "initialization_seconds": 0.06303379917517304,
+  "likelihood_evaluations": 136448,
+  "likelihood_evaluations_per_second": 121.0800359261661,
+  "likelihoods": [
+    "union3",
+    "desi"
+  ],
+  "log_z": -35.676948121562425,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 572,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0rd": 9626.629052114991,
+    "Omega_m": 0.3394416603278972,
+    "epsilon": 0.022096059149498415,
+    "nu": 43.11559818951379,
+    "w0": -0.6221844413139594,
+    "wa": -1.216526907195044
+  },
+  "minimum_chi2": 28.431846078440746,
+  "model": "w0wa-epsilon",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "w0",
+    "wa",
+    "epsilon",
+    "H0rd",
+    "nu"
+  ],
+  "posterior_samples": 16896,
+  "postprocessing_seconds": 0.42883594892919064,
+  "priors": {
+    "H0rd": [
+      2997.92458,
+      29979.245799999997
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "epsilon": [
+      -0.4,
+      0.4
+    ],
+    "nu": [
+      10.0,
+      60.0
+    ],
+    "w0": [
+      -3.0,
+      0.5
+    ],
+    "wa": [
+      -4.0,
+      3.0
+    ]
+  },
+  "resume_signature": {
+    "bao_sn_likelihood_version": 2,
+    "cc": null,
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0
+    },
+    "likelihoods": [
+      "union3",
+      "desi"
+    ],
+    "model": "w0wa-epsilon",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "w0",
+      "wa",
+      "epsilon",
+      "H0rd",
+      "nu"
+    ],
+    "priors": {
+      "H0rd": [
+        2997.92458,
+        29979.245799999997
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "epsilon": [
+        -0.4,
+        0.4
+      ],
+      "nu": [
+        10.0,
+        60.0
+      ],
+      "w0": [
+        -3.0,
+        0.5
+      ],
+      "wa": [
+        -4.0,
+        3.0
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 7680,
+  "sampling_seconds": 24.281412929296494,
+  "seed": 20261028,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 1127.4159211809747,
+  "updated_at": "2026-10-03T08:38:13.400117+00:00",
+  "zmin": null
+}

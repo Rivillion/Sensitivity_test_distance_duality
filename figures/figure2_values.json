@@ -1,0 +1,49 @@
+{
+  "run_root": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline",
+  "runs": {
+    "w0wa": {
+      "nlive": 3000,
+      "discard_exploration": true,
+      "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa/posterior.npz",
+      "posterior_sha256": "fba026a609e9de12fae5a3fbea051f27886b2b04b6311f47dbd4ed8a263184f3",
+      "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa/summary.json",
+      "summary_sha256": "218dc67ca25799e4396a7a64414129396a7098142271cca38233c442a9dd4ab2",
+      "posterior_draw_count": 17920,
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa",
+        "H0rd",
+        "nu"
+      ]
+    },
+    "w0wa-epsilon": {
+      "nlive": 3000,
+      "discard_exploration": true,
+      "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/posterior.npz",
+      "posterior_sha256": "d769f25a7d663a6e68ec00f3890d1e45516b04be74f960143ad519712b517449",
+      "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/summary.json",
+      "summary_sha256": "a9c9bc9ab72c8a83c4f810105f281546daadb79aafd0666feba8e19749aa9e4e",
+      "posterior_draw_count": 18432,
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa",
+        "epsilon",
+        "H0rd",
+        "nu"
+      ]
+    }
+  },
+  "plotted_parameters": [
+    "w0",
+    "wa"
+  ],
+  "contour_probabilities": [
+    0.68,
+    0.95
+  ],
+  "method": "GetDist weighted marginalized 2D density with default smoothing; ignore_rows=0",
+  "calibration_treatment": "explicit_sampling; calibration coordinates marginalized",
+  "pdf": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/figures/figure2.pdf"
+}

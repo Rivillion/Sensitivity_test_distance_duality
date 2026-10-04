@@ -1,0 +1,153 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": null,
+  "constraints_68_equal_tail": {
+    "H0rd": {
+      "lower_68": 8932.92557399255,
+      "median": 9263.44284086152,
+      "minus": 330.5172668689702,
+      "plus": 462.14017740423515,
+      "upper_68": 9725.583018265756
+    },
+    "Omega_m": {
+      "lower_68": 0.32898671441410815,
+      "median": 0.3733814936551888,
+      "minus": 0.04439477924108065,
+      "plus": 0.03299552621648516,
+      "upper_68": 0.40637701987167396
+    },
+    "w0": {
+      "lower_68": -0.6989759047365984,
+      "median": -0.30515997157426433,
+      "minus": 0.3938159331623341,
+      "plus": 0.3137807115013871,
+      "upper_68": 0.008620739927122756
+    },
+    "wa": {
+      "lower_68": -3.3870912260287285,
+      "median": -2.310090478233313,
+      "minus": 1.0770007477954153,
+      "plus": 1.4037208235654837,
+      "upper_68": -0.9063696546678295
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:29.151235+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10066.163447729237,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 87296,
+  "exploration_seconds": 871.5299974037334,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0
+  },
+  "initialization_seconds": 0.13058951776474714,
+  "likelihood_evaluations": 95232,
+  "likelihood_evaluations_per_second": 104.34818584363128,
+  "likelihoods": [
+    "desi"
+  ],
+  "log_z": -15.526592151814787,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 207,
+    "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0rd": 9124.965651583076,
+    "Omega_m": 0.38660586620797766,
+    "w0": -0.17883355260692024,
+    "wa": -2.716676251359625
+  },
+  "minimum_chi2": 5.618600005409102,
+  "model": "w0wa",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "w0",
+    "wa",
+    "H0rd"
+  ],
+  "posterior_samples": 14336,
+  "postprocessing_seconds": 0.25030295364558697,
+  "priors": {
+    "H0rd": [
+      2997.92458,
+      29979.245799999997
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "w0": [
+      -3.0,
+      0.5
+    ],
+    "wa": [
+      -4.0,
+      3.0
+    ]
+  },
+  "resume_signature": {
+    "bao_sn_likelihood_version": 2,
+    "cc": null,
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "epsilon": 0.0
+    },
+    "likelihoods": [
+      "desi"
+    ],
+    "model": "w0wa",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "w0",
+      "wa",
+      "H0rd"
+    ],
+    "priors": {
+      "H0rd": [
+        2997.92458,
+        29979.245799999997
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "w0": [
+        -3.0,
+        0.5
+      ],
+      "wa": [
+        -4.0,
+        3.0
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 7936,
+  "sampling_seconds": 41.106856127269566,
+  "seed": 20261004,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 913.0178631711751,
+  "updated_at": "2026-10-03T08:34:42.102227+00:00",
+  "zmin": null
+}

@@ -1,0 +1,177 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": {
+    "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+    "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+    "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+    "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+    "dataset": "full-2022",
+    "h0_mode": "explicit",
+    "likelihood_version": 1
+  },
+  "constraints_68_equal_tail": {
+    "H0": {
+      "lower_68": 65.4372798669342,
+      "median": 68.68393515893199,
+      "minus": 3.246655291997783,
+      "plus": 3.352666203403473,
+      "upper_68": 72.03660136233546
+    },
+    "Omega_m": {
+      "lower_68": 0.2990426011083822,
+      "median": 0.3065167668498017,
+      "minus": 0.007474165741419514,
+      "plus": 0.007521143650849715,
+      "upper_68": 0.31403791050065144
+    },
+    "nu": {
+      "lower_68": 43.14450485329796,
+      "median": 43.15135534679668,
+      "minus": 0.006850493498717469,
+      "plus": 0.006766780943806339,
+      "upper_68": 43.158122127740484
+    },
+    "r_d": {
+      "lower_68": 140.01467757840982,
+      "median": 146.87395037912916,
+      "minus": 6.859272800719339,
+      "plus": 7.175849520134591,
+      "upper_68": 154.04979989926375
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:26.820401+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10217.153432518624,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 118784,
+  "exploration_seconds": 1015.246249238,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0,
+    "w0": -1.0,
+    "wa": 0.0
+  },
+  "initialization_seconds": 0.688608856027713,
+  "likelihood_evaluations": 126720,
+  "likelihood_evaluations_per_second": 120.69834729468067,
+  "likelihoods": [
+    "dovekie",
+    "desi",
+    "cc"
+  ],
+  "log_z": -849.3600829850686,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 315,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0": 68.86718471064394,
+    "Omega_m": 0.3063039870994301,
+    "nu": 43.15112442844384,
+    "r_d": 146.44470375029766
+  },
+  "minimum_chi2": 1659.978682525039,
+  "model": "lcdm",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "H0",
+    "r_d",
+    "nu"
+  ],
+  "posterior_samples": 16640,
+  "postprocessing_seconds": 0.49606842501088977,
+  "priors": {
+    "H0": [
+      20.0,
+      120.0
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "nu": [
+      10.0,
+      60.0
+    ],
+    "r_d": [
+      50.0,
+      300.0
+    ]
+  },
+  "resume_signature": {
+    "bao_sn_likelihood_version": 2,
+    "cc": {
+      "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+      "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+      "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+      "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+      "dataset": "full-2022",
+      "h0_mode": "explicit",
+      "likelihood_version": 1
+    },
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "epsilon": 0.0,
+      "w0": -1.0,
+      "wa": 0.0
+    },
+    "likelihoods": [
+      "dovekie",
+      "desi",
+      "cc"
+    ],
+    "model": "lcdm",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "H0",
+      "r_d",
+      "nu"
+    ],
+    "priors": {
+      "H0": [
+        20.0,
+        120.0
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "nu": [
+        10.0,
+        60.0
+      ],
+      "r_d": [
+        50.0,
+        300.0
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 7936,
+  "sampling_seconds": 34.643851498985896,
+  "seed": 20261021,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 1051.0748273960198,
+  "updated_at": "2026-10-03T08:36:57.246827+00:00",
+  "zmin": null
+}

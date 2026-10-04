@@ -1,0 +1,87 @@
+{
+  "run_root": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline",
+  "runs": {
+    "pantheon": {
+      "nlive": 3000,
+      "discard_exploration": true,
+      "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/posterior.npz",
+      "posterior_sha256": "d769f25a7d663a6e68ec00f3890d1e45516b04be74f960143ad519712b517449",
+      "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/summary.json",
+      "summary_sha256": "a9c9bc9ab72c8a83c4f810105f281546daadb79aafd0666feba8e19749aa9e4e",
+      "posterior_draw_count": 18432,
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa",
+        "epsilon",
+        "H0rd",
+        "nu"
+      ]
+    },
+    "dovekie": {
+      "nlive": 3000,
+      "discard_exploration": true,
+      "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa-epsilon/posterior.npz",
+      "posterior_sha256": "fa56e6e806f835e01b94f334a84de3bf9b71c8c3be147ae850d5e588d23fafbc",
+      "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa-epsilon/summary.json",
+      "summary_sha256": "7b9355313e36542afde2587126d6eefa688b27a2963eccab476286d195658c6e",
+      "posterior_draw_count": 18176,
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa",
+        "epsilon",
+        "H0rd",
+        "nu"
+      ]
+    },
+    "union3": {
+      "nlive": 3000,
+      "discard_exploration": true,
+      "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa-epsilon/posterior.npz",
+      "posterior_sha256": "bb5f4abd61544261e55889441ca014dd3b016be59eb95072737eb7d2703b72ef",
+      "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa-epsilon/summary.json",
+      "summary_sha256": "3c2b3282a8de67934f182c72e6bcbb42a22c3192b09f06ae84df33da2a53c2f4",
+      "posterior_draw_count": 16896,
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa",
+        "epsilon",
+        "H0rd",
+        "nu"
+      ]
+    },
+    "union31": {
+      "nlive": 3000,
+      "discard_exploration": true,
+      "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa-epsilon/posterior.npz",
+      "posterior_sha256": "3337b74242698ff117c21d743c0323388ff4b8094ad29baaf000b2fab0e8d6d5",
+      "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa-epsilon/summary.json",
+      "summary_sha256": "4281bc130d3899dc1c1131216907691ecbba361bae80c67557e0f5bd3d28f167",
+      "posterior_draw_count": 17920,
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa",
+        "epsilon",
+        "H0rd",
+        "nu"
+      ]
+    }
+  },
+  "plotted_parameters": [
+    "Omega_m",
+    "w0",
+    "wa",
+    "epsilon"
+  ],
+  "contour_probabilities": [
+    0.68,
+    0.95,
+    0.99
+  ],
+  "method": "GetDist weighted marginalized densities with default smoothing; ignore_rows=0",
+  "calibration_treatment": "explicit_sampling; H0rd and nu marginalized",
+  "pdf": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/figures/figure4.pdf"
+}

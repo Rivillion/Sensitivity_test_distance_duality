@@ -1,0 +1,170 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": null,
+  "constraints_68_equal_tail": {
+    "H0rd": {
+      "lower_68": 10080.00349001375,
+      "median": 10153.37164659903,
+      "minus": 73.36815658527848,
+      "plus": 74.25158182272571,
+      "upper_68": 10227.623228421755
+    },
+    "Omega_m": {
+      "lower_68": 0.2890263317519144,
+      "median": 0.29752398324899676,
+      "minus": 0.00849765149708237,
+      "plus": 0.008676542570425938,
+      "upper_68": 0.3062005258194227
+    },
+    "epsilon": {
+      "lower_68": -0.03783782197324487,
+      "median": -0.021325363950814136,
+      "minus": 0.01651245802243073,
+      "plus": 0.016905495755050293,
+      "upper_68": -0.004419868195763843
+    },
+    "nu": {
+      "lower_68": 43.14610550637488,
+      "median": 43.158939038939366,
+      "minus": 0.012833532564485495,
+      "plus": 0.012539361041817187,
+      "upper_68": 43.17147839998118
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-04T10:03:41.010049+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10062.000348543843,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 119296,
+  "exploration_seconds": 640.2585944309831,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "w0": -1.0,
+    "wa": 0.0
+  },
+  "initialization_seconds": 0.03788833413273096,
+  "likelihood_evaluations": 127232,
+  "likelihood_evaluations_per_second": 192.03137800416246,
+  "likelihoods": [
+    "dovekie",
+    "desi"
+  ],
+  "log_z": -772.3727151650893,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 297,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0rd": 10155.49442948055,
+    "Omega_m": 0.29726960373799205,
+    "epsilon": -0.02130463669619964,
+    "nu": 43.15882801052753
+  },
+  "minimum_chi2": 1504.2335822958084,
+  "model": "lcdm-epsilon",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "epsilon",
+    "H0rd",
+    "nu"
+  ],
+  "posterior_samples": 16896,
+  "postprocessing_seconds": 0.7175642028450966,
+  "priors": {
+    "H0rd": [
+      2997.92458,
+      29979.245799999997
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "epsilon": [
+      -0.4,
+      0.4
+    ],
+    "nu": [
+      10.0,
+      60.0
+    ]
+  },
+  "resume_signature": {
+    "bao_sn_likelihood_version": 2,
+    "cc": null,
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "w0": -1.0,
+      "wa": 0.0
+    },
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "model": "lcdm-epsilon",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "epsilon",
+      "H0rd",
+      "nu"
+    ],
+    "priors": {
+      "H0rd": [
+        2997.92458,
+        29979.245799999997
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "epsilon": [
+        -0.4,
+        0.4
+      ],
+      "nu": [
+        10.0,
+        60.0
+      ]
+    },
+    "robustness_selection": {
+      "bao_drop_indices": [],
+      "case_id": "cut_dovekie_0.050",
+      "input_sha256": {
+        "DES-Dovekie_HD.csv": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+        "STAT+SYS.npz": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+        "desi_gaussian_bao_ALL_GCcomb_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+        "desi_gaussian_bao_ALL_GCcomb_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585"
+      },
+      "n_bao": 13,
+      "n_sn": 1679,
+      "version": 1
+    },
+    "zmin": 0.05
+  },
+  "sampling_likelihood_evaluations": 7936,
+  "sampling_seconds": 22.2997922366485,
+  "seed": 2026100414,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 663.3138944972306,
+  "updated_at": "2026-10-04T10:14:44.320195+00:00",
+  "zmin": 0.05
+}

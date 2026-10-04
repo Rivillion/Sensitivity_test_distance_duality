@@ -1,0 +1,12 @@
+# Direct runtime dependencies for sampling, figures and tables.
+# Versions recovered from the surviving environment metadata.
+# Tested with Python 3.14.
+
+getdist==1.7.7
+h5py==3.16.0
+matplotlib==3.11.1
+nautilus-sampler==1.0.6
+numpy==2.5.1
+pandas==3.0.5
+scipy==1.18.0
+PyMuPDF==1.28.2

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-04",
+  "method": "Downloaded pinned public upstream blobs and compared SHA-256 and size with the existing local files. All eight located upstream blobs were byte-identical. Existing numerical inputs were not changed.",
+  "original_acquisition_dates_inferred": false,
+  "files": [
+    {
+      "repository": "CobayaSampler/bao_data",
+      "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "upstream_path": "desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "download_url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "local_path": "data/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "upstream_sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "local_sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "bytes": 472,
+      "byte_identical": true,
+      "license_identifier": "CC-BY-4.0",
+      "license_evidence_url": "https://data.desi.lbl.gov/doc/acknowledgments/",
+      "official_source_link": "https://data.desi.lbl.gov/public/papers/y3/bao-cosmo-params/README.html",
+      "redistribution_status": "published_upstream_license",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "repository": "CobayaSampler/bao_data",
+      "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "upstream_path": "desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "download_url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "local_path": "data/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "upstream_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "local_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "bytes": 2547,
+      "byte_identical": true,
+      "license_identifier": "CC-BY-4.0",
+      "license_evidence_url": "https://data.desi.lbl.gov/doc/acknowledgments/",
+      "official_source_link": "https://data.desi.lbl.gov/public/papers/y3/bao-cosmo-params/README.html",
+      "redistribution_status": "published_upstream_license",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "repository": "PantheonPlusSH0ES/DataRelease",
+      "commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "upstream_path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+      "download_url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat",
+      "local_path": "data/Pantheon+SH0ES.dat",
+      "upstream_sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "local_sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "bytes": 579283,
+      "byte_identical": true,
+      "license_identifier": null,
+      "license_evidence_url": null,
+      "official_source_link": null,
+      "redistribution_status": "terms_not_established_in_checked_sources",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "repository": "PantheonPlusSH0ES/DataRelease",
+      "commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "upstream_path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+      "download_url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov",
+      "local_path": "data/Pantheon+SH0ES_STAT+SYS.cov",
+      "upstream_sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "local_sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "bytes": 33284960,
+      "byte_identical": true,
+      "license_identifier": null,
+      "license_evidence_url": null,
+      "official_source_link": null,
+      "redistribution_status": "terms_not_established_in_checked_sources",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "repository": "des-science/DES-SN5YR",
+      "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "upstream_path": "4_DISTANCES_COVMAT/DES-Dovekie_HD.csv",
+      "download_url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/4_DISTANCES_COVMAT/DES-Dovekie_HD.csv",
+      "local_path": "data/DES-Dovekie_HD.csv",
+      "upstream_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+      "local_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+      "bytes": 148002,
+      "byte_identical": true,
+      "license_identifier": null,
+      "license_evidence_url": null,
+      "official_source_link": null,
+      "redistribution_status": "terms_not_established_in_checked_sources",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "repository": "des-science/DES-SN5YR",
+      "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "upstream_path": "4_DISTANCES_COVMAT/STAT+SYS.npz",
+      "download_url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/4_DISTANCES_COVMAT/STAT%2BSYS.npz",
+      "local_path": "data/STAT+SYS.npz",
+      "upstream_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+      "local_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+      "bytes": 6244951,
+      "byte_identical": true,
+      "license_identifier": null,
+      "license_evidence_url": null,
+      "official_source_link": null,
+      "redistribution_status": "terms_not_established_in_checked_sources",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "repository": "rubind/union3_release",
+      "commit": "f5c387349b68f3535fdabf0fbc4f45cd407f9084",
+      "upstream_path": "mu_mat_union3_cosmo=2_mu.fits",
+      "download_url": "https://raw.githubusercontent.com/rubind/union3_release/f5c387349b68f3535fdabf0fbc4f45cd407f9084/mu_mat_union3_cosmo%3D2_mu.fits",
+      "local_path": "data/raw/sn/union3/mu_mat_union3_cosmo=2_mu.fits",
+      "upstream_sha256": "ef98b7dde1025ee7134f3242aaea3f1f0ed3f2b29a718458c550a8e4e24d0349",
+      "local_sha256": "ef98b7dde1025ee7134f3242aaea3f1f0ed3f2b29a718458c550a8e4e24d0349",
+      "bytes": 8640,
+      "byte_identical": true,
+      "license_identifier": "MIT",
+      "license_evidence_url": "https://github.com/rubind/union3_release/blob/f5c387349b68f3535fdabf0fbc4f45cd407f9084/LICENSE",
+      "official_source_link": null,
+      "redistribution_status": "published_upstream_license",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "repository": "rubind/union3_release",
+      "commit": "f5c387349b68f3535fdabf0fbc4f45cd407f9084",
+      "upstream_path": "mu_mat_union3.1_UNITY1.8_template_cosmo=2_0_mu.fits",
+      "download_url": "https://raw.githubusercontent.com/rubind/union3_release/f5c387349b68f3535fdabf0fbc4f45cd407f9084/mu_mat_union3.1_UNITY1.8_template_cosmo%3D2_0_mu.fits",
+      "local_path": "data/raw/sn/union3/mu_mat_union3.1_UNITY1.8_template_cosmo=2_0_mu.fits",
+      "upstream_sha256": "bfebb15f64f2c39eb33fca91a6b370cfaebbe8946fcdd58c8d1019ea302482b9",
+      "local_sha256": "bfebb15f64f2c39eb33fca91a6b370cfaebbe8946fcdd58c8d1019ea302482b9",
+      "bytes": 8640,
+      "byte_identical": true,
+      "license_identifier": "MIT",
+      "license_evidence_url": "https://github.com/rubind/union3_release/blob/f5c387349b68f3535fdabf0fbc4f45cd407f9084/LICENSE",
+      "official_source_link": null,
+      "redistribution_status": "published_upstream_license",
+      "distribution": "download_from_upstream"
+    },
+    {
+      "local_path": "data/Hz_full_2022_mod.txt",
+      "local_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+      "bytes": 565,
+      "repository": null,
+      "commit": null,
+      "upstream_path": null,
+      "download_url": null,
+      "upstream_sha256": null,
+      "byte_identical": null,
+      "license_identifier": null,
+      "license_evidence_url": null,
+      "redistribution_status": "author_prepared_and_authorized_for_release",
+      "distribution": "bundled_author_prepared_input",
+      "prepared_by": "Manuscript authors",
+      "source_references": [
+        "https://arxiv.org/abs/2201.07241",
+        "https://arxiv.org/abs/2003.07362"
+      ],
+      "provenance_evidence": "Manuscript author confirmation on 2026-10-04: self-produced from references cited in the manuscript; preserve unchanged."
+    },
+    {
+      "local_path": "data/covmat_Hz_full_2022.txt",
+      "local_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+      "bytes": 20000,
+      "repository": null,
+      "commit": null,
+      "upstream_path": null,
+      "download_url": null,
+      "upstream_sha256": null,
+      "byte_identical": null,
+      "license_identifier": null,
+      "license_evidence_url": null,
+      "redistribution_status": "author_prepared_and_authorized_for_release",
+      "distribution": "bundled_author_prepared_input",
+      "prepared_by": "Manuscript authors",
+      "source_references": [
+        "https://arxiv.org/abs/2201.07241",
+        "https://arxiv.org/abs/2003.07362"
+      ],
+      "provenance_evidence": "Manuscript author confirmation on 2026-10-04: self-produced from references cited in the manuscript; preserve unchanged."
+    }
+  ],
+  "repository_license_checks": [
+    {
+      "repository": "CobayaSampler/bao_data",
+      "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "github_detected_license": null,
+      "tree_truncated": false,
+      "license_or_copyright_paths": []
+    },
+    {
+      "repository": "PantheonPlusSH0ES/DataRelease",
+      "commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "github_detected_license": null,
+      "tree_truncated": false,
+      "license_or_copyright_paths": []
+    },
+    {
+      "repository": "des-science/DES-SN5YR",
+      "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "github_detected_license": null,
+      "tree_truncated": false,
+      "license_or_copyright_paths": []
+    },
+    {
+      "repository": "rubind/union3_release",
+      "commit": "f5c387349b68f3535fdabf0fbc4f45cd407f9084",
+      "github_detected_license": "MIT",
+      "tree_truncated": false,
+      "license_or_copyright_paths": [
+        "LICENSE"
+      ]
+    }
+  ],
+  "des_legacy_archive": {
+    "record_url": "https://zenodo.org/records/12720778",
+    "latest_version_api_url": "https://zenodo.org/api/records/12720778/versions/latest",
+    "latest_record_id": 12720778,
+    "publication_date": "2024-07-11",
+    "license": "cc-by-4.0",
+    "files": [
+      "DES-SN5YR-1.2.zip"
+    ],
+    "applicability_to_dovekie": "Not established: archive predates the updated files and upstream README explicitly distinguishes the releases."
+  },
+  "retained_license_notices": [
+    {
+      "local_path": "data/raw/sn/union3/LICENSE",
+      "upstream_url": "https://github.com/rubind/union3_release/blob/f5c387349b68f3535fdabf0fbc4f45cd407f9084/LICENSE",
+      "sha256": "43a299159ed9f4e780486a6c58f8a983ac4902d2c2c6fc9cc952e7f3e3d9189e",
+      "copyright": "Copyright (c) 2024 David Rubin"
+    }
+  ],
+  "distribution_policy": {
+    "upstream_inputs": "Downloaded directly from pinned upstream repositories; excluded from Git.",
+    "cc_inputs": "Author-prepared from manuscript references; bundled unchanged at the manuscript authors' instruction.",
+    "author_confirmation_date": "2026-10-04"
+  }
+}

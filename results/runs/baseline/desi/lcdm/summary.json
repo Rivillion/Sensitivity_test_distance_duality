@@ -1,0 +1,121 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": null,
+  "constraints_68_equal_tail": {
+    "H0rd": {
+      "lower_68": 10078.439316763723,
+      "median": 10152.16038815011,
+      "minus": 73.72107138638785,
+      "plus": 73.8650716441407,
+      "upper_68": 10226.025459794251
+    },
+    "Omega_m": {
+      "lower_68": 0.28924178076824025,
+      "median": 0.29771759840582257,
+      "minus": 0.008475817637582317,
+      "plus": 0.008747624639310725,
+      "upper_68": 0.3064652230451333
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:27.197213+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10185.566387176124,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 65792,
+  "exploration_seconds": 554.4462778400048,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0,
+    "w0": -1.0,
+    "wa": 0.0
+  },
+  "initialization_seconds": 0.04735956000513397,
+  "likelihood_evaluations": 74496,
+  "likelihood_evaluations_per_second": 124.24859405702013,
+  "likelihoods": [
+    "desi"
+  ],
+  "log_z": -13.998619185628588,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 65,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0rd": 10153.977329495581,
+    "Omega_m": 0.29746181833505325
+  },
+  "minimum_chi2": 10.271041029161964,
+  "model": "lcdm",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "H0rd"
+  ],
+  "posterior_samples": 13568,
+  "postprocessing_seconds": 0.13490297901444137,
+  "priors": {
+    "H0rd": [
+      2997.92458,
+      29979.245799999997
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ]
+  },
+  "resume_signature": {
+    "bao_sn_likelihood_version": 2,
+    "cc": null,
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "epsilon": 0.0,
+      "w0": -1.0,
+      "wa": 0.0
+    },
+    "likelihoods": [
+      "desi"
+    ],
+    "model": "lcdm",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "H0rd"
+    ],
+    "priors": {
+      "H0rd": [
+        2997.92458,
+        29979.245799999997
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 8704,
+  "sampling_seconds": 45.12589893498807,
+  "seed": 20261003,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 599.7545044040016,
+  "updated_at": "2026-10-03T08:29:26.927668+00:00",
+  "zmin": null
+}

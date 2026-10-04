@@ -1,0 +1,394 @@
+[
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "desi"
+    ],
+    "task_id": 0,
+    "seed": 20261003,
+    "output": "results/runs/baseline/desi/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "desi"
+    ],
+    "task_id": 1,
+    "seed": 20261004,
+    "output": "results/runs/baseline/desi/w0wa"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "cc"
+    ],
+    "task_id": 2,
+    "seed": 20261005,
+    "output": "results/runs/baseline/cc/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "cc"
+    ],
+    "task_id": 3,
+    "seed": 20261006,
+    "output": "results/runs/baseline/cc/w0wa"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "desi",
+      "cc"
+    ],
+    "task_id": 4,
+    "seed": 20261007,
+    "output": "results/runs/baseline/desi+cc/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "desi",
+      "cc"
+    ],
+    "task_id": 5,
+    "seed": 20261008,
+    "output": "results/runs/baseline/desi+cc/w0wa"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "task_id": 6,
+    "seed": 20261009,
+    "output": "results/runs/baseline/pantheon+desi/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "task_id": 7,
+    "seed": 20261010,
+    "output": "results/runs/baseline/pantheon+desi/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "task_id": 8,
+    "seed": 20261011,
+    "output": "results/runs/baseline/pantheon+desi/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "task_id": 9,
+    "seed": 20261012,
+    "output": "results/runs/baseline/pantheon+desi/w0wa-epsilon"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "pantheon",
+      "desi",
+      "cc"
+    ],
+    "task_id": 10,
+    "seed": 20261013,
+    "output": "results/runs/baseline/pantheon+desi+cc/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "pantheon",
+      "desi",
+      "cc"
+    ],
+    "task_id": 11,
+    "seed": 20261014,
+    "output": "results/runs/baseline/pantheon+desi+cc/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi",
+      "cc"
+    ],
+    "task_id": 12,
+    "seed": 20261015,
+    "output": "results/runs/baseline/pantheon+desi+cc/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi",
+      "cc"
+    ],
+    "task_id": 13,
+    "seed": 20261016,
+    "output": "results/runs/baseline/pantheon+desi+cc/w0wa-epsilon"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "task_id": 14,
+    "seed": 20261017,
+    "output": "results/runs/baseline/dovekie+desi/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "task_id": 15,
+    "seed": 20261018,
+    "output": "results/runs/baseline/dovekie+desi/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "task_id": 16,
+    "seed": 20261019,
+    "output": "results/runs/baseline/dovekie+desi/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "task_id": 17,
+    "seed": 20261020,
+    "output": "results/runs/baseline/dovekie+desi/w0wa-epsilon"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "dovekie",
+      "desi",
+      "cc"
+    ],
+    "task_id": 18,
+    "seed": 20261021,
+    "output": "results/runs/baseline/dovekie+desi+cc/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "dovekie",
+      "desi",
+      "cc"
+    ],
+    "task_id": 19,
+    "seed": 20261022,
+    "output": "results/runs/baseline/dovekie+desi+cc/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "dovekie",
+      "desi",
+      "cc"
+    ],
+    "task_id": 20,
+    "seed": 20261023,
+    "output": "results/runs/baseline/dovekie+desi+cc/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "dovekie",
+      "desi",
+      "cc"
+    ],
+    "task_id": 21,
+    "seed": 20261024,
+    "output": "results/runs/baseline/dovekie+desi+cc/w0wa-epsilon"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "union3",
+      "desi"
+    ],
+    "task_id": 22,
+    "seed": 20261025,
+    "output": "results/runs/baseline/union3+desi/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "union3",
+      "desi"
+    ],
+    "task_id": 23,
+    "seed": 20261026,
+    "output": "results/runs/baseline/union3+desi/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "union3",
+      "desi"
+    ],
+    "task_id": 24,
+    "seed": 20261027,
+    "output": "results/runs/baseline/union3+desi/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "union3",
+      "desi"
+    ],
+    "task_id": 25,
+    "seed": 20261028,
+    "output": "results/runs/baseline/union3+desi/w0wa-epsilon"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "union3",
+      "desi",
+      "cc"
+    ],
+    "task_id": 26,
+    "seed": 20261029,
+    "output": "results/runs/baseline/union3+desi+cc/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "union3",
+      "desi",
+      "cc"
+    ],
+    "task_id": 27,
+    "seed": 20261030,
+    "output": "results/runs/baseline/union3+desi+cc/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "union3",
+      "desi",
+      "cc"
+    ],
+    "task_id": 28,
+    "seed": 20261031,
+    "output": "results/runs/baseline/union3+desi+cc/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "union3",
+      "desi",
+      "cc"
+    ],
+    "task_id": 29,
+    "seed": 20261032,
+    "output": "results/runs/baseline/union3+desi+cc/w0wa-epsilon"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "union31",
+      "desi"
+    ],
+    "task_id": 30,
+    "seed": 20261033,
+    "output": "results/runs/baseline/union31+desi/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "union31",
+      "desi"
+    ],
+    "task_id": 31,
+    "seed": 20261034,
+    "output": "results/runs/baseline/union31+desi/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "union31",
+      "desi"
+    ],
+    "task_id": 32,
+    "seed": 20261035,
+    "output": "results/runs/baseline/union31+desi/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "union31",
+      "desi"
+    ],
+    "task_id": 33,
+    "seed": 20261036,
+    "output": "results/runs/baseline/union31+desi/w0wa-epsilon"
+  },
+  {
+    "model": "lcdm",
+    "likelihoods": [
+      "union31",
+      "desi",
+      "cc"
+    ],
+    "task_id": 34,
+    "seed": 20261037,
+    "output": "results/runs/baseline/union31+desi+cc/lcdm"
+  },
+  {
+    "model": "w0wa",
+    "likelihoods": [
+      "union31",
+      "desi",
+      "cc"
+    ],
+    "task_id": 35,
+    "seed": 20261038,
+    "output": "results/runs/baseline/union31+desi+cc/w0wa"
+  },
+  {
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "union31",
+      "desi",
+      "cc"
+    ],
+    "task_id": 36,
+    "seed": 20261039,
+    "output": "results/runs/baseline/union31+desi+cc/lcdm-epsilon"
+  },
+  {
+    "model": "w0wa-epsilon",
+    "likelihoods": [
+      "union31",
+      "desi",
+      "cc"
+    ],
+    "task_id": 37,
+    "seed": 20261040,
+    "output": "results/runs/baseline/union31+desi+cc/w0wa-epsilon"
+  }
+]

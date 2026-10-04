@@ -1,0 +1,1118 @@
+{
+  "rows": [
+    {
+      "sample": "pantheon",
+      "sample_label": "Pantheon$+$",
+      "model": "lcdm",
+      "minimum_chi2": 1414.5112962001613,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.30495024988308816,
+          "q16": 0.2971181251253834,
+          "q84": 0.31281574775644727,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 68.83809532138508,
+          "q16": 65.63651420399009,
+          "q84": 72.15122351910229,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.66118092832946,
+          "q16": 139.99931160370335,
+          "q84": 153.75848935883673,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 234,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/lcdm/posterior.npz",
+        "posterior_sha256": "0b6895a5d873a485b875e83147b00a9afddabf5e10f2257ac3c8e6bfccca1347",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/lcdm/summary.json",
+        "summary_sha256": "d174737ef34d5285f75d8f284623c7088a8fb001e8b63bb28c2b248757d0afc9",
+        "posterior_draw_count": 16640,
+        "parameter_names": [
+          "Omega_m",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "pantheon",
+      "sample_label": "Pantheon$+$",
+      "model": "w0wa",
+      "minimum_chi2": 1409.634493026886,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.30267634074930205,
+          "q16": 0.27343270241672357,
+          "q84": 0.318578265519465,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.8883846782078995,
+          "q16": -0.9450036179685193,
+          "q84": -0.82419006486366,
+          "sampled": true
+        },
+        "wa": {
+          "median": -0.1360275131380937,
+          "q16": -0.5938958272656714,
+          "q84": 0.41706062881957706,
+          "sampled": true
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 67.9338650271065,
+          "q16": 64.67066400046677,
+          "q84": 71.1731986060687,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.70983190995233,
+          "q16": 140.06551396596103,
+          "q84": 154.07472525455523,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 962,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/w0wa/posterior.npz",
+        "posterior_sha256": "bf1ffde3f35ee30ff0f5dee5aded27411f3f1e968e010f41c912169ba2c74d26",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/w0wa/summary.json",
+        "summary_sha256": "ad3b50fd562445dae7cec5befb3d1578c73c1ded4097af2fb05da1bfae09b36e",
+        "posterior_draw_count": 17920,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "pantheon",
+      "sample_label": "Pantheon$+$",
+      "model": "lcdm-epsilon",
+      "minimum_chi2": 1411.5380139980698,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.2983461951548243,
+          "q16": 0.28997413282398043,
+          "q84": 0.3068873242665051,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "median": -0.028512725204149103,
+          "q16": -0.044638251268098283,
+          "q84": -0.012076042883143512,
+          "sampled": true
+        },
+        "H0": {
+          "median": 69.21843358446114,
+          "q16": 65.91739167665621,
+          "q84": 72.55376592258541,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.5672602654686,
+          "q16": 139.89174567954893,
+          "q84": 153.9103257772495,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 627,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/lcdm-epsilon/posterior.npz",
+        "posterior_sha256": "fefae36702366ed7b4b618840491ec247b52351a2dcb87c6b0b0f576d8b6cc1b",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/lcdm-epsilon/summary.json",
+        "summary_sha256": "4e2306fdb107c1dc5eaacdac8de9823647eccca5417113c951d8d4deb9d0696d",
+        "posterior_draw_count": 17408,
+        "parameter_names": [
+          "Omega_m",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "pantheon",
+      "sample_label": "Pantheon$+$",
+      "model": "w0wa-epsilon",
+      "minimum_chi2": 1409.5009438990496,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.3054595136724637,
+          "q16": 0.27278519882809704,
+          "q84": 0.32629658970790676,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.8633771506405639,
+          "q16": -0.9709077820637466,
+          "q84": -0.7502152432130358,
+          "sampled": true
+        },
+        "wa": {
+          "median": -0.21523675364708117,
+          "q16": -0.7527271341551982,
+          "q84": 0.44281707397165526,
+          "sampled": true
+        },
+        "epsilon": {
+          "median": 0.00775222631195005,
+          "q16": -0.026597126822504258,
+          "q84": 0.042611741841058315,
+          "sampled": true
+        },
+        "H0": {
+          "median": 67.55701048478403,
+          "q16": 64.11533568935235,
+          "q84": 70.9942661461753,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.91551368139278,
+          "q16": 140.37733726305325,
+          "q84": 154.27267188344473,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 2010,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/w0wa-epsilon/posterior.npz",
+        "posterior_sha256": "1eff7c8785bcf19a244b74ca58c34c0d581ed3c646bdc11f8cf8a89ef900570a",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi+cc/w0wa-epsilon/summary.json",
+        "summary_sha256": "1417f2176c045b3ba6ee45205551fc6cc364439930e275d7d59a0327ee0e7723",
+        "posterior_draw_count": 18688,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "dovekie",
+      "sample_label": "DES-Dovekie",
+      "model": "lcdm",
+      "minimum_chi2": 1659.978682525039,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.3065167668498017,
+          "q16": 0.2990426011083822,
+          "q84": 0.31403791050065144,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 68.68393515893199,
+          "q16": 65.4372798669342,
+          "q84": 72.03660136233546,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.87395037912916,
+          "q16": 140.01467757840982,
+          "q84": 154.04979989926375,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 315,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/lcdm/posterior.npz",
+        "posterior_sha256": "b1b0b6121c7d5faa77e4d82a28c954db0f7200683c5a45796e1b3d45fd8b6913",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/lcdm/summary.json",
+        "summary_sha256": "079f2425e42d13c1366b73ca8ad2dab82045987330353715ce780e876a015f86",
+        "posterior_draw_count": 16640,
+        "parameter_names": [
+          "Omega_m",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "dovekie",
+      "sample_label": "DES-Dovekie",
+      "model": "w0wa",
+      "minimum_chi2": 1653.1234696872364,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.31236848117001736,
+          "q16": 0.2935412207951441,
+          "q84": 0.3263447006262383,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.850126177597943,
+          "q16": -0.9171069664006977,
+          "q84": -0.7805624245114604,
+          "sampled": true
+        },
+        "wa": {
+          "median": -0.46590752115664813,
+          "q16": -0.9349370550483722,
+          "q84": 0.043892598826275275,
+          "sampled": true
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 67.8631041936514,
+          "q16": 64.62768916587599,
+          "q84": 71.12018932219709,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.58547992830245,
+          "q16": 139.96479907613468,
+          "q84": 153.72188173406772,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 845,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/w0wa/posterior.npz",
+        "posterior_sha256": "9d67ef65e765ad2b6990788e7cdaf9d5fa85756a7676374143ed25823c0bb594",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/w0wa/summary.json",
+        "summary_sha256": "a442d4b4dc40f918dd2f52865eb7568aa949ff6c42083d552eb6a448eaedd14c",
+        "posterior_draw_count": 17920,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "dovekie",
+      "sample_label": "DES-Dovekie",
+      "model": "lcdm-epsilon",
+      "minimum_chi2": 1656.2813110209088,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.29781676730272466,
+          "q16": 0.289538429178822,
+          "q84": 0.3062387265373228,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "median": -0.028077785152976098,
+          "q16": -0.04263348189791316,
+          "q84": -0.013526919266119819,
+          "sampled": true
+        },
+        "H0": {
+          "median": 69.21390735207898,
+          "q16": 65.8142758062254,
+          "q84": 72.58349249839854,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.61298132939174,
+          "q16": 139.97931779602874,
+          "q84": 154.1336681723521,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 506,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/lcdm-epsilon/posterior.npz",
+        "posterior_sha256": "70963899258061a943b1def5a3edb662acb7d705ee0111ee58c11e1375dd73a8",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/lcdm-epsilon/summary.json",
+        "summary_sha256": "38f8e25e6b6282a4f0ca8b98408c67d450a7183d28c924bd84fe86fd67fab247",
+        "posterior_draw_count": 17408,
+        "parameter_names": [
+          "Omega_m",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "dovekie",
+      "sample_label": "DES-Dovekie",
+      "model": "w0wa-epsilon",
+      "minimum_chi2": 1652.492470240047,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.32165988074693286,
+          "q16": 0.3000864739394169,
+          "q84": 0.3400156296489905,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.7758353456887277,
+          "q16": -0.8960696848127134,
+          "q84": -0.6470646515319802,
+          "sampled": true
+        },
+        "wa": {
+          "median": -0.6730529160109446,
+          "q16": -1.2227465898010594,
+          "q84": -0.12448682899025032,
+          "sampled": true
+        },
+        "epsilon": {
+          "median": 0.02295133079428424,
+          "q16": -0.008948250930489898,
+          "q84": 0.05496077097541319,
+          "sampled": true
+        },
+        "H0": {
+          "median": 66.94806226869221,
+          "q16": 63.516837317384585,
+          "q84": 70.36328796308007,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.62532731158998,
+          "q16": 140.04541163199826,
+          "q84": 154.03758424453366,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 1515,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/w0wa-epsilon/posterior.npz",
+        "posterior_sha256": "306c3ca445a79df1a60d3249b62e38f317eb34a4b4bff9d30281938a703201bc",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi+cc/w0wa-epsilon/summary.json",
+        "summary_sha256": "869eeb3d5995d188a1bb713230d8793471a6e6b547e0b67a6e95909eec910bf7",
+        "posterior_draw_count": 18688,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union3",
+      "sample_label": "Union3",
+      "model": "lcdm",
+      "minimum_chi2": 53.53639407151858,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.30442999932089887,
+          "q16": 0.29623952109341045,
+          "q84": 0.31272249656113205,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 68.94343225405638,
+          "q16": 65.54186924054605,
+          "q84": 72.25564632379329,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.51772354920377,
+          "q16": 139.8877411553042,
+          "q84": 154.07709041749695,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 225,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/lcdm/posterior.npz",
+        "posterior_sha256": "a21adb6237bf0453397ce238156960649e38e74a53922682d50d3f06c8b63c5d",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/lcdm/summary.json",
+        "summary_sha256": "1716e20d4a366c0460253e55203b8b60bb4b020b7a2012fe781f29782446b2df",
+        "posterior_draw_count": 15616,
+        "parameter_names": [
+          "Omega_m",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union3",
+      "sample_label": "Union3",
+      "model": "w0wa",
+      "minimum_chi2": 43.986350278901845,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.32950409353601084,
+          "q16": 0.3110085810329811,
+          "q84": 0.3455426382624883,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.7101894122738419,
+          "q16": -0.8195680257384277,
+          "q84": -0.5975516251287427,
+          "sampled": true
+        },
+        "wa": {
+          "median": -0.9487278359154798,
+          "q16": -1.5105420516131747,
+          "q84": -0.38214967639415365,
+          "sampled": true
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 66.32745197750549,
+          "q16": 63.10208381961416,
+          "q84": 69.70848607892478,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.89581536970064,
+          "q16": 140.08843375178765,
+          "q84": 154.17286086276965,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 689,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/w0wa/posterior.npz",
+        "posterior_sha256": "8da51854381439c71a3511300a3a70556eafa6d4a717a372b5b641f7b418d074",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/w0wa/summary.json",
+        "summary_sha256": "132ce9209af6c418eca3f51812ccad0f5301235f8d4a71c29da2462ac357d2f0",
+        "posterior_draw_count": 16640,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union3",
+      "sample_label": "Union3",
+      "model": "lcdm-epsilon",
+      "minimum_chi2": 48.98210949514204,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.2981070269054644,
+          "q16": 0.2897356328222303,
+          "q84": 0.3067687850008703,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "median": -0.046974331857104645,
+          "q16": -0.06992726578843378,
+          "q84": -0.024983271629846038,
+          "sampled": true
+        },
+        "H0": {
+          "median": 69.2229428588787,
+          "q16": 65.85949003875754,
+          "q84": 72.56286347330874,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.5483373116269,
+          "q16": 139.94428989401612,
+          "q84": 154.0464758676162,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 385,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/lcdm-epsilon/posterior.npz",
+        "posterior_sha256": "34a95d0471123c1bb8ddaccb8a9619ddadd8a80134d933ef49c47f1596472995",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/lcdm-epsilon/summary.json",
+        "summary_sha256": "5ac46b8d9dbea9b100164050385cbfa2837fae44482d726d1eb456a4f3589e00",
+        "posterior_draw_count": 16128,
+        "parameter_names": [
+          "Omega_m",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union3",
+      "sample_label": "Union3",
+      "model": "w0wa-epsilon",
+      "minimum_chi2": 43.73341438877671,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.3361408065200505,
+          "q16": 0.3124508175688917,
+          "q84": 0.3580386911890667,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.6551643506322851,
+          "q16": -0.8219592847592465,
+          "q84": -0.48364313819436067,
+          "sampled": true
+        },
+        "wa": {
+          "median": -1.1143055570460252,
+          "q16": -1.7804956471703477,
+          "q84": -0.42913768830308285,
+          "sampled": true
+        },
+        "epsilon": {
+          "median": 0.016441501185146312,
+          "q16": -0.02058989181747506,
+          "q84": 0.053683768839185686,
+          "sampled": true
+        },
+        "H0": {
+          "median": 65.76904594098563,
+          "q16": 62.37826525756388,
+          "q84": 69.29200220419708,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.98359276503896,
+          "q16": 140.2322980794808,
+          "q84": 154.22184010439565,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 1125,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/w0wa-epsilon/posterior.npz",
+        "posterior_sha256": "dc98d3887ea1912a2a43099a47560aad6ab22b41b8445df6f37349af2cdf626e",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi+cc/w0wa-epsilon/summary.json",
+        "summary_sha256": "72d32e31d3a06bb37380be660b3c71699e5633640a7a7e9f0fb42b64638e1a47",
+        "posterior_draw_count": 17408,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union31",
+      "sample_label": "Union3.1",
+      "model": "lcdm",
+      "minimum_chi2": 55.83494554904135,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.3023937431149314,
+          "q16": 0.2940988340822869,
+          "q84": 0.31059033264326763,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 68.93591530005799,
+          "q16": 65.60752722252539,
+          "q84": 72.22459905637298,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.72973572738385,
+          "q16": 140.12026652044457,
+          "q84": 154.13947912919642,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 441,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/lcdm/posterior.npz",
+        "posterior_sha256": "807091f3bd8ba79bbc641ffd8ddafc97b4c386db27a2e3502f00691a3bddbb37",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/lcdm/summary.json",
+        "summary_sha256": "4b6cfcbb594f40fe88c6a95245881d5e80aa317ffa02311e60819d937a703c02",
+        "posterior_draw_count": 16640,
+        "parameter_names": [
+          "Omega_m",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union31",
+      "sample_label": "Union3.1",
+      "model": "w0wa",
+      "minimum_chi2": 49.77672104537926,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.3201293735107589,
+          "q16": 0.3005860302412241,
+          "q84": 0.3363308581252316,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.7894436642366198,
+          "q16": -0.8893090085260544,
+          "q84": -0.6834160226698618,
+          "sampled": true
+        },
+        "wa": {
+          "median": -0.6963688427650823,
+          "q16": -1.2559136779365545,
+          "q84": -0.12096872792063351,
+          "sampled": true
+        },
+        "epsilon": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "H0": {
+          "median": 67.13623700128073,
+          "q16": 63.875030617336655,
+          "q84": 70.45600172964797,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.76368926861977,
+          "q16": 140.20768422788916,
+          "q84": 154.15880417660674,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 988,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/w0wa/posterior.npz",
+        "posterior_sha256": "2991da758b10ecabc8c289c3ee35fe018779920c52c2629dfe8ddb779d075ff3",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/w0wa/summary.json",
+        "summary_sha256": "4eca16d512970419899ea04f221525ecb6b0a63a65557fcd83b5199659aba977",
+        "posterior_draw_count": 17920,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union31",
+      "sample_label": "Union3.1",
+      "model": "lcdm-epsilon",
+      "minimum_chi2": 53.724176608203045,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.2977159406962655,
+          "q16": 0.28960034915685884,
+          "q84": 0.3064749664686822,
+          "sampled": true
+        },
+        "w0": {
+          "fixed": -1.0,
+          "sampled": false
+        },
+        "wa": {
+          "fixed": 0.0,
+          "sampled": false
+        },
+        "epsilon": {
+          "median": -0.030725410749796123,
+          "q16": -0.05128724655797018,
+          "q84": -0.009615194739148514,
+          "sampled": true
+        },
+        "H0": {
+          "median": 69.18132909212372,
+          "q16": 65.90309845154451,
+          "q84": 72.5708466790561,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.6727613757271,
+          "q16": 139.96880775951954,
+          "q84": 154.05869221931226,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 539,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/lcdm-epsilon/posterior.npz",
+        "posterior_sha256": "9226df27d49d07da1357d00ca0ac8ac2a429e6ac02f990a41330dd45fefbc5e9",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/lcdm-epsilon/summary.json",
+        "summary_sha256": "93a0244d9d50f2aaf46fdc1520bdeb2733348599429505e152ba8635db9e4ee0",
+        "posterior_draw_count": 17408,
+        "parameter_names": [
+          "Omega_m",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    },
+    {
+      "sample": "union31",
+      "sample_label": "Union3.1",
+      "model": "w0wa-epsilon",
+      "minimum_chi2": 48.923828267226625,
+      "coordinates": {
+        "Omega_m": {
+          "median": 0.3335108842914507,
+          "q16": 0.3095025988182674,
+          "q84": 0.35463210983071725,
+          "sampled": true
+        },
+        "w0": {
+          "median": -0.6775884246886426,
+          "q16": -0.8380336875582359,
+          "q84": -0.5148700659836791,
+          "sampled": true
+        },
+        "wa": {
+          "median": -1.0418981624394874,
+          "q16": -1.6762815055349174,
+          "q84": -0.3693350903988968,
+          "sampled": true
+        },
+        "epsilon": {
+          "median": 0.03227795086766533,
+          "q16": -0.004750740002537224,
+          "q84": 0.0695280417818987,
+          "sampled": true
+        },
+        "H0": {
+          "median": 65.9437795466371,
+          "q16": 62.4381858268362,
+          "q84": 69.51326004951403,
+          "sampled": true
+        },
+        "r_d": {
+          "median": 146.97880098455948,
+          "q16": 140.27053785569214,
+          "q84": 154.39249065280498,
+          "sampled": true
+        }
+      },
+      "optimizer_status": {
+        "evaluations": 1350,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "success": true
+      },
+      "provenance": {
+        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/w0wa-epsilon/posterior.npz",
+        "posterior_sha256": "f2735e30d7e2bc7cea08212dd518ca7508f8f8899e86796685caf673a25ab357",
+        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi+cc/w0wa-epsilon/summary.json",
+        "summary_sha256": "7eb594df259e4102fee2acbf1553d92ce39b76cce059a69aa3c960030c18f283",
+        "posterior_draw_count": 18432,
+        "parameter_names": [
+          "Omega_m",
+          "w0",
+          "wa",
+          "epsilon",
+          "H0",
+          "r_d",
+          "nu"
+        ]
+      },
+      "cc": {
+        "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+        "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+        "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+        "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+        "dataset": "full-2022",
+        "h0_mode": "explicit",
+        "likelihood_version": 1
+      }
+    }
+  ],
+  "include_cc": true,
+  "quantile_method": "GetDist weighted equal-tail percentiles; ignore_rows=0"
+}

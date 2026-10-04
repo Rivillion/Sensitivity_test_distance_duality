@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.hdf5
+*.log
+.runner.lock
+results/run_logs/
+results/reruns/
+
+# Downloaded upstream inputs. The author-prepared CC files remain versioned.
+/data/desi_gaussian_bao_ALL_GCcomb_mean.txt
+/data/desi_gaussian_bao_ALL_GCcomb_cov.txt
+/data/Pantheon+SH0ES.dat
+/data/Pantheon+SH0ES_STAT+SYS.cov
+/data/DES-Dovekie_HD.csv
+/data/STAT+SYS.npz
+/data/raw/sn/union3/mu_mat_union3_cosmo=2_mu.fits
+/data/raw/sn/union3/mu_mat_union3.1_UNITY1.8_template_cosmo=2_0_mu.fits
+.download-*.tmp

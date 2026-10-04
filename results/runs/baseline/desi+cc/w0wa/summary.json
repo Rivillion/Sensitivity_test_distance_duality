@@ -1,0 +1,188 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": {
+    "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+    "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+    "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+    "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+    "dataset": "full-2022",
+    "h0_mode": "explicit",
+    "likelihood_version": 1
+  },
+  "constraints_68_equal_tail": {
+    "H0": {
+      "lower_68": 60.04967958572474,
+      "median": 64.14111024244272,
+      "minus": 4.091430656717982,
+      "plus": 4.5183923865906195,
+      "upper_68": 68.65950262903334
+    },
+    "Omega_m": {
+      "lower_68": 0.3095690439192852,
+      "median": 0.35971979771325957,
+      "minus": 0.05015075379397438,
+      "plus": 0.03794233074389575,
+      "upper_68": 0.3976621284571553
+    },
+    "r_d": {
+      "lower_68": 140.3200938070915,
+      "median": 146.9701242062685,
+      "minus": 6.650030399177012,
+      "plus": 7.395989727475296,
+      "upper_68": 154.3661139337438
+    },
+    "w0": {
+      "lower_68": -0.835582089968641,
+      "median": -0.4384797623011365,
+      "minus": 0.39710232766750453,
+      "plus": 0.354925160732388,
+      "upper_68": -0.0835546015687485
+    },
+    "wa": {
+      "lower_68": -3.095129991076362,
+      "median": -1.8493934149408178,
+      "minus": 1.2457365761355441,
+      "plus": 1.5083615413606957,
+      "upper_68": -0.3410318735801221
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:27.291532+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10057.05816587633,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 99584,
+  "exploration_seconds": 946.0545254908502,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0
+  },
+  "initialization_seconds": 0.05983810778707266,
+  "likelihood_evaluations": 107520,
+  "likelihood_evaluations_per_second": 109.83548997256025,
+  "likelihoods": [
+    "desi",
+    "cc"
+  ],
+  "log_z": -25.48701030798551,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 517,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0": 63.532853067220785,
+    "Omega_m": 0.36794809349951196,
+    "r_d": 146.68999823871076,
+    "w0": -0.3633275186175857,
+    "wa": -2.0922443674654794
+  },
+  "minimum_chi2": 21.639455448899337,
+  "model": "w0wa",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "w0",
+    "wa",
+    "H0",
+    "r_d"
+  ],
+  "posterior_samples": 14848,
+  "postprocessing_seconds": 0.5864922190085053,
+  "priors": {
+    "H0": [
+      20.0,
+      120.0
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "r_d": [
+      50.0,
+      300.0
+    ],
+    "w0": [
+      -3.0,
+      0.5
+    ],
+    "wa": [
+      -4.0,
+      3.0
+    ]
+  },
+  "resume_signature": {
+    "cc": {
+      "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+      "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+      "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+      "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+      "dataset": "full-2022",
+      "h0_mode": "explicit",
+      "likelihood_version": 1
+    },
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "epsilon": 0.0
+    },
+    "likelihoods": [
+      "desi",
+      "cc"
+    ],
+    "model": "w0wa",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "w0",
+      "wa",
+      "H0",
+      "r_d"
+    ],
+    "priors": {
+      "H0": [
+        20.0,
+        120.0
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "r_d": [
+        50.0,
+        300.0
+      ],
+      "w0": [
+        -3.0,
+        0.5
+      ],
+      "wa": [
+        -4.0,
+        3.0
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 7936,
+  "sampling_seconds": 32.86403741501272,
+  "seed": 20261008,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 979.5649636466987,
+  "updated_at": "2026-10-03T08:35:46.833379+00:00",
+  "zmin": null
+}

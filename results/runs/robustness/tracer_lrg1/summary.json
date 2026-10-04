@@ -1,0 +1,173 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": null,
+  "constraints_68_equal_tail": {
+    "H0rd": {
+      "lower_68": 10117.899500048663,
+      "median": 10202.00538203685,
+      "minus": 84.10588198818732,
+      "plus": 80.54456759332606,
+      "upper_68": 10282.549949630176
+    },
+    "Omega_m": {
+      "lower_68": 0.28405177507856394,
+      "median": 0.2928330251281245,
+      "minus": 0.00878125004956054,
+      "plus": 0.009401196778172416,
+      "upper_68": 0.3022342219062969
+    },
+    "epsilon": {
+      "lower_68": -0.04963084062461787,
+      "median": -0.032797456282516735,
+      "minus": 0.016833384342101132,
+      "plus": 0.01664445648733537,
+      "upper_68": -0.016152999795181366
+    },
+    "nu": {
+      "lower_68": 23.800325366082674,
+      "median": 23.807323924338135,
+      "minus": 0.006998558255460807,
+      "plus": 0.007060241333448403,
+      "upper_68": 23.814384165671584
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-04T10:03:41.040591+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10032.63010324421,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 120320,
+  "exploration_seconds": 632.5799703039229,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "w0": -1.0,
+    "wa": 0.0
+  },
+  "initialization_seconds": 0.019930377136915922,
+  "likelihood_evaluations": 128256,
+  "likelihood_evaluations_per_second": 196.4774225814354,
+  "likelihoods": [
+    "pantheon",
+    "desi"
+  ],
+  "log_z": -716.4846240815195,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 405,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0rd": 10202.491281894989,
+    "Omega_m": 0.2926966867475679,
+    "epsilon": -0.03331601386309441,
+    "nu": 23.80741861649078
+  },
+  "minimum_chi2": 1392.1803921067751,
+  "model": "lcdm-epsilon",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "epsilon",
+    "H0rd",
+    "nu"
+  ],
+  "posterior_samples": 17152,
+  "postprocessing_seconds": 0.6908149570226669,
+  "priors": {
+    "H0rd": [
+      2997.92458,
+      29979.245799999997
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "epsilon": [
+      -0.4,
+      0.4
+    ],
+    "nu": [
+      10.0,
+      60.0
+    ]
+  },
+  "resume_signature": {
+    "bao_sn_likelihood_version": 2,
+    "cc": null,
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "w0": -1.0,
+      "wa": 0.0
+    },
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "model": "lcdm-epsilon",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "epsilon",
+      "H0rd",
+      "nu"
+    ],
+    "priors": {
+      "H0rd": [
+        2997.92458,
+        29979.245799999997
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "epsilon": [
+        -0.4,
+        0.4
+      ],
+      "nu": [
+        10.0,
+        60.0
+      ]
+    },
+    "robustness_selection": {
+      "bao_drop_indices": [
+        1,
+        2
+      ],
+      "case_id": "tracer_lrg1",
+      "input_sha256": {
+        "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+        "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+        "desi_gaussian_bao_ALL_GCcomb_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+        "desi_gaussian_bao_ALL_GCcomb_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585"
+      },
+      "n_bao": 11,
+      "n_sn": 1580,
+      "version": 1
+    },
+    "zmin": 0.01
+  },
+  "sampling_likelihood_evaluations": 7936,
+  "sampling_seconds": 20.19732245011255,
+  "seed": 2026100402,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 653.4881024551578,
+  "updated_at": "2026-10-04T10:14:34.526040+00:00",
+  "zmin": 0.01
+}

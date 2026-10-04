@@ -1,0 +1,173 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": null,
+  "constraints_68_equal_tail": {
+    "H0rd": {
+      "lower_68": 9609.389490685178,
+      "median": 9740.847883659726,
+      "minus": 131.45839297454768,
+      "plus": 133.19053070610062,
+      "upper_68": 9874.038414365827
+    },
+    "Omega_m": {
+      "lower_68": 0.31237904935488947,
+      "median": 0.33045700445451726,
+      "minus": 0.018077955099627785,
+      "plus": 0.015413890763468496,
+      "upper_68": 0.34587089521798575
+    },
+    "nu": {
+      "lower_68": 43.025560546699104,
+      "median": 43.112518416796846,
+      "minus": 0.08695787009774136,
+      "plus": 0.0893581960516201,
+      "upper_68": 43.201876612848466
+    },
+    "w0": {
+      "lower_68": -0.8096244207176895,
+      "median": -0.6994732775381349,
+      "minus": 0.11015114317955454,
+      "plus": 0.11751824004985423,
+      "upper_68": -0.5819550374882807
+    },
+    "wa": {
+      "lower_68": -1.562062147487191,
+      "median": -0.9993776055824135,
+      "minus": 0.5626845419047775,
+      "plus": 0.5688823372531009,
+      "upper_68": -0.4304952683293126
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:26.032600+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10030.598351493109,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 118784,
+  "exploration_seconds": 1030.814499577973,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0
+  },
+  "initialization_seconds": 0.062196776270866394,
+  "likelihood_evaluations": 126464,
+  "likelihood_evaluations_per_second": 119.07277108799533,
+  "likelihoods": [
+    "union3",
+    "desi"
+  ],
+  "log_z": -33.693328601604925,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 1100,
+    "message": "ABNORMAL: ",
+    "success": false
+  },
+  "maximum_likelihood_parameters": {
+    "H0rd": 9735.814033297203,
+    "Omega_m": 0.33090217753424,
+    "nu": 43.11226129815811,
+    "w0": -0.6960329569802344,
+    "wa": -1.005903161782597
+  },
+  "minimum_chi2": 28.783253090580644,
+  "model": "w0wa",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "w0",
+    "wa",
+    "H0rd",
+    "nu"
+  ],
+  "posterior_samples": 16384,
+  "postprocessing_seconds": 0.7193717104382813,
+  "priors": {
+    "H0rd": [
+      2997.92458,
+      29979.245799999997
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "nu": [
+      10.0,
+      60.0
+    ],
+    "w0": [
+      -3.0,
+      0.5
+    ],
+    "wa": [
+      -4.0,
+      3.0
+    ]
+  },
+  "resume_signature": {
+    "bao_sn_likelihood_version": 2,
+    "cc": null,
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "epsilon": 0.0
+    },
+    "likelihoods": [
+      "union3",
+      "desi"
+    ],
+    "model": "w0wa",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "w0",
+      "wa",
+      "H0rd",
+      "nu"
+    ],
+    "priors": {
+      "H0rd": [
+        2997.92458,
+        29979.245799999997
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "nu": [
+        10.0,
+        60.0
+      ],
+      "w0": [
+        -3.0,
+        0.5
+      ],
+      "wa": [
+        -4.0,
+        3.0
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 7680,
+  "sampling_seconds": 31.258708633016795,
+  "seed": 20261026,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 1062.854818996042,
+  "updated_at": "2026-10-03T08:37:08.849247+00:00",
+  "zmin": null
+}

@@ -1,0 +1,321 @@
+[
+  {
+    "task_id": 0,
+    "case_id": "tracer_none",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "None",
+    "zmin": 0.01,
+    "bao_drop_indices": [],
+    "n_sn": 1580,
+    "n_bao": 13,
+    "seed": 2026100400,
+    "output": "results/runs/robustness/tracer_none"
+  },
+  {
+    "task_id": 1,
+    "case_id": "tracer_bgs",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "BGS",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      0
+    ],
+    "n_sn": 1580,
+    "n_bao": 12,
+    "seed": 2026100401,
+    "output": "results/runs/robustness/tracer_bgs"
+  },
+  {
+    "task_id": 2,
+    "case_id": "tracer_lrg1",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "LRG1",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      1,
+      2
+    ],
+    "n_sn": 1580,
+    "n_bao": 11,
+    "seed": 2026100402,
+    "output": "results/runs/robustness/tracer_lrg1"
+  },
+  {
+    "task_id": 3,
+    "case_id": "tracer_lrg2",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "LRG2",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      3,
+      4
+    ],
+    "n_sn": 1580,
+    "n_bao": 11,
+    "seed": 2026100403,
+    "output": "results/runs/robustness/tracer_lrg2"
+  },
+  {
+    "task_id": 4,
+    "case_id": "tracer_lrg3_elg1",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "LRG3+ELG1",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      5,
+      6
+    ],
+    "n_sn": 1580,
+    "n_bao": 11,
+    "seed": 2026100404,
+    "output": "results/runs/robustness/tracer_lrg3_elg1"
+  },
+  {
+    "task_id": 5,
+    "case_id": "tracer_elg2",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "ELG2",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      7,
+      8
+    ],
+    "n_sn": 1580,
+    "n_bao": 11,
+    "seed": 2026100405,
+    "output": "results/runs/robustness/tracer_elg2"
+  },
+  {
+    "task_id": 6,
+    "case_id": "tracer_qso",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "QSO",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      9,
+      10
+    ],
+    "n_sn": 1580,
+    "n_bao": 11,
+    "seed": 2026100406,
+    "output": "results/runs/robustness/tracer_qso"
+  },
+  {
+    "task_id": 7,
+    "case_id": "tracer_lyalpha",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "Lyalpha",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      11,
+      12
+    ],
+    "n_sn": 1580,
+    "n_bao": 11,
+    "seed": 2026100407,
+    "output": "results/runs/robustness/tracer_lyalpha"
+  },
+  {
+    "task_id": 8,
+    "case_id": "tracer_lrg1_lrg2",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "LRG1 + LRG2",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_sn": 1580,
+    "n_bao": 9,
+    "seed": 2026100408,
+    "output": "results/runs/robustness/tracer_lrg1_lrg2"
+  },
+  {
+    "task_id": 9,
+    "case_id": "tracer_bgs_lrg1_lrg2",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "VII",
+    "label": "BGS + LRG1 + LRG2",
+    "zmin": 0.01,
+    "bao_drop_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "n_sn": 1580,
+    "n_bao": 8,
+    "seed": 2026100409,
+    "output": "results/runs/robustness/tracer_bgs_lrg1_lrg2"
+  },
+  {
+    "task_id": 10,
+    "case_id": "cut_pantheon_0.023",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "IX",
+    "label": "pantheon zmin=0.023",
+    "zmin": 0.023,
+    "bao_drop_indices": [],
+    "n_sn": 1371,
+    "n_bao": 13,
+    "seed": 2026100410,
+    "output": "results/runs/robustness/cut_pantheon_0.023"
+  },
+  {
+    "task_id": 11,
+    "case_id": "cut_pantheon_0.050",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "IX",
+    "label": "pantheon zmin=0.050",
+    "zmin": 0.05,
+    "bao_drop_indices": [],
+    "n_sn": 1056,
+    "n_bao": 13,
+    "seed": 2026100411,
+    "output": "results/runs/robustness/cut_pantheon_0.050"
+  },
+  {
+    "task_id": 12,
+    "case_id": "cut_pantheon_0.100",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "pantheon",
+      "desi"
+    ],
+    "sample": "pantheon",
+    "table": "IX",
+    "label": "pantheon zmin=0.100",
+    "zmin": 0.1,
+    "bao_drop_indices": [],
+    "n_sn": 960,
+    "n_bao": 13,
+    "seed": 2026100412,
+    "output": "results/runs/robustness/cut_pantheon_0.100"
+  },
+  {
+    "task_id": 13,
+    "case_id": "cut_dovekie_0.025",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "sample": "dovekie",
+    "table": "IX",
+    "label": "dovekie zmin=0.025",
+    "zmin": 0.025,
+    "bao_drop_indices": [],
+    "n_sn": 1820,
+    "n_bao": 13,
+    "seed": 2026100413,
+    "output": "results/runs/robustness/cut_dovekie_0.025"
+  },
+  {
+    "task_id": 14,
+    "case_id": "cut_dovekie_0.050",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "sample": "dovekie",
+    "table": "IX",
+    "label": "dovekie zmin=0.050",
+    "zmin": 0.05,
+    "bao_drop_indices": [],
+    "n_sn": 1679,
+    "n_bao": 13,
+    "seed": 2026100414,
+    "output": "results/runs/robustness/cut_dovekie_0.050"
+  },
+  {
+    "task_id": 15,
+    "case_id": "cut_dovekie_0.100",
+    "model": "lcdm-epsilon",
+    "likelihoods": [
+      "dovekie",
+      "desi"
+    ],
+    "sample": "dovekie",
+    "table": "IX",
+    "label": "dovekie zmin=0.100",
+    "zmin": 0.1,
+    "bao_drop_indices": [],
+    "n_sn": 1619,
+    "n_bao": 13,
+    "seed": 2026100415,
+    "output": "results/runs/robustness/cut_dovekie_0.100"
+  }
+]

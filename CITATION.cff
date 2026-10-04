@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code, cite the accompanying paper and this repository's tagged archival release when available."
+type: software
+title: "Sensitivity test of distance duality"
+abstract: "Reproduction code for Sensitivity of calibration-free DESI DR2 BAO-supernova constraints to a distance-duality tilt."
+authors:
+  - family-names: "Fay"
+    given-names: "Stéphane"
+  - family-names: "Artola"
+    given-names: "Mikel"
+  - family-names: "Perivolaropoulos"
+    given-names: "Leandros"
+repository-code: "https://github.com/Rivillion/Sensitivity_test_distance_duality"
+url: "https://github.com/Rivillion/Sensitivity_test_distance_duality"
+license: MIT
+keywords:
+  - cosmology
+  - distance duality
+  - DESI
+  - supernovae
+  - cosmic chronometers

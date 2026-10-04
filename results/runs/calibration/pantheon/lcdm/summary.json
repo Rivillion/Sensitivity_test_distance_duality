@@ -1,0 +1,158 @@
+{
+  "H0_moments": {
+    "mean": 73.24200102218013,
+    "std": 0.9458461407924833
+  },
+  "calibration_treatment": "full_explicit_sampling_with_Gaussian_calibrations",
+  "case": "pantheon",
+  "constraints_68_equal_tail": {
+    "H0": {
+      "lower_68": 72.31726725951908,
+      "median": 73.23109882581355,
+      "minus": 0.913831566294462,
+      "plus": 0.9505077815478273,
+      "upper_68": 74.18160660736137
+    },
+    "M_B": {
+      "lower_68": -19.279921429622274,
+      "median": -19.253536321949255,
+      "minus": 0.026385107673018382,
+      "plus": 0.02738416981981473,
+      "upper_68": -19.22615215212944
+    },
+    "Omega_m": {
+      "lower_68": 0.3148878286799929,
+      "median": 0.333068595200381,
+      "minus": 0.018180766520388136,
+      "plus": 0.01841847924724993,
+      "upper_68": 0.35148707444763094
+    },
+    "nu": {
+      "lower_68": 23.80039019826959,
+      "median": 23.807368038643435,
+      "minus": 0.006977840373846078,
+      "plus": 0.007073224077320361,
+      "upper_68": 23.814441262720756
+    }
+  },
+  "coordinate_note": "Uniform H0rd and nu as in Final_version; H0 and alpha derived draw by draw. No additional uniform H0 or alpha prior.",
+  "cores": 4,
+  "created_at": "2026-10-04T08:13:34.154461+00:00",
+  "derived_parameters": [
+    "H0"
+  ],
+  "discard_exploration": true,
+  "effective_sample_size": 10210.34509550842,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0,
+    "w0": -1.0,
+    "wa": 0.0
+  },
+  "likelihood_evaluations": 83456,
+  "likelihood_note": "Full data chi-square with no profiling or analytic marginalization; Gaussian calibrations belong to the prior. ln Z omits fixed data-normalization constants, as in src.sampler.",
+  "likelihoods": [
+    "pantheon"
+  ],
+  "log_z": -703.9517552555379,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 90,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "Omega_m": 0.3326018720589231,
+    "nu": 23.807206680923883
+  },
+  "minimum_chi2": 1386.405268132431,
+  "model": "lcdm",
+  "n_eff_target": 10000,
+  "nlive": 3000,
+  "parameters": [
+    "Omega_m",
+    "nu",
+    "M_B"
+  ],
+  "posterior_parameters": [
+    "Omega_m",
+    "nu",
+    "M_B",
+    "H0"
+  ],
+  "posterior_samples": 14336,
+  "priors": {
+    "M_B": {
+      "distribution": "Gaussian",
+      "mean": -19.253,
+      "sigma": 0.027
+    },
+    "Omega_m": {
+      "bounds": [
+        0.1,
+        0.5
+      ],
+      "distribution": "uniform"
+    },
+    "nu": {
+      "bounds": [
+        10.0,
+        60.0
+      ],
+      "distribution": "uniform"
+    }
+  },
+  "resume_signature": {
+    "case": "pantheon",
+    "discard_exploration": true,
+    "input_sha256": {
+      "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc"
+    },
+    "n_eff": 10000,
+    "n_grid": 385,
+    "nlive": 3000,
+    "numerics_version": 6,
+    "parameters": [
+      "Omega_m",
+      "nu",
+      "M_B"
+    ],
+    "priors": {
+      "M_B": {
+        "distribution": "Gaussian",
+        "mean": -19.253,
+        "sigma": 0.027
+      },
+      "Omega_m": {
+        "bounds": [
+          0.1,
+          0.5
+        ],
+        "distribution": "uniform"
+      },
+      "nu": {
+        "bounds": [
+          10.0,
+          60.0
+        ],
+        "distribution": "uniform"
+      }
+    },
+    "seed": 20261005,
+    "source_sha256": {
+      "background.py": "aac53436fb5c39239dc237f248d075fa9019ddb7d6c2b1d717a076c671b7b679",
+      "likelihoods.py": "ad03ff9acea198c3fcaa6e7584dd684ec968819801401600985d9b86a0e5208c",
+      "sample_section4b.py": "77a74777e99dbbdb504a19399b4e31ba37cbfc7f6a1018e42346da2a0447ab52",
+      "sampler.py": "9c494285dfaf14b51b43f24a3ea260e075b2887f716e19eab2f874c4c059320b"
+    },
+    "version": 1,
+    "zmin": 0.01
+  },
+  "seed": 20261005,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 42.492434189999585,
+  "updated_at": "2026-10-04T08:14:16.405149+00:00",
+  "zmin": 0.01
+}

@@ -1,0 +1,168 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": {
+    "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+    "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+    "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+    "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+    "dataset": "full-2022",
+    "h0_mode": "explicit",
+    "likelihood_version": 1
+  },
+  "constraints_68_equal_tail": {
+    "H0": {
+      "lower_68": 63.290636836086534,
+      "median": 71.18926490501198,
+      "minus": 7.898628068925447,
+      "plus": 9.500597560250327,
+      "upper_68": 80.68986246526231
+    },
+    "Omega_m": {
+      "lower_68": 0.24221231296720058,
+      "median": 0.3175469157270371,
+      "minus": 0.0753346027598365,
+      "plus": 0.0847834218828265,
+      "upper_68": 0.4023303376098636
+    },
+    "w0": {
+      "lower_68": -2.2369001063550615,
+      "median": -1.4439682362389044,
+      "minus": 0.7929318701161572,
+      "plus": 0.7186540497999832,
+      "upper_68": -0.7253141864389212
+    },
+    "wa": {
+      "lower_68": -2.8631718392796563,
+      "median": -0.529837752332118,
+      "minus": 2.3333340869475383,
+      "plus": 2.147243201408677,
+      "upper_68": 1.6174054490765588
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:27.097993+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10037.612920756963,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 46080,
+  "exploration_seconds": 431.11565240006894,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0
+  },
+  "initialization_seconds": 0.04796262411400676,
+  "likelihood_evaluations": 54528,
+  "likelihood_evaluations_per_second": 114.40158632372068,
+  "likelihoods": [
+    "cc"
+  ],
+  "log_z": -11.506805356559548,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 171,
+    "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0": 71.77671891114639,
+    "Omega_m": 0.2682562468412262,
+    "w0": -1.365092013596043,
+    "wa": 1.3830369127494135
+  },
+  "minimum_chi2": 14.404769145793887,
+  "model": "w0wa",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "w0",
+    "wa",
+    "H0"
+  ],
+  "posterior_samples": 11776,
+  "postprocessing_seconds": 0.1695804549381137,
+  "priors": {
+    "H0": [
+      20.0,
+      120.0
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ],
+    "w0": [
+      -3.0,
+      0.5
+    ],
+    "wa": [
+      -4.0,
+      3.0
+    ]
+  },
+  "resume_signature": {
+    "cc": {
+      "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+      "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+      "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+      "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+      "dataset": "full-2022",
+      "h0_mode": "explicit",
+      "likelihood_version": 1
+    },
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "epsilon": 0.0
+    },
+    "likelihoods": [
+      "cc"
+    ],
+    "model": "w0wa",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "w0",
+      "wa",
+      "H0"
+    ],
+    "priors": {
+      "H0": [
+        20.0,
+        120.0
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ],
+      "w0": [
+        -3.0,
+        0.5
+      ],
+      "wa": [
+        -4.0,
+        3.0
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 8448,
+  "sampling_seconds": 45.52109497599304,
+  "seed": 20261006,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 476.8543565371074,
+  "updated_at": "2026-10-03T08:27:23.933203+00:00",
+  "zmin": null
+}

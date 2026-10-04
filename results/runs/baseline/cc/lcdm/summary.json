@@ -1,0 +1,136 @@
+{
+  "calibration_treatment": "explicit_sampling",
+  "cc": {
+    "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+    "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+    "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+    "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+    "dataset": "full-2022",
+    "h0_mode": "explicit",
+    "likelihood_version": 1
+  },
+  "constraints_68_equal_tail": {
+    "H0": {
+      "lower_68": 62.26725994071248,
+      "median": 67.07922535431334,
+      "minus": 4.811965413600859,
+      "plus": 5.169484383445251,
+      "upper_68": 72.24870973775859
+    },
+    "Omega_m": {
+      "lower_68": 0.2724322950093841,
+      "median": 0.3319760539378953,
+      "minus": 0.059543758928511215,
+      "plus": 0.06868778360521066,
+      "upper_68": 0.40066383754310597
+    }
+  },
+  "cores": 4,
+  "created_at": "2026-10-03T08:19:27.107854+00:00",
+  "curvature_on": false,
+  "discard_exploration": true,
+  "effective_sample_size": 10016.580119724815,
+  "explicit_sampling_version": 1,
+  "exploration_likelihood_evaluations": 40704,
+  "exploration_seconds": 341.3288249382749,
+  "fixed_parameters": {
+    "Omega_k": 0.0,
+    "alpha": 1.0,
+    "epsilon": 0.0,
+    "w0": -1.0,
+    "wa": 0.0
+  },
+  "initialization_seconds": 0.051617600955069065,
+  "likelihood_evaluations": 49152,
+  "likelihood_evaluations_per_second": 125.65228227505912,
+  "likelihoods": [
+    "cc"
+  ],
+  "log_z": -10.746066896729156,
+  "maximum_likelihood_optimizer": {
+    "evaluations": 35,
+    "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+    "success": true
+  },
+  "maximum_likelihood_parameters": {
+    "H0": 67.8180167441713,
+    "Omega_m": 0.32279528145677283
+  },
+  "minimum_chi2": 14.629324749312135,
+  "model": "lcdm",
+  "n_batch": 256,
+  "nlive": 3000,
+  "numerics_version": 6,
+  "parameters": [
+    "Omega_m",
+    "H0"
+  ],
+  "posterior_samples": 11520,
+  "postprocessing_seconds": 0.32651476189494133,
+  "priors": {
+    "H0": [
+      20.0,
+      120.0
+    ],
+    "Omega_m": [
+      0.1,
+      0.5
+    ]
+  },
+  "resume_signature": {
+    "cc": {
+      "covariance_path": "/scratch/mikart/CDDR/data/covmat_Hz_full_2022.txt",
+      "covariance_sha256": "3f05e3b64276be2cbf93ff587c12d06e01725f4a49b87ccc005b3c532864ef2c",
+      "data_path": "/scratch/mikart/CDDR/data/Hz_full_2022_mod.txt",
+      "data_sha256": "c5fd5b600ad8d08628d256e6cc24164fd875ce63ffcf891ea74c9fc7d566fc0f",
+      "dataset": "full-2022",
+      "h0_mode": "explicit",
+      "likelihood_version": 1
+    },
+    "curvature_on": false,
+    "discard_exploration": true,
+    "explicit_sampling_version": 1,
+    "fixed_parameters": {
+      "Omega_k": 0.0,
+      "alpha": 1.0,
+      "epsilon": 0.0,
+      "w0": -1.0,
+      "wa": 0.0
+    },
+    "likelihoods": [
+      "cc"
+    ],
+    "model": "lcdm",
+    "n_eff": 10000,
+    "nlive": 3000,
+    "numerics": {
+      "integration": "simpson",
+      "n_grid": 385,
+      "vectorized": true,
+      "version": 6
+    },
+    "parameters": [
+      "Omega_m",
+      "H0"
+    ],
+    "priors": {
+      "H0": [
+        20.0,
+        120.0
+      ],
+      "Omega_m": [
+        0.1,
+        0.5
+      ]
+    },
+    "zmin": null
+  },
+  "sampling_likelihood_evaluations": 8448,
+  "sampling_seconds": 49.84592421911657,
+  "seed": 20261005,
+  "status": "completed",
+  "successful": true,
+  "total_seconds": 391.5529395956546,
+  "updated_at": "2026-10-03T08:25:58.644065+00:00",
+  "zmin": null
+}

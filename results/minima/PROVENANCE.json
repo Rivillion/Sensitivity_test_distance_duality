@@ -1,0 +1,26 @@
+{
+  "method": "Compact minimum products extracted from the current full-coordinate Section III.B audit; posterior/profile intervals are excluded.",
+  "audited_on": "2026-10-04",
+  "audit_sha256": "00c319ef496b5bf737276f2f1b03a97fbf75e4ae44fd3848c7d3793fc90f804e",
+  "fit_count": 228,
+  "audit_checks_pass": true,
+  "products_sha256": {
+    "controls": "86bd9edafb5921a76fbae2d26d88441ff996e4716c9bf9586d2052ec70f5dddd",
+    "tracers": "fd119b8d697f57f6c0dac010ea586c8c14daba7f402ac7b7673bf8e8d2ca684f",
+    "cuts": "0b16e1d34830216d0db1f7c5f5ad746cae92d8eef18e5161fdd1ff43d2cf6c3d"
+  },
+  "original_scientific_source_sha256": {
+    "background": "aac53436fb5c39239dc237f248d075fa9019ddb7d6c2b1d717a076c671b7b679",
+    "likelihoods": "ad03ff9acea198c3fcaa6e7584dd684ec968819801401600985d9b86a0e5208c",
+    "sampler": "9c494285dfaf14b51b43f24a3ea260e075b2887f716e19eab2f874c4c059320b",
+    "profile_fits": "fb059b2e7c7824bfaf49f99943867eadb0a003fe319dee73aad4095037b1936c"
+  },
+  "non_sn_source": "Current full-2022 profile minima, independently checked against explicit-calibration runs.",
+  "profile_intervals_used": false,
+  "frozen_manuscript_values_used": false,
+  "recompute_commands": [
+    "python -m results.minimize controls",
+    "python -m results.minimize tracers",
+    "python -m results.minimize cuts"
+  ]
+}

@@ -1,0 +1,5 @@
+# Keep source text portable while preserving checksum-pinned numerical inputs.
+* text=auto eol=lf
+data/Hz_full_2022_mod.txt -text
+data/covmat_Hz_full_2022.txt -text
+results/runs/** -text
