@@ -1,14 +1,15 @@
-"""Generate profile-likelihood results for the paper tables.
+"""Generate the optimized minima used by manuscript Tables III, V-VII and Sec. IV.A.
 
-Usage: python -m results.minimize {ladder,controls,tracers,cuts,information,non-sn}
+Usage: python -m results.minimize {controls,tracers,cuts,non-sn}
+controls: Table V alternative tilts and curvature (also Fig. 3);
+tracers: Table VI DESI DR2 tracer deletions; cuts: Table VII SN redshift cuts;
+non-sn: BAO, CC and BAO+CC alone (Table III and Sec. IV.A).
 Results are written as JSON under results/minima. All reported minima are
 fresh optimizations of the released likelihoods.
 """
 
 from __future__ import annotations
 
-import argparse
-import json
 import math
 import os
 from pathlib import Path
@@ -58,9 +59,10 @@ def fit_record(fit: pf.Fit) -> dict:
     }
 
 
-def fit_ladder(sn, bao, *, interval: bool = False, **kwargs) -> dict:
+def fit_ladder(sn, bao) -> dict:
+    """Minimize all four models and record both dark-energy improvements."""
     fits = {
-        model: pf.fit(sn, bao, cpl=cpl, free_epsilon=epsilon, **kwargs)
+        model: pf.fit(sn, bao, cpl=cpl, free_epsilon=epsilon)
         for model, cpl, epsilon in (
             ("lcdm", False, False), ("w0wa", True, False),
             ("lcdm-epsilon", False, True), ("w0wa-epsilon", True, True),
@@ -74,23 +76,6 @@ def fit_ladder(sn, bao, *, interval: bool = False, **kwargs) -> dict:
         "delta_de_given_tilt": chi["lcdm-epsilon"] - chi["w0wa-epsilon"],
     }
     return result
-
-
-def ladder() -> dict:
-    return {sample: fit_ladder(make_sn(sample), pf.subset_bao(())) for sample in SAMPLES}
-
-
-def cc_ladder() -> dict:
-    data = ROOT / "data"
-    cc = CosmicChronometer(
-        data / "Hz_full_2022_mod.txt",
-        data / "covmat_Hz_full_2022.txt",
-        h0_mode="profile",
-    )
-    return {
-        sample: fit_ladder(make_sn(sample), pf.subset_bao(()), interval=False, cc=cc)
-        for sample in SAMPLES
-    }
 
 
 def controls() -> dict:
@@ -110,23 +95,13 @@ def controls() -> dict:
                 "delta_de": null.chi2 - alternative.chi2,
             }
         pf.configure_tilt(sn, "log")
-        for control, options in (
-            ("curvature", {"curvature_on": True}),
-            ("linear_eos", {"eos": "linear"}),
-        ):
-            null = pf.fit(sn, bao, cpl=False, free_epsilon=False, **options)
-            alternative = pf.fit(sn, bao, cpl=True, free_epsilon=False, **options)
-            variants[control] = {
-                "lcdm": fit_record(null), "w0wa": fit_record(alternative),
-                "delta_de": null.chi2 - alternative.chi2,
-            }
-            if control == "linear_eos":
-                null_tilt = pf.fit(sn, bao, cpl=False, free_epsilon=True, **options)
-                alt_tilt = pf.fit(sn, bao, cpl=True, free_epsilon=True, **options)
-                variants[control]["with_log_tilt"] = {
-                    "lcdm": fit_record(null_tilt), "w0wa": fit_record(alt_tilt),
-                    "delta_de": null_tilt.chi2 - alt_tilt.chi2,
-                }
+        # Free spatial curvature in both backgrounds, with epsilon fixed to zero.
+        null = pf.fit(sn, bao, cpl=False, free_epsilon=False, curvature_on=True)
+        alternative = pf.fit(sn, bao, cpl=True, free_epsilon=False, curvature_on=True)
+        variants["curvature"] = {
+            "lcdm": fit_record(null), "w0wa": fit_record(alternative),
+            "delta_de": null.chi2 - alternative.chi2,
+        }
         result[sample] = variants
     return result
 
@@ -151,22 +126,6 @@ def cuts() -> dict:
         result[sample] = {
             f"{cutoff:.3f}": fit_ladder(make_sn(sample, cutoff), pf.subset_bao(()))
             for cutoff in cutoffs
-        }
-    return result
-
-
-def information() -> dict:
-    path = OUT / "ladder.json"
-    profiles = json.loads(path.read_text(encoding="utf-8"))
-    result = {}
-    for sample, item in profiles.items():
-        n = item["n_sn"] + item["n_bao"]
-        cpl = item["fits"]["w0wa"]["chi2"]
-        tilted = item["fits"]["lcdm-epsilon"]["chi2"]
-        result[sample] = {
-            "n": n, "chi2_cpl": cpl, "chi2_lcdm_tilt": tilted,
-            "delta_aic": cpl - tilted + 2,
-            "delta_bic": cpl - tilted + math.log(n),
         }
     return result
 
@@ -209,10 +168,6 @@ def non_sn() -> dict:
     return result
 
 
-COMMANDS = {
-    "ladder": ladder, "cc-ladder": cc_ladder,
-    "controls": controls, "tracers": tracers,
-    "cuts": cuts, "information": information, "non-sn": non_sn,
-}
+COMMANDS = {"controls": controls, "tracers": tracers, "cuts": cuts, "non-sn": non_sn}
 
 

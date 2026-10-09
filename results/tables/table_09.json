@@ -1,139 +1,60 @@
 {
   "columns": [
-    "Sample",
-    "$z_{\\min}$",
-    "N SN",
-    "$\\varepsilon$",
-    "$\\Delta\\chi^2$",
-    "$\\Delta\\chi^2_{\\varepsilon}$"
+    "Parameter",
+    "Prior",
+    "Application"
   ],
   "rows": [
     [
-      "Pantheon+",
-      "0.010",
-      1580,
-      "$-0.0291^{+0.0165}_{-0.0166}$",
-      "5.06",
-      "2.18"
+      "$\\Omega_{\\rm m}$",
+      "$\\mathcal{U}(0.1, 0.5)$",
+      "All backgrounds"
     ],
     [
-      "Pantheon+",
-      "0.023",
-      1371,
-      "$-0.0251^{+0.0166}_{-0.0170}$",
-      "3.58",
-      "1.44"
+      "$w_0$",
+      "$\\mathcal{U}(-3, 0.5)$",
+      "CPL"
     ],
     [
-      "Pantheon+",
-      "0.050",
-      1056,
-      "$-0.0289^{+0.0191}_{-0.0192}$",
-      "3.40",
-      "1.19"
+      "$w_a$",
+      "$\\mathcal{U}(-4, 3)$",
+      "CPL"
     ],
     [
-      "Pantheon+",
-      "0.100",
-      960,
-      "$-0.0289^{+0.0215}_{-0.0217}$",
-      "3.21",
-      "1.44"
+      "$\\varepsilon$",
+      "$\\mathcal{U}(-0.4, 0.4)$",
+      "Tilt free"
     ],
     [
-      "DES-Dovekie",
-      "0.025",
-      1820,
-      "$-0.0285^{+0.0143}_{-0.0144}$",
-      "7.16",
-      "4.08"
+      "$H_0r_{\\rm d}$ (km\\,s$^{-1}$)",
+      "$\\mathcal{U}(c/100, c/10)$",
+      "BAO without CC"
     ],
     [
-      "DES-Dovekie",
-      "0.050",
-      1679,
-      "$-0.0213^{+0.0169}_{-0.0165}$",
-      "3.24",
-      "1.89"
+      "$\\nu$ (mag)",
+      "$\\mathcal{U}(10, 60)$",
+      "SN intercept"
     ],
     [
-      "DES-Dovekie",
-      "0.100",
-      1619,
-      "$-0.0080^{+0.0186}_{-0.0199}$",
-      "0.95",
-      "0.82"
+      "$H_0$ (km\\,s$^{-1}$\\,Mpc$^{-1}$)",
+      "$\\mathcal{U}(20, 120)$",
+      "BAO with CC"
+    ],
+    [
+      "$r_{\\rm d}$ (Mpc)",
+      "$\\mathcal{U}(50, 300)$",
+      "With CC"
+    ],
+    [
+      "$r_{\\rm d}$ (Mpc)",
+      "$147.09 \\pm 0.26$",
+      "Calibration only"
+    ],
+    [
+      "$M_{\\rm B}$ (mag)",
+      "$-19.253 \\pm 0.027$",
+      "Calibration only"
     ]
   ],
-  "minima_sha256": {
-    "controls": "86bd9edafb5921a76fbae2d26d88441ff996e4716c9bf9586d2052ec70f5dddd",
-    "tracers": "fd119b8d697f57f6c0dac010ea586c8c14daba7f402ac7b7673bf8e8d2ca684f",
-    "cuts": "0b16e1d34830216d0db1f7c5f5ad746cae92d8eef18e5161fdd1ff43d2cf6c3d"
-  },
-  "runs": {
-    "tracer_none": {
-      "posterior_sha256": "b9452a37cb1b585d9343f6112c8810240828771ffee080be4a12c9df4a6b6180",
-      "summary_sha256": "4a5fb9a39f465cc14bce0cf0f756dddf0b9074d57d49c8fa77cd32edbf44dffc"
-    },
-    "tracer_bgs": {
-      "posterior_sha256": "4d63db0b0d5969a3a2825652b5c5bf34b1494ccc1ccd5c5a6fdd3d5e58ed9df0",
-      "summary_sha256": "f21e4daa7f5280fed6194b1e1dd8cd6da681a11a6c73b528099eeb5fe92e8505"
-    },
-    "tracer_lrg1": {
-      "posterior_sha256": "82c1db15d7521d1186702291d38fe26cc7a29744de583be5e49529d673a22502",
-      "summary_sha256": "b0f9d7fe141b7c6f18692e0e15a7be92b431816be7457319a53e2ac87d1eedad"
-    },
-    "tracer_lrg2": {
-      "posterior_sha256": "d8f83b89e2be71c3ebb57f9aeb99a186b028cb051209d77a2f8ddda7dab2ce8a",
-      "summary_sha256": "e50be954239b38dfc4e110a42766d7f145c92351b3a3ce96b175e3c4d700d04e"
-    },
-    "tracer_lrg3_elg1": {
-      "posterior_sha256": "be96b4967c78a0d9d78526026e0881ec7b15fab632796e69da0890f75db54974",
-      "summary_sha256": "8e1bb0b2b5de3fb0dd7bfd4d15ee98d334f199c0d58da6c0dfb4bd01f458d872"
-    },
-    "tracer_elg2": {
-      "posterior_sha256": "07d611ef4012d4e50cfe8be52fabfd1552fcb6a7aefa83ddad880e0f4d4f80b3",
-      "summary_sha256": "226b68d1bdee64cb0d3b8931e9f0eeb718271f53c72a10ed682cec77db11a366"
-    },
-    "tracer_qso": {
-      "posterior_sha256": "160769ffbe6139061d5eb2a0204a0db1c5dac37718349414a76e21eda1743df8",
-      "summary_sha256": "a886cd1e60a604646a5bab9e5ab188b2a940b0df8a9f958d9707911cabadaad7"
-    },
-    "tracer_lyalpha": {
-      "posterior_sha256": "c7e3ae1c31245c530d104de9ff6a8afaf021be847ced27e1c3c724650ff19731",
-      "summary_sha256": "123c9e5b0cbd4246a0b8949ed38d473ac2235a3cb0710824a4e0effd8ce6ef93"
-    },
-    "tracer_lrg1_lrg2": {
-      "posterior_sha256": "d72d74a03ad012676a7c7b1b13d562963eb6bf31e72902648925fcebaeae836c",
-      "summary_sha256": "1ecd0701d7b9fea64a987b6704b541d7f73156129bade95c8a98e5aa9768e8ff"
-    },
-    "tracer_bgs_lrg1_lrg2": {
-      "posterior_sha256": "304b4d2d1a7826d707501dbcf2570311a2d75ff0f5ec0265ca45cfe0cae0ec49",
-      "summary_sha256": "55878ff9cb9b57baa852a015d295e00ac868e099a06895ccf04fc0ff52408b79"
-    },
-    "cut_pantheon_0.023": {
-      "posterior_sha256": "70c3474941e2a97416a91eb6128f3e5d55222b925f594c86fc759e83ca76f797",
-      "summary_sha256": "a6ccb7df56c339bc2f31385440b3e838a33f9e489938d3212927d84732098348"
-    },
-    "cut_pantheon_0.050": {
-      "posterior_sha256": "bd39e11d12dada0642234263ba182ab4c737d6bbb1c706b1c13bd23692ee416f",
-      "summary_sha256": "c85af394b7af0b2830f9920b01966a0c439618184fa4afb07acdedc02467b0df"
-    },
-    "cut_pantheon_0.100": {
-      "posterior_sha256": "f6850c3446c93911bb757656f3549087731408188633ff6838dae8ef6da09c5d",
-      "summary_sha256": "caca073ac109f7581948c261a554ca0a8a808e54a6f9dd37f295c7100e9048e7"
-    },
-    "cut_dovekie_0.025": {
-      "posterior_sha256": "fbae6d011d9267013a9495ad73223c3dcfbd31c0177d33d9eb871255e5e4e4ca",
-      "summary_sha256": "655006085b1a10389b7716c9e49d228837bafd4eeecb4bb4cd53ac00d718584e"
-    },
-    "cut_dovekie_0.050": {
-      "posterior_sha256": "b820f34664e988f2c4eccb073bea5d42bc9420ef5bad9501ce645aee710f01d8",
-      "summary_sha256": "d73b665b89d22f0ed91156d1ff9f7009a7da72e8c91eb03c2f8a768ba684446d"
-    },
-    "cut_dovekie_0.100": {
-      "posterior_sha256": "61ba5741ffa139e7e83b36c44f109209464d6a5efbf9e15ec6674d4deba63ecb",
-      "summary_sha256": "251ec3dd53f66b82196937fed40d1a77580582a93c557849f5729c7d5632a246"
-    }
-  }
+  "source": "src/sampler.py PRIOR_BOUNDS and src/calibration.py"
 }

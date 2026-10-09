@@ -1,4 +1,4 @@
-"""Recompute calibrated quantities from the weighted Section IV.B draws."""
+"""Recompute the Sec. IV.B calibrated quantities (and Eq. 21) from the weighted draws."""
 import argparse
 import json
 import math
@@ -44,13 +44,17 @@ def main(run_root=OUTPUT_ROOT, output_dir=ROOT / "results/tables"):
                          "summary_sha256": sha256(directory / "summary.json"),
                          "minimum_chi2": summary["minimum_chi2"], "nlive": summary["nlive"]}
     ratio = constraints["bao"]["H0"]["median"] / constraints["pantheon"]["H0"]["median"]
+    alpha = constraints["joint"]["alpha"]
+    # alpha < 1: measure the distance to exact CDDR with the upper half-width.
+    alpha_sigma = (1 - alpha["median"]) / alpha["plus"]
     separation = abs(moments["pantheon"]["mean"] - moments["bao"]["mean"]) / math.hypot(moments["pantheon"]["std"], moments["bao"]["std"])
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     result = {"constraints": constraints, "H0_moments": moments, "runs": records,
               "H0_difference_sigma_gaussian": separation, "separate_fit_median_ratio": ratio,
-              "separate_fit_magnitude_offset": 5 * math.log10(ratio), "rho_a_epsilon": rho}
-    (output / "calibration.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
+              "separate_fit_magnitude_offset": 5 * math.log10(ratio), "rho_a_epsilon": rho,
+              "alpha_deviation_from_unity_sigma": alpha_sigma}
+    (output / "section4b.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
     tex = [r"\begin{tabular}{lc}", r"Quantity & Posterior median and 68\% interval \\", r"\hline"]
     for label, case, name, digits in ((r"$H_0^{\rm BAO}$", "bao", "H0", 2),
             (r"$H_0^{\rm SN}$", "pantheon", "H0", 2), (r"$\alpha$", "joint", "alpha", 3),
@@ -58,10 +62,12 @@ def main(run_root=OUTPUT_ROOT, output_dir=ROOT / "results/tables"):
         q = constraints[case][name]
         tex.append(f"{label} & ${q['median']:.{digits}f}^{{+{q['plus']:.{digits}f}}}_{{-{q['minus']:.{digits}f}}}$ " + r"\\")
     tex.append(r"\end{tabular}")
-    (output / "calibration.tex").write_text("\n".join(tex) + "\n")
-    (output / "calibration.md").write_text(
+    (output / "section4b.tex").write_text("\n".join(tex) + "\n")
+    (output / "section4b.md").write_text(
         "# Calibrated Section IV.B quantities\n\n"
         f"Gaussian H0 separation from posterior moments: {separation:.6f} sigma.\n\n"
+        f"Joint alpha = {alpha['median']:.3f} +{alpha['plus']:.3f} -{alpha['minus']:.3f}, "
+        f"{alpha_sigma:.2f} sigma below exact CDDR.\n\n"
         f"Ratio of separate H0 medians: {ratio:.8f}; magnitude offset: {5*math.log10(ratio):.8f} mag.\n\n"
         f"Joint weighted correlation of 5 log10(alpha) and epsilon: {rho:.6f}.\n\n"
         "The ratio of separate medians is a descriptive normalization. The joint alpha interval is computed separately from the joint draws. H0 is in km/s/Mpc. Gaussian calibrations are priors and are excluded from the data chi-square.\n")

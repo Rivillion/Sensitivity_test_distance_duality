@@ -1,88 +1,71 @@
 {
   "columns": [
-    "Dropped block",
-    "$\\varepsilon$",
-    "$\\Delta\\chi^2$",
-    "$\\Delta\\chi^2_{\\varepsilon}$",
-    "Reduction"
+    "Sample",
+    "$z_{\\min}$",
+    "$N_{\\rm SN}$",
+    "$\\varepsilon_{\\Lambda{\\rm CDM}}$",
+    "$\\Delta\\chi^2_{\\rm DE}$",
+    "$\\Delta\\chi^2_{{\\rm DE}|\\varepsilon}$"
   ],
   "rows": [
     [
-      "None (all 13)",
-      "$-0.0291^{+0.0165}_{-0.0166}$",
+      "Pantheon+",
+      "0.010",
+      1580,
+      "$-0.029 \\pm 0.017$",
       "5.06",
-      "2.18",
-      "57%"
+      "2.18"
     ],
     [
-      "BGS",
-      "$-0.0311^{+0.0168}_{-0.0173}$",
-      "5.06",
-      "1.82",
-      "64%"
+      "",
+      "0.023",
+      1371,
+      "$-0.025 \\pm 0.017$",
+      "3.58",
+      "1.44"
     ],
     [
-      "LRG1",
-      "$-0.0328^{+0.0166}_{-0.0168}$",
-      "5.14",
-      "1.25",
-      "76%"
+      "",
+      "0.050",
+      1056,
+      "$-0.029 \\pm 0.019$",
+      "3.40",
+      "1.19"
     ],
     [
-      "LRG2",
-      "$-0.0270^{+0.0168}_{-0.0164}$",
-      "3.69",
-      "1.07",
-      "71%"
+      "",
+      "0.100",
+      960,
+      "$-0.029 \\pm 0.022$",
+      "3.21",
+      "1.44"
     ],
     [
-      "LRG3+ELG1",
-      "$-0.0268^{+0.0170}_{-0.0165}$",
-      "5.29",
-      "3.23",
-      "39%"
+      "DES-Dovekie",
+      "0.025",
+      1820,
+      "$-0.029 \\pm 0.015$",
+      "7.16",
+      "4.08"
     ],
     [
-      "ELG2",
-      "$-0.0277^{+0.0165}_{-0.0166}$",
-      "4.71",
-      "2.17",
-      "54%"
+      "",
+      "0.050",
+      1679,
+      "$-0.021 \\pm 0.017$",
+      "3.24",
+      "1.89"
     ],
     [
-      "QSO",
-      "$-0.0290^{+0.0166}_{-0.0162}$",
-      "5.00",
-      "2.20",
-      "56%"
-    ],
-    [
-      "Lyalpha",
-      "$-0.0272^{+0.0181}_{-0.0184}$",
-      "5.68",
-      "3.71",
-      "35%"
-    ],
-    [
-      "LRG1 + LRG2",
-      "$-0.0304^{+0.0167}_{-0.0172}$",
-      "3.79",
-      "0.64",
-      "83%"
-    ],
-    [
-      "BGS + LRG1 + LRG2",
-      "$-0.0347^{+0.0183}_{-0.0178}$",
-      "4.07",
-      "0.99",
-      "76%"
+      "",
+      "0.100",
+      1619,
+      "$-0.008 \\pm 0.020$",
+      "0.95",
+      "0.82"
     ]
   ],
-  "minima_sha256": {
-    "controls": "86bd9edafb5921a76fbae2d26d88441ff996e4716c9bf9586d2052ec70f5dddd",
-    "tracers": "fd119b8d697f57f6c0dac010ea586c8c14daba7f402ac7b7673bf8e8d2ca684f",
-    "cuts": "0b16e1d34830216d0db1f7c5f5ad746cae92d8eef18e5161fdd1ff43d2cf6c3d"
-  },
+  "minima_sha256": "0b16e1d34830216d0db1f7c5f5ad746cae92d8eef18e5161fdd1ff43d2cf6c3d",
   "runs": {
     "tracer_none": {
       "posterior_sha256": "b9452a37cb1b585d9343f6112c8810240828771ffee080be4a12c9df4a6b6180",
@@ -116,14 +99,6 @@
       "posterior_sha256": "c7e3ae1c31245c530d104de9ff6a8afaf021be847ced27e1c3c724650ff19731",
       "summary_sha256": "123c9e5b0cbd4246a0b8949ed38d473ac2235a3cb0710824a4e0effd8ce6ef93"
     },
-    "tracer_lrg1_lrg2": {
-      "posterior_sha256": "d72d74a03ad012676a7c7b1b13d562963eb6bf31e72902648925fcebaeae836c",
-      "summary_sha256": "1ecd0701d7b9fea64a987b6704b541d7f73156129bade95c8a98e5aa9768e8ff"
-    },
-    "tracer_bgs_lrg1_lrg2": {
-      "posterior_sha256": "304b4d2d1a7826d707501dbcf2570311a2d75ff0f5ec0265ca45cfe0cae0ec49",
-      "summary_sha256": "55878ff9cb9b57baa852a015d295e00ac868e099a06895ccf04fc0ff52408b79"
-    },
     "cut_pantheon_0.023": {
       "posterior_sha256": "70c3474941e2a97416a91eb6128f3e5d55222b925f594c86fc759e83ca76f797",
       "summary_sha256": "a6ccb7df56c339bc2f31385440b3e838a33f9e489938d3212927d84732098348"
@@ -136,10 +111,6 @@
       "posterior_sha256": "f6850c3446c93911bb757656f3549087731408188633ff6838dae8ef6da09c5d",
       "summary_sha256": "caca073ac109f7581948c261a554ca0a8a808e54a6f9dd37f295c7100e9048e7"
     },
-    "cut_dovekie_0.025": {
-      "posterior_sha256": "fbae6d011d9267013a9495ad73223c3dcfbd31c0177d33d9eb871255e5e4e4ca",
-      "summary_sha256": "655006085b1a10389b7716c9e49d228837bafd4eeecb4bb4cd53ac00d718584e"
-    },
     "cut_dovekie_0.050": {
       "posterior_sha256": "b820f34664e988f2c4eccb073bea5d42bc9420ef5bad9501ce645aee710f01d8",
       "summary_sha256": "d73b665b89d22f0ed91156d1ff9f7009a7da72e8c91eb03c2f8a768ba684446d"
@@ -148,5 +119,7 @@
       "posterior_sha256": "61ba5741ffa139e7e83b36c44f109209464d6a5efbf9e15ec6674d4deba63ecb",
       "summary_sha256": "251ec3dd53f66b82196937fed40d1a77580582a93c557849f5729c7d5632a246"
     }
-  }
+  },
+  "epsilon": "LambdaCDM + epsilon posterior median; first row per sample from the baseline run",
+  "boundary_minima": "w0waCDM minima for DES-Dovekie zmin = 0.100 lie on the Omega_m = 0.1 prior boundary"
 }

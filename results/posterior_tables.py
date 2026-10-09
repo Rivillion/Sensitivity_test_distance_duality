@@ -1,22 +1,19 @@
-#!/usr/bin/env python3
-"""Export updated BAO+SN or BAO+SN+CC intervals and refined minima to LaTeX.
+"""Collect and render the posterior Tables VIII (BAO+SN+CC) and X (BAO+SN).
 
-Run from the release root: python -m results.posterior_tables
-Add --include-cc for the full-2022 CC dataset and H0/r_d columns.
-No sampling or minimization is performed. Output uses REVTeX ruledtabular.
+Used by results.make_tables. No sampling or minimization is performed.
+Output uses REVTeX ruledtabular.
 """
 from __future__ import annotations
 
-import argparse
 import hashlib
 import json
-import os
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 import numpy as np
 
-from src.posterior_io import MODELS, RUN_ROOT, SAMPLE_KEYS, load_run
+from src.posterior_io import MODELS, SAMPLE_KEYS, load_run
+from src.release_io import resolve
 from src.sampler import compute_getdist_constraints
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -43,10 +40,10 @@ def collect_rows(run_root: Path, *, include_cc: bool = False) -> list[dict]:
                     digest = hashlib.sha256((ROOT / "data" / filename).read_bytes()).hexdigest()
                     if record["cc"].get(f"{key}_sha256") != digest:
                         raise ValueError(f"CC {key} differs from current full-2022 dataset: {sample}/{model}")
-            summary = json.loads(Path(record["provenance"]["summary_path"]).read_text())
+            summary = json.loads(resolve(record["provenance"]["summary_path"]).read_text())
             if summary.get("fixed_parameters", {}).get("Omega_k") != 0:
                 raise ValueError("This table requires spatially flat runs")
-            with np.load(record["provenance"]["posterior_path"], allow_pickle=False) as posterior:
+            with np.load(resolve(record["provenance"]["posterior_path"]), allow_pickle=False) as posterior:
                 names = posterior["parameter_names"].tolist()
                 if include_cc and not {"H0", "r_d", "nu"}.issubset(names):
                     raise ValueError(f"Missing directly sampled CC calibration coordinates: {sample}/{model}")
@@ -125,8 +122,8 @@ def format_coordinate(name: str, coordinate: dict) -> str:
 
 def render_latex(rows: list[dict], *, include_cc: bool = False) -> str:
     columns = COLUMNS + (("H0", "r_d") if include_cc else ())
-    caption = (r"One-dimensional marginalized posterior medians and 16th/84th-percentile errors for DESI DR2 BAO plus each SN compilation and CC.\@ Here $H_0$ is in units of ${\rm km}\, {\rm s}^{-1}\, {\rm Mpc}^{-1}$ and $r_{\rm d}$ in units of Mpc. "
-               if include_cc else r"Marginalized posterior medians and 16th/84th-percentile errors for DESI DR2 BAO plus each SN compilation. ")
+    caption = (r"One-dimensional marginalized posterior medians and 16th/84th-percentile errors for DESI DR2 BAO plus each SN compilation and CC.\@ The first-column labels only denote the SN sample, but are all understood to be combined with BAO and CC. Here $H_0$ is in units of ${\rm km}\, {\rm s}^{-1}\, {\rm Mpc}^{-1}$ and $r_{\rm d}$ in units of Mpc. "
+               if include_cc else r"Marginalized posterior medians and 16th/84th-percentile errors for DESI DR2 BAO plus each SN compilation. The labels in the first column are understood to be combined with the BAO data. ")
     caption += r"The $\chi_{\min}^2$ column contains separately optimized likelihood minima."
     label = "tab:posteriorCC" if include_cc else "tab:posterior"
     header = r"Sample & Model & $\chi^2_{\min}$ & $\Omega_{\rm m}$ & $w_0$ & $w_a$ & $\varepsilon$"
@@ -146,31 +143,3 @@ def render_latex(rows: list[dict], *, include_cc: bool = False) -> str:
         lines.append(" & ".join(cells) + r" \\[0.4em]")
     lines.extend([r"\end{tabular}", r"\end{ruledtabular}", r"\end{table*}", ""])
     return "\n".join(lines)
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--runs-dir", type=Path, default=RUN_ROOT)
-    parser.add_argument("--include-cc", action="store_true",
-                        help="Export BAO+SN+CC using the full-2022 CC runs")
-    parser.add_argument("--output-dir", type=Path,
-                        default=Path(os.environ.get("SN_BAO_TABLE_DIR", str(ROOT / "results/tables"))))
-    args = parser.parse_args()
-    rows = collect_rows(args.runs_dir, include_cc=args.include_cc)
-    args.output_dir.mkdir(parents=True, exist_ok=True)
-    tex_path = args.output_dir / ("posterior_bao_sn_cc.tex" if args.include_cc else "posterior_bao_sn.tex")
-    tex_path.write_text(render_latex(rows, include_cc=args.include_cc))
-    metadata = {"data_combination": "BAO+SN+CC" if args.include_cc else "BAO+SN", "spatial_geometry": "flat",
-                "run_root": str(args.runs_dir.resolve()),
-                "quantile_probabilities": [0.16, 0.5, 0.84],
-                "quantile_method": "GetDist weighted equal-tail percentiles; ignore_rows=0",
-                "uncertainty_format": "Two significant digits; median at finer uncertainty decimal place",
-                "minimum_chi2_decimal_places": 2,
-                "minimum_method": "Refined minimum_chi2 from summary.json; no new minimization",
-                "rows": rows}
-    tex_path.with_suffix(".json").write_text(json.dumps(metadata, indent=2, allow_nan=False) + "\n")
-    print(f"Saved {len(rows)} rows to {tex_path.resolve()}")
-
-
-if __name__ == "__main__":
-    main()

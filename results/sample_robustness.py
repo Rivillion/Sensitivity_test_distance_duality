@@ -1,4 +1,4 @@
-"""Sample 16 tracer-deletion and redshift-cut LambdaCDM+epsilon fits."""
+"""Sample the 13 tracer-deletion and redshift-cut LambdaCDM+epsilon fits."""
 import argparse
 import json
 from pathlib import Path
@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--task-id", type=int, choices=range(16))
+    parser.add_argument("--task-id", type=int, choices=range(13))
     parser.add_argument("--cores", type=sampler.positive_integer, default=4)
     parser.add_argument("--output-root", type=Path, default=ROOT / "results/runs/robustness")
     parser.add_argument("--fresh", action="store_true")

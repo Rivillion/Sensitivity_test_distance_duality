@@ -163,5 +163,6 @@
   "H0_difference_sigma_gaussian": 3.9181560268270497,
   "separate_fit_median_ratio": 0.9425329290390321,
   "separate_fit_magnitude_offset": -0.12851734009291874,
-  "rho_a_epsilon": -0.36082363870356665
+  "rho_a_epsilon": -0.36082363870356665,
+  "alpha_deviation_from_unity_sigma": 4.135039515253109
 }

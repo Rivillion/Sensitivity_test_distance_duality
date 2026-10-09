@@ -1,6 +1,18 @@
 # Release validation
 
-Checked on 2026-10-04 with Python 3.14 and the pinned dependencies in `requirements.txt`.
+## Manuscript-order revision, 2026-10-08
+
+Figure scripts, table exports and the robustness inventory were reorganized to follow the final manuscript numbering. Unused parts were removed: the two combined tracer-deletion posteriors and their minima, the DES-Dovekie zmin=0.025 rerun that duplicated the baseline, the linear equation-of-state control, the `ladder`, `cc-ladder` and `information` minimization commands, and an unused profile-interval helper. Checked with Python 3.14 and the pinned dependencies:
+
+- **47 tests passed**. These include a new end-to-end check that regenerates every table into a temporary directory and compares it with the manuscript values.
+- Input checksums and all **54 published posteriors** passed full verification: 38 baseline, 3 calibrated and 13 robustness. The largest log-likelihood or minimum chi-square discrepancy was unchanged at **7.45e-9**. The independent calibration quadrature audit reproduced `results/tables/quadrature_audit.json` exactly.
+- Figures 2-5 rendered pixel-identically to their previous outputs (old Figures 2, 1, 3 and 4). Figure 1 (old Figure 5) is pixel-identical to the version printed in the manuscript. That version had been saved before a later margin change in the shared axis helper, which Figure 1 no longer depends on. In all five figures, every text element sits at the same position as in the manuscript PDF.
+- All values in Tables I, III-X and the Section IV.A/IV.B numbers agree with the manuscript, with one exception: DES-Dovekie at zmin=0.100 in Table VII. There the exported global minima lie on the Omega_m prior boundary (0.95 and 0.82), while the manuscript quotes the interior minima. The posterior Tables VIII and X differ from the previous exports only in their captions. All table fragments compiled in REVTeX without errors or overfull boxes.
+- The saved minima were pruned only by removing unused entries; `results/minima/PROVENANCE.json` records the updated file hashes. Figure and table provenance records now store repository-relative paths.
+
+## Initial release, 2026-10-04
+
+Checked with Python 3.14 and the pinned dependencies in `requirements.txt`. Figure and table numbers in this section refer to the earlier manuscript draft.
 
 - **37 tests passed**, covering background integration, full-covariance likelihood algebra, calibration transforms, SN cuts, explicit calibrations, relocated inputs, archived-run handling and corrected boundary/rounding results.
 - Input checksums and all **57 published posteriors** passed validation. Posterior and summary bytes were preserved exactly: 38 baseline, 3 calibrated, 16 robustness.

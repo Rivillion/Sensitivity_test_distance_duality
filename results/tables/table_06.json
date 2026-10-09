@@ -1,275 +1,376 @@
 {
   "columns": [
-    "Sample",
-    "No extension",
-    "Log tilt",
-    "Linear tilt",
-    "Saturating tilt",
-    "Curvature"
+    "Dropped tracer",
+    "Pantheon+ $\\Delta\\chi^2_{\\rm DE}$",
+    "Pantheon+ $\\Delta\\chi^2_{{\\rm DE}|\\varepsilon}$",
+    "Pantheon+ $f_{\\rm red}$ (\\%)",
+    "DES-Dovekie $\\Delta\\chi^2_{\\rm DE}$",
+    "DES-Dovekie $\\Delta\\chi^2_{{\\rm DE}|\\varepsilon}$",
+    "DES-Dovekie $f_{\\rm red}$ (\\%)",
+    "Union3 $\\Delta\\chi^2_{\\rm DE}$",
+    "Union3 $\\Delta\\chi^2_{{\\rm DE}|\\varepsilon}$",
+    "Union3 $f_{\\rm red}$ (\\%)",
+    "Union3.1 $\\Delta\\chi^2_{\\rm DE}$",
+    "Union3.1 $\\Delta\\chi^2_{{\\rm DE}|\\varepsilon}$",
+    "Union3.1 $f_{\\rm red}$ (\\%)"
   ],
   "rows": [
     [
-      "Pantheon+",
+      "None (full DR2)",
       "5.06",
       "2.18",
-      "2.64",
-      "2.05",
-      "3.24"
-    ],
-    [
-      "DES-Dovekie",
+      "57",
       "7.16",
       "4.08",
-      "4.16",
-      "4.06",
-      "5.04"
-    ],
-    [
-      "Union3",
+      "43",
       "10.03",
       "5.75",
-      "6.47",
-      "5.20",
-      "8.40"
-    ],
-    [
-      "Union3.1",
+      "43",
       "6.42",
       "5.26",
+      "18"
+    ],
+    [
+      "BGS",
+      "5.06",
+      "1.82",
+      "64",
+      "7.34",
+      "3.69",
+      "50",
+      "9.99",
+      "5.41",
+      "46",
+      "6.41",
+      "4.89",
+      "24"
+    ],
+    [
+      "LRG1",
+      "5.14",
+      "1.25",
+      "76",
+      "7.86",
+      "3.17",
+      "60",
+      "9.97",
+      "4.64",
+      "54",
+      "6.54",
+      "4.20",
+      "36"
+    ],
+    [
+      "LRG2",
+      "3.69",
+      "1.07",
+      "71",
+      "5.89",
+      "2.87",
+      "51",
+      "8.20",
+      "4.04",
+      "51",
+      "5.12",
+      "3.67",
+      "28"
+    ],
+    [
+      "LRG3+ELG1",
       "5.29",
-      "5.26",
-      "5.17"
+      "3.23",
+      "39",
+      "6.60",
+      "4.72",
+      "28",
+      "9.86",
+      "6.33",
+      "36",
+      "6.21",
+      "5.82",
+      "6"
+    ],
+    [
+      "ELG2",
+      "4.71",
+      "2.17",
+      "54",
+      "6.57",
+      "3.94",
+      "40",
+      "9.52",
+      "5.53",
+      "42",
+      "6.02",
+      "5.05",
+      "16"
+    ],
+    [
+      "QSO",
+      "5.00",
+      "2.20",
+      "56",
+      "7.01",
+      "4.04",
+      "42",
+      "9.89",
+      "5.68",
+      "43",
+      "6.30",
+      "5.19",
+      "18"
+    ],
+    [
+      "Ly$\\alpha$",
+      "5.68",
+      "3.71",
+      "35",
+      "6.22",
+      "4.47",
+      "28",
+      "9.53",
+      "6.00",
+      "37",
+      "6.19",
+      "5.48",
+      "11"
     ]
   ],
-  "minima_sha256": {
-    "controls": "86bd9edafb5921a76fbae2d26d88441ff996e4716c9bf9586d2052ec70f5dddd",
-    "tracers": "fd119b8d697f57f6c0dac010ea586c8c14daba7f402ac7b7673bf8e8d2ca684f",
-    "cuts": "0b16e1d34830216d0db1f7c5f5ad746cae92d8eef18e5161fdd1ff43d2cf6c3d"
+  "minima_sha256": "2ec8d1326abe47b0e6a465055b03c37ed6dff7c329041dac1af737a487f026ac",
+  "epsilon_stability": {
+    "pantheon_lcdm_epsilon_posterior": {
+      "None (all 13)": {
+        "median": -0.029141102217764114,
+        "q16": -0.04576075075839936,
+        "q84": -0.01264684041403219
+      },
+      "BGS": {
+        "median": -0.03106101899581032,
+        "q16": -0.048368612984744375,
+        "q84": -0.01427398152932391
+      },
+      "LRG1": {
+        "median": -0.032797456282516735,
+        "q16": -0.04963084062461787,
+        "q84": -0.016152999795181366
+      },
+      "LRG2": {
+        "median": -0.02696577356837021,
+        "q16": -0.04337507709867994,
+        "q84": -0.010153040896382581
+      },
+      "LRG3+ELG1": {
+        "median": -0.02682031351175984,
+        "q16": -0.04330883813276776,
+        "q84": -0.009826174472777893
+      },
+      "ELG2": {
+        "median": -0.02765871802592834,
+        "q16": -0.04423988553625924,
+        "q84": -0.011128860478513858
+      },
+      "QSO": {
+        "median": -0.029036000081329227,
+        "q16": -0.04525661140736903,
+        "q84": -0.012412822474506036
+      },
+      "Lyalpha": {
+        "median": -0.027184626107382315,
+        "q16": -0.04558430633514404,
+        "q84": -0.009072307329547669
+      }
+    },
+    "best_fit_epsilon": {
+      "pantheon": {
+        "None (all 13)": {
+          "lcdm-epsilon": -0.029155658605927167,
+          "w0wa-epsilon": 0.01434840072769382
+        },
+        "BGS": {
+          "lcdm-epsilon": -0.03144413187435165,
+          "w0wa-epsilon": 0.013747364445964572
+        },
+        "LRG1": {
+          "lcdm-epsilon": -0.03331603282564363,
+          "w0wa-epsilon": 0.0008140328199653759
+        },
+        "LRG2": {
+          "lcdm-epsilon": -0.027299206017861954,
+          "w0wa-epsilon": 0.004017000621388006
+        },
+        "LRG3+ELG1": {
+          "lcdm-epsilon": -0.027046125228013404,
+          "w0wa-epsilon": 0.025147073605307445
+        },
+        "ELG2": {
+          "lcdm-epsilon": -0.027858136089126632,
+          "w0wa-epsilon": 0.014800651591067521
+        },
+        "QSO": {
+          "lcdm-epsilon": -0.0288580621680159,
+          "w0wa-epsilon": 0.014510565642719997
+        },
+        "Lyalpha": {
+          "lcdm-epsilon": -0.02769630643487434,
+          "w0wa-epsilon": 0.01720821430825681
+        }
+      },
+      "dovekie": {
+        "None (all 13)": {
+          "lcdm-epsilon": -0.02882790432256767,
+          "w0wa-epsilon": 0.027155122125106665
+        },
+        "BGS": {
+          "lcdm-epsilon": -0.031231154045967637,
+          "w0wa-epsilon": 0.0264050163319532
+        },
+        "LRG1": {
+          "lcdm-epsilon": -0.033102601633027286,
+          "w0wa-epsilon": 0.013000079673911402
+        },
+        "LRG2": {
+          "lcdm-epsilon": -0.026960958842399012,
+          "w0wa-epsilon": 0.01598889623438506
+        },
+        "LRG3+ELG1": {
+          "lcdm-epsilon": -0.026710239480452442,
+          "w0wa-epsilon": 0.03797173281026362
+        },
+        "ELG2": {
+          "lcdm-epsilon": -0.027537038044368772,
+          "w0wa-epsilon": 0.02752113132281314
+        },
+        "QSO": {
+          "lcdm-epsilon": -0.02853139707487666,
+          "w0wa-epsilon": 0.02742055211556218
+        },
+        "Lyalpha": {
+          "lcdm-epsilon": -0.02766156859428483,
+          "w0wa-epsilon": 0.03161122406890936
+        }
+      },
+      "union3": {
+        "None (all 13)": {
+          "lcdm-epsilon": -0.0482731242704072,
+          "w0wa-epsilon": 0.02209597246011099
+        },
+        "BGS": {
+          "lcdm-epsilon": -0.050625622762047726,
+          "w0wa-epsilon": 0.02507686586987534
+        },
+        "LRG1": {
+          "lcdm-epsilon": -0.05250681449555907,
+          "w0wa-epsilon": 0.009903367666555515
+        },
+        "LRG2": {
+          "lcdm-epsilon": -0.04640446931934428,
+          "w0wa-epsilon": 0.01057714624621396
+        },
+        "LRG3+ELG1": {
+          "lcdm-epsilon": -0.04615151536904363,
+          "w0wa-epsilon": 0.030586994667016507
+        },
+        "ELG2": {
+          "lcdm-epsilon": -0.046973456330661426,
+          "w0wa-epsilon": 0.021885738934320265
+        },
+        "QSO": {
+          "lcdm-epsilon": -0.047974822110138565,
+          "w0wa-epsilon": 0.022040549051811496
+        },
+        "Lyalpha": {
+          "lcdm-epsilon": -0.046942289120167006,
+          "w0wa-epsilon": 0.022174281691424654
+        }
+      },
+      "union31": {
+        "None (all 13)": {
+          "lcdm-epsilon": -0.03140653995331622,
+          "w0wa-epsilon": 0.03727522088121194
+        },
+        "BGS": {
+          "lcdm-epsilon": -0.033769203416213894,
+          "w0wa-epsilon": 0.03923583980880381
+        },
+        "LRG1": {
+          "lcdm-epsilon": -0.03564540766659872,
+          "w0wa-epsilon": 0.024500642387251515
+        },
+        "LRG2": {
+          "lcdm-epsilon": -0.029540795902724272,
+          "w0wa-epsilon": 0.025441242551498773
+        },
+        "LRG3+ELG1": {
+          "lcdm-epsilon": -0.029288752612090945,
+          "w0wa-epsilon": 0.04588752836377803
+        },
+        "ELG2": {
+          "lcdm-epsilon": -0.030110890095083075,
+          "w0wa-epsilon": 0.037069695076649645
+        },
+        "QSO": {
+          "lcdm-epsilon": -0.031109111077870025,
+          "w0wa-epsilon": 0.03723473287769668
+        },
+        "Lyalpha": {
+          "lcdm-epsilon": -0.030120870149737283,
+          "w0wa-epsilon": 0.037689768282310555
+        }
+      }
+    }
   },
   "runs": {
-    "pantheon": {
-      "lcdm": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm/posterior.npz",
-        "posterior_sha256": "220276cfb84b39b5f64000d6f5eb0a2f23d706645cbb23e36849a4cbccb861b8",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm/summary.json",
-        "summary_sha256": "478916e821ac645d87f8c81d3d7d520c238f4d65f650140b11e4072722353d08",
-        "posterior_draw_count": 16384,
-        "parameter_names": [
-          "Omega_m",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa/posterior.npz",
-        "posterior_sha256": "fba026a609e9de12fae5a3fbea051f27886b2b04b6311f47dbd4ed8a263184f3",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa/summary.json",
-        "summary_sha256": "218dc67ca25799e4396a7a64414129396a7098142271cca38233c442a9dd4ab2",
-        "posterior_draw_count": 17920,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "lcdm-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm-epsilon/posterior.npz",
-        "posterior_sha256": "ab5e2bd9c16a0e9c19c234aa838f69b790de662eb417a58fddf944f9602bb0f4",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm-epsilon/summary.json",
-        "summary_sha256": "e11f2373c9df0a9545a5385bc1ccf05860fd0106045f1726d3d9b80f82773a13",
-        "posterior_draw_count": 17152,
-        "parameter_names": [
-          "Omega_m",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/posterior.npz",
-        "posterior_sha256": "d769f25a7d663a6e68ec00f3890d1e45516b04be74f960143ad519712b517449",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/summary.json",
-        "summary_sha256": "a9c9bc9ab72c8a83c4f810105f281546daadb79aafd0666feba8e19749aa9e4e",
-        "posterior_draw_count": 18432,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      }
+    "tracer_none": {
+      "posterior_sha256": "b9452a37cb1b585d9343f6112c8810240828771ffee080be4a12c9df4a6b6180",
+      "summary_sha256": "4a5fb9a39f465cc14bce0cf0f756dddf0b9074d57d49c8fa77cd32edbf44dffc"
     },
-    "dovekie": {
-      "lcdm": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm/posterior.npz",
-        "posterior_sha256": "4cb2496b57d152e99d5696cb1de92865aff89b1202a13174b78f5b1a81f419a1",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm/summary.json",
-        "summary_sha256": "0bc949b53aca8c6b15650600aa3dbe79bfb3ca518eab93d9636f354ade1a8107",
-        "posterior_draw_count": 16128,
-        "parameter_names": [
-          "Omega_m",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa/posterior.npz",
-        "posterior_sha256": "c88a0feb36c732296caa66d11133751a8a0c269719904a213bd59866e82d7617",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa/summary.json",
-        "summary_sha256": "f89fdc3bcbbcd102276b2163bf7cfc2da5b17fcc934a56441319ebe17db4b82c",
-        "posterior_draw_count": 17664,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "lcdm-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm-epsilon/posterior.npz",
-        "posterior_sha256": "0c57e137cd83bd671d64d771811269ef694d1f4b92d0512db247461016d8714b",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm-epsilon/summary.json",
-        "summary_sha256": "105b761f18e416112e4233251f2341dbbaf21db7d2702e4095f9486db60b8cbd",
-        "posterior_draw_count": 17152,
-        "parameter_names": [
-          "Omega_m",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa-epsilon/posterior.npz",
-        "posterior_sha256": "fa56e6e806f835e01b94f334a84de3bf9b71c8c3be147ae850d5e588d23fafbc",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa-epsilon/summary.json",
-        "summary_sha256": "7b9355313e36542afde2587126d6eefa688b27a2963eccab476286d195658c6e",
-        "posterior_draw_count": 18176,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      }
+    "tracer_bgs": {
+      "posterior_sha256": "4d63db0b0d5969a3a2825652b5c5bf34b1494ccc1ccd5c5a6fdd3d5e58ed9df0",
+      "summary_sha256": "f21e4daa7f5280fed6194b1e1dd8cd6da681a11a6c73b528099eeb5fe92e8505"
     },
-    "union3": {
-      "lcdm": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm/posterior.npz",
-        "posterior_sha256": "376d0bc4362ff5e1c84d2a6a6dd3eff610a18248591581d1d2866f7c065289cd",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm/summary.json",
-        "summary_sha256": "105868d7e7aaa0c9d8b787209c74013858752c6f31fbd5e18e318e820a03b25c",
-        "posterior_draw_count": 15104,
-        "parameter_names": [
-          "Omega_m",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa/posterior.npz",
-        "posterior_sha256": "1bdaecdf3ee33f55ae748a2c3fde2efcce1dc864d873f1a0187e2f23abff1814",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa/summary.json",
-        "summary_sha256": "041f8849abe5a4353834237328c138236a64196b7ee8e7ae55ee5e566927ef92",
-        "posterior_draw_count": 16384,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "lcdm-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm-epsilon/posterior.npz",
-        "posterior_sha256": "d7937139fffe8a1982c8f4a5ca4d0f7f59b1a36ea2ce47b49adadcfea4d618be",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm-epsilon/summary.json",
-        "summary_sha256": "891f91ff28745114e6c54ef155f7b1f9b20dc2fbbd105584ad55865e0418db2c",
-        "posterior_draw_count": 15872,
-        "parameter_names": [
-          "Omega_m",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa-epsilon/posterior.npz",
-        "posterior_sha256": "bb5f4abd61544261e55889441ca014dd3b016be59eb95072737eb7d2703b72ef",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa-epsilon/summary.json",
-        "summary_sha256": "3c2b3282a8de67934f182c72e6bcbb42a22c3192b09f06ae84df33da2a53c2f4",
-        "posterior_draw_count": 16896,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      }
+    "tracer_lrg1": {
+      "posterior_sha256": "82c1db15d7521d1186702291d38fe26cc7a29744de583be5e49529d673a22502",
+      "summary_sha256": "b0f9d7fe141b7c6f18692e0e15a7be92b431816be7457319a53e2ac87d1eedad"
     },
-    "union31": {
-      "lcdm": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm/posterior.npz",
-        "posterior_sha256": "b74ee9b22aeb2f1ab7805882ff48fae31b2a45b397c8b1abd5a1e137d057a3cd",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm/summary.json",
-        "summary_sha256": "5420e8c272b4d17d0e1cb74635d364bdeb97d16a15cb3dee2098bd46d14d906c",
-        "posterior_draw_count": 16128,
-        "parameter_names": [
-          "Omega_m",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa/posterior.npz",
-        "posterior_sha256": "034e3ee9f42c218d33199e574c3f4639ee50416c47e54e81f032c897edd6aaf9",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa/summary.json",
-        "summary_sha256": "88ad0f2e496910c8f4a2d5b82bc3ac04bfc896ac0a4f6c489bb630f03c86a71a",
-        "posterior_draw_count": 17408,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "lcdm-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm-epsilon/posterior.npz",
-        "posterior_sha256": "06c7e5a9fcfd10c3545e3063e730a172c66e039db5e81cdd1883e19f341092e9",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm-epsilon/summary.json",
-        "summary_sha256": "78d3c63b8ae41b3ce592c3e0611cfc4750ea23740c73d7d4bd0d45f780c24f78",
-        "posterior_draw_count": 16896,
-        "parameter_names": [
-          "Omega_m",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      },
-      "w0wa-epsilon": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa-epsilon/posterior.npz",
-        "posterior_sha256": "3337b74242698ff117c21d743c0323388ff4b8094ad29baaf000b2fab0e8d6d5",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa-epsilon/summary.json",
-        "summary_sha256": "4281bc130d3899dc1c1131216907691ecbba361bae80c67557e0f5bd3d28f167",
-        "posterior_draw_count": 17920,
-        "parameter_names": [
-          "Omega_m",
-          "w0",
-          "wa",
-          "epsilon",
-          "H0rd",
-          "nu"
-        ]
-      }
+    "tracer_lrg2": {
+      "posterior_sha256": "d8f83b89e2be71c3ebb57f9aeb99a186b028cb051209d77a2f8ddda7dab2ce8a",
+      "summary_sha256": "e50be954239b38dfc4e110a42766d7f145c92351b3a3ce96b175e3c4d700d04e"
+    },
+    "tracer_lrg3_elg1": {
+      "posterior_sha256": "be96b4967c78a0d9d78526026e0881ec7b15fab632796e69da0890f75db54974",
+      "summary_sha256": "8e1bb0b2b5de3fb0dd7bfd4d15ee98d334f199c0d58da6c0dfb4bd01f458d872"
+    },
+    "tracer_elg2": {
+      "posterior_sha256": "07d611ef4012d4e50cfe8be52fabfd1552fcb6a7aefa83ddad880e0f4d4f80b3",
+      "summary_sha256": "226b68d1bdee64cb0d3b8931e9f0eeb718271f53c72a10ed682cec77db11a366"
+    },
+    "tracer_qso": {
+      "posterior_sha256": "160769ffbe6139061d5eb2a0204a0db1c5dac37718349414a76e21eda1743df8",
+      "summary_sha256": "a886cd1e60a604646a5bab9e5ab188b2a940b0df8a9f958d9707911cabadaad7"
+    },
+    "tracer_lyalpha": {
+      "posterior_sha256": "c7e3ae1c31245c530d104de9ff6a8afaf021be847ced27e1c3c724650ff19731",
+      "summary_sha256": "123c9e5b0cbd4246a0b8949ed38d473ac2235a3cb0710824a4e0effd8ce6ef93"
+    },
+    "cut_pantheon_0.023": {
+      "posterior_sha256": "70c3474941e2a97416a91eb6128f3e5d55222b925f594c86fc759e83ca76f797",
+      "summary_sha256": "a6ccb7df56c339bc2f31385440b3e838a33f9e489938d3212927d84732098348"
+    },
+    "cut_pantheon_0.050": {
+      "posterior_sha256": "bd39e11d12dada0642234263ba182ab4c737d6bbb1c706b1c13bd23692ee416f",
+      "summary_sha256": "c85af394b7af0b2830f9920b01966a0c439618184fa4afb07acdedc02467b0df"
+    },
+    "cut_pantheon_0.100": {
+      "posterior_sha256": "f6850c3446c93911bb757656f3549087731408188633ff6838dae8ef6da09c5d",
+      "summary_sha256": "caca073ac109f7581948c261a554ca0a8a808e54a6f9dd37f295c7100e9048e7"
+    },
+    "cut_dovekie_0.050": {
+      "posterior_sha256": "b820f34664e988f2c4eccb073bea5d42bc9420ef5bad9501ce645aee710f01d8",
+      "summary_sha256": "d73b665b89d22f0ed91156d1ff9f7009a7da72e8c91eb03c2f8a768ba684446d"
+    },
+    "cut_dovekie_0.100": {
+      "posterior_sha256": "61ba5741ffa139e7e83b36c44f109209464d6a5efbf9e15ec6674d4deba63ecb",
+      "summary_sha256": "251ec3dd53f66b82196937fed40d1a77580582a93c557849f5729c7d5632a246"
     }
   }
 }

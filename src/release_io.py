@@ -12,6 +12,18 @@ def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def repo_relative(path):
+    """Portable provenance path: relative to the repository root when inside it."""
+    path = Path(path).resolve()
+    return str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else str(path)
+
+
+def resolve(path):
+    """Inverse of repo_relative for paths read back from provenance records."""
+    path = Path(path)
+    return path if path.is_absolute() else ROOT / path
+
+
 def verify_inputs():
     for line in (ROOT / "data/SHA256SUMS").read_text().splitlines():
         digest, name = line.split(maxsplit=1)

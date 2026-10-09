@@ -1,4 +1,4 @@
-"""Verify inputs, 57 completed posteriors, and saved likelihood evaluations."""
+"""Verify inputs, 54 completed posteriors, and saved likelihood evaluations."""
 import argparse
 import json
 from pathlib import Path
@@ -34,7 +34,7 @@ def main():
         if sha256(ROOT / name) != digest:
             raise ValueError(f"Published run checksum mismatch: {name}")
     count, max_error = 0, 0.0
-    for kind, expected_count in (("baseline", 38), ("robustness", 16)):
+    for kind, expected_count in (("baseline", 38), ("robustness", 13)):
         jobs = json.loads((ROOT / f"results/jobs_{kind}.json").read_text())
         if len(jobs) != expected_count or [j["task_id"] for j in jobs] != list(range(expected_count)):
             raise ValueError(f"Incomplete {kind} inventory")

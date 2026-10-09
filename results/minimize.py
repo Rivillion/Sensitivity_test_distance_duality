@@ -1,6 +1,7 @@
 """Regenerate optimized minima used by manuscript comparison tables.
 
-Commands: ladder, controls, tracers, cuts, information, cc-ladder, non-sn.
+Commands: controls (Table V, Fig. 3), tracers (Table VI), cuts (Table VII),
+non-sn (Table III BAO-only row and Sec. IV.A).
 These calculations minimize likelihoods and never provide posterior intervals.
 """
 import argparse
