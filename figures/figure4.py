@@ -35,8 +35,14 @@ DEFAULT_POSTERIOR = ROOT / "results" / "runs" / "calibration" / "joint" / "lcdm-
 DEFAULT_OUTPUT = FIGURE_DIR / "figure4.pdf"
 RESIDUAL_INPUTS = ("Pantheon+SH0ES.dat", "Pantheon+SH0ES_STAT+SYS.cov",
                    "desi_gaussian_bao_ALL_GCcomb_mean.txt", "desi_gaussian_bao_ALL_GCcomb_cov.txt")
-WIDTH = 7.05
-HEIGHT = 3.1
+# Panel layout in inches: left margin, gap between panels, right and bottom
+# margins, and room above for the title. Fixed in inches so the text keeps
+# its space at the fixed font sizes; the figure size follows from them.
+PANEL_WIDTH = 1.90125
+PANEL_HEIGHT = 1.79
+MARGINS = {"left": .6, "gap": .82, "right": .04, "bottom": .47, "top": .24}
+WIDTH = MARGINS["left"] + 2 * PANEL_WIDTH + MARGINS["gap"] + MARGINS["right"]
+HEIGHT = MARGINS["bottom"] + PANEL_HEIGHT + MARGINS["top"]
 LABEL_SIZE = 9
 TICK_SIZE = 8
 LEGEND_SIZE = 9
@@ -100,8 +106,9 @@ def draw_residual_panel(ax, residuals):
     ax.set_xticklabels(["0.01", "0.03", "0.1", "0.3", "1", "2"])
     ax.set_xlabel(r"Redshift $z$", fontsize=LABEL_SIZE)
     ax.set_ylabel(r"$\mu-\mu_{\Lambda \rm CDM}$ (mag)", fontsize=LABEL_SIZE)
+    # Short handles keep the legend clear of the DESI point at z = 0.51.
     ax.legend(loc="upper left", frameon=False, fontsize=LEGEND_SIZE,
-              handlelength=1.5, borderaxespad=.3)
+              handlelength=1.0, handletextpad=.4, borderaxespad=.3)
 
 
 def make_figure(posterior, constraints, residuals):
@@ -130,9 +137,12 @@ def make_figure(posterior, constraints, residuals):
     ax.set_yticks(np.arange(-.08, .021, .02))
     plotter.fig.set_size_inches(WIDTH, HEIGHT, forward=True)
     # Equal plotting widths, with room between panels for the right y-label.
-    panel_width = .395
-    ax.set_position([.09, .16, panel_width, .78])
-    residual_ax = plotter.fig.add_axes([.59, .16, panel_width, .78])
+    m = MARGINS
+    panel_width, panel_height = PANEL_WIDTH / WIDTH, PANEL_HEIGHT / HEIGHT
+    bottom = m["bottom"] / HEIGHT
+    ax.set_position([m["left"] / WIDTH, bottom, panel_width, panel_height])
+    residual_ax = plotter.fig.add_axes([(m["left"] + m["gap"]) / WIDTH + panel_width, bottom,
+                                        panel_width, panel_height])
     draw_residual_panel(residual_ax, residuals)
     for panel in (residual_ax, ax):
         panel.tick_params(direction="out", length=4, width=.7, labelsize=TICK_SIZE)
@@ -176,6 +186,8 @@ def main():
         "density_estimator": "GetDist weighted 2D KDE, default bandwidth and bias correction",
         "density_thresholds": thresholds.tolist(),
         "axis_limits": LIMITS, "width_inch": WIDTH, "height_inch": HEIGHT,
+        "layout_margins_inch": MARGINS,
+        "panel_size_inch": [PANEL_WIDTH, PANEL_HEIGHT],
         "color": PURPLE, "point": "Dark diamond: exact CDDR at (alpha, epsilon)=(1,0)",
         "reference_lines": "alpha=1 and epsilon=0 (exact CDDR)",
         "caption": "Left: marginalized (alpha, epsilon) posterior for DESI DR2 BAO + Pantheon+ in flat LambdaCDM + epsilon with a Planck r_d prior and a SH0ES M_B prior; contours enclose 68% and 95%; the diamond marks the exact CDDR point (1, 0). Right: distance-modulus residuals relative to a LambdaCDM fit to the full DESI DR2 likelihood. Transverse BAO distances use the Planck r_d prior and that LambdaCDM fit; Pantheon+ uses the SH0ES M_B prior and 18 approximately equal-population bins (simultaneous generalized-least-squares estimates, correlated, for illustration only). The curve is the best-fitting uncalibrated BAO+SN LambdaCDM + epsilon distance modulus, normalized with the SH0ES prior and binned with the same operator. Bars show diagonal standard deviations including the common M_B or r_d uncertainty. Radial BAO and the D_V point enter the fits but are not displayed.",
