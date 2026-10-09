@@ -1,0 +1,669 @@
+{
+  "compilations": [
+    {
+      "curvature_fits": {
+        "delta_de": 3.2355468277946784,
+        "lcdm": {
+          "at_omega_m_boundary": false,
+          "chi2": 1397.9725392523485,
+          "geometry": [
+            0.2931317320290256,
+            0.04881567257370573
+          ],
+          "parameters": {
+            "H0rd": 10054.341523949424,
+            "Omega_k": 0.04881567244779861,
+            "Omega_m": 0.2931317319992418,
+            "nu": 23.802489121946223
+          },
+          "tilt": 0.0
+        },
+        "w0wa": {
+          "at_omega_m_boundary": false,
+          "chi2": 1394.7369924245538,
+          "geometry": [
+            0.3055053796772137,
+            0.0016685849242690453,
+            -0.8879330826718658,
+            -0.23220068709486766
+          ],
+          "parameters": {
+            "H0rd": 9966.643281850384,
+            "Omega_k": 0.0016685849242690232,
+            "Omega_m": 0.3055053796772137,
+            "nu": 23.813676095855435,
+            "w0": -0.8879330826718657,
+            "wa": -0.2322006870948674
+          },
+          "tilt": 0.0
+        }
+      },
+      "delta_aic_baseline": 1.0571523366454585,
+      "delta_aic_free_curvature": -0.7644531722053216,
+      "delta_aic_free_epsilon": -1.8213764763231666,
+      "delta_chi2_baseline": 5.0571523366454585,
+      "delta_chi2_free_curvature": 3.2355468277946784,
+      "delta_chi2_free_epsilon": 2.1786235236768334,
+      "label": "Pantheon+",
+      "runs": {
+        "lcdm": {
+          "minimum_chi2": 1399.7953897877405,
+          "minimum_optimizer_status": {
+            "evaluations": 133,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 16384,
+            "posterior_path": "results/runs/baseline/pantheon+desi/lcdm/posterior.npz",
+            "posterior_sha256": "220276cfb84b39b5f64000d6f5eb0a2f23d706645cbb23e36849a4cbccb861b8",
+            "summary_path": "results/runs/baseline/pantheon+desi/lcdm/summary.json",
+            "summary_sha256": "478916e821ac645d87f8c81d3d7d520c238f4d65f650140b11e4072722353d08"
+          },
+          "sampled_minimum_chi2": 1399.7956299222162
+        },
+        "lcdm-epsilon": {
+          "epsilon": {
+            "median": -0.029156473580705555,
+            "q16": -0.04574050816560665,
+            "q84": -0.012726523546622848
+          },
+          "minimum_chi2": 1396.741742630488,
+          "minimum_optimizer_status": {
+            "evaluations": 324,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 17152,
+            "posterior_path": "results/runs/baseline/pantheon+desi/lcdm-epsilon/posterior.npz",
+            "posterior_sha256": "ab5e2bd9c16a0e9c19c234aa838f69b790de662eb417a58fddf944f9602bb0f4",
+            "summary_path": "results/runs/baseline/pantheon+desi/lcdm-epsilon/summary.json",
+            "summary_sha256": "e11f2373c9df0a9545a5385bc1ccf05860fd0106045f1726d3d9b80f82773a13"
+          },
+          "sampled_minimum_chi2": 1396.7677436653687
+        },
+        "w0wa": {
+          "minimum_chi2": 1394.738237451095,
+          "minimum_optimizer_status": {
+            "evaluations": 517,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 17920,
+            "posterior_path": "results/runs/baseline/pantheon+desi/w0wa/posterior.npz",
+            "posterior_sha256": "fba026a609e9de12fae5a3fbea051f27886b2b04b6311f47dbd4ed8a263184f3",
+            "summary_path": "results/runs/baseline/pantheon+desi/w0wa/summary.json",
+            "summary_sha256": "218dc67ca25799e4396a7a64414129396a7098142271cca38233c442a9dd4ab2"
+          },
+          "sampled_minimum_chi2": 1394.810901917748
+        },
+        "w0wa-epsilon": {
+          "epsilon": {
+            "median": 0.01014235899559407,
+            "q16": -0.024963035831237712,
+            "q84": 0.04558643195967471
+          },
+          "minimum_chi2": 1394.5631191068112,
+          "minimum_optimizer_status": {
+            "evaluations": 1014,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 18432,
+            "posterior_path": "results/runs/baseline/pantheon+desi/w0wa-epsilon/posterior.npz",
+            "posterior_sha256": "d769f25a7d663a6e68ec00f3890d1e45516b04be74f960143ad519712b517449",
+            "summary_path": "results/runs/baseline/pantheon+desi/w0wa-epsilon/summary.json",
+            "summary_sha256": "a9c9bc9ab72c8a83c4f810105f281546daadb79aafd0666feba8e19749aa9e4e"
+          },
+          "sampled_minimum_chi2": 1394.6722107512924
+        }
+      },
+      "sample": "pantheon"
+    },
+    {
+      "curvature_fits": {
+        "delta_de": 5.038883980515266,
+        "lcdm": {
+          "at_omega_m_boundary": false,
+          "chi2": 1643.1458746310627,
+          "geometry": [
+            0.29332045593751865,
+            0.05317460115712552
+          ],
+          "parameters": {
+            "H0rd": 10041.292073255052,
+            "Omega_k": 0.053174601344917805,
+            "Omega_m": 0.29332045568062715,
+            "nu": 43.15844222599669
+          },
+          "tilt": 0.0
+        },
+        "w0wa": {
+          "at_omega_m_boundary": false,
+          "chi2": 1638.1069906505475,
+          "geometry": [
+            0.31329923983264607,
+            0.005405135595016848,
+            -0.8445780152306867,
+            -0.5481540803965398
+          ],
+          "parameters": {
+            "H0rd": 9942.887303154235,
+            "Omega_k": 0.005405135595018651,
+            "Omega_m": 0.3132992398326465,
+            "nu": 43.18200480489885,
+            "w0": -0.844578015230709,
+            "wa": -0.5481540803965399
+          },
+          "tilt": 0.0
+        }
+      },
+      "delta_aic_baseline": 3.157987419756182,
+      "delta_aic_free_curvature": 1.0388839805152656,
+      "delta_aic_free_epsilon": 0.07608381310205914,
+      "delta_chi2_baseline": 7.157987419756182,
+      "delta_chi2_free_curvature": 5.038883980515266,
+      "delta_chi2_free_epsilon": 4.076083813102059,
+      "label": "DES-Dovekie",
+      "runs": {
+        "lcdm": {
+          "minimum_chi2": 1645.277835785426,
+          "minimum_optimizer_status": {
+            "evaluations": 147,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 16128,
+            "posterior_path": "results/runs/baseline/dovekie+desi/lcdm/posterior.npz",
+            "posterior_sha256": "4cb2496b57d152e99d5696cb1de92865aff89b1202a13174b78f5b1a81f419a1",
+            "summary_path": "results/runs/baseline/dovekie+desi/lcdm/summary.json",
+            "summary_sha256": "0bc949b53aca8c6b15650600aa3dbe79bfb3ca518eab93d9636f354ade1a8107"
+          },
+          "sampled_minimum_chi2": 1645.2833855276863
+        },
+        "lcdm-epsilon": {
+          "epsilon": {
+            "median": -0.028514916752387987,
+            "q16": -0.043401969086822034,
+            "q84": -0.013545124850437573
+          },
+          "minimum_chi2": 1641.480452390878,
+          "minimum_optimizer_status": {
+            "evaluations": 306,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 17152,
+            "posterior_path": "results/runs/baseline/dovekie+desi/lcdm-epsilon/posterior.npz",
+            "posterior_sha256": "0c57e137cd83bd671d64d771811269ef694d1f4b92d0512db247461016d8714b",
+            "summary_path": "results/runs/baseline/dovekie+desi/lcdm-epsilon/summary.json",
+            "summary_sha256": "105b761f18e416112e4233251f2341dbbaf21db7d2702e4095f9486db60b8cbd"
+          },
+          "sampled_minimum_chi2": 1641.5003358893123
+        },
+        "w0wa": {
+          "minimum_chi2": 1638.11984836567,
+          "minimum_optimizer_status": {
+            "evaluations": 825,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 17664,
+            "posterior_path": "results/runs/baseline/dovekie+desi/w0wa/posterior.npz",
+            "posterior_sha256": "c88a0feb36c732296caa66d11133751a8a0c269719904a213bd59866e82d7617",
+            "summary_path": "results/runs/baseline/dovekie+desi/w0wa/summary.json",
+            "summary_sha256": "f89fdc3bcbbcd102276b2163bf7cfc2da5b17fcc934a56441319ebe17db4b82c"
+          },
+          "sampled_minimum_chi2": 1638.172160455397
+        },
+        "w0wa-epsilon": {
+          "epsilon": {
+            "median": 0.025248633604038506,
+            "q16": -0.007989775026918777,
+            "q84": 0.05738946720753069
+          },
+          "minimum_chi2": 1637.404368577776,
+          "minimum_optimizer_status": {
+            "evaluations": 754,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 18176,
+            "posterior_path": "results/runs/baseline/dovekie+desi/w0wa-epsilon/posterior.npz",
+            "posterior_sha256": "fa56e6e806f835e01b94f334a84de3bf9b71c8c3be147ae850d5e588d23fafbc",
+            "summary_path": "results/runs/baseline/dovekie+desi/w0wa-epsilon/summary.json",
+            "summary_sha256": "7b9355313e36542afde2587126d6eefa688b27a2963eccab476286d195658c6e"
+          },
+          "sampled_minimum_chi2": 1637.5084227009168
+        }
+      },
+      "sample": "dovekie"
+    },
+    {
+      "curvature_fits": {
+        "delta_de": 8.401751513631062,
+        "lcdm": {
+          "at_omega_m_boundary": false,
+          "chi2": 37.185004024145485,
+          "geometry": [
+            0.2935123590800878,
+            0.049535693348864374
+          ],
+          "parameters": {
+            "H0rd": 10049.53443335308,
+            "Omega_k": 0.04953569335378083,
+            "Omega_m": 0.29351235908522083,
+            "nu": 43.08439297305725
+          },
+          "tilt": 0.0
+        },
+        "w0wa": {
+          "at_omega_m_boundary": false,
+          "chi2": 28.783252510514423,
+          "geometry": [
+            0.33089546540380305,
+            3.8178834109662104e-05,
+            -0.6960332952919205,
+            -1.0060110019225794
+          ],
+          "parameters": {
+            "H0rd": 9735.813768683529,
+            "Omega_k": 3.817872400824207e-05,
+            "Omega_m": 0.33089546535164677,
+            "nu": 43.11226245502926,
+            "w0": -0.696033294723561,
+            "wa": -1.0060110019518267
+          },
+          "tilt": 0.0
+        }
+      },
+      "delta_aic_baseline": 6.030655832082658,
+      "delta_aic_free_curvature": 4.401751513631062,
+      "delta_aic_free_epsilon": 1.7518689322546415,
+      "delta_chi2_baseline": 10.030655832082658,
+      "delta_chi2_free_curvature": 8.401751513631062,
+      "delta_chi2_free_epsilon": 5.7518689322546415,
+      "label": "Union3",
+      "runs": {
+        "lcdm": {
+          "minimum_chi2": 38.8139089226633,
+          "minimum_optimizer_status": {
+            "evaluations": 98,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 15104,
+            "posterior_path": "results/runs/baseline/union3+desi/lcdm/posterior.npz",
+            "posterior_sha256": "376d0bc4362ff5e1c84d2a6a6dd3eff610a18248591581d1d2866f7c065289cd",
+            "summary_path": "results/runs/baseline/union3+desi/lcdm/summary.json",
+            "summary_sha256": "105868d7e7aaa0c9d8b787209c74013858752c6f31fbd5e18e318e820a03b25c"
+          },
+          "sampled_minimum_chi2": 38.81413602430376
+        },
+        "lcdm-epsilon": {
+          "epsilon": {
+            "median": -0.04821706572453832,
+            "q16": -0.07042916450703218,
+            "q84": -0.025623551374471254
+          },
+          "minimum_chi2": 34.18371501069539,
+          "minimum_optimizer_status": {
+            "evaluations": 315,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 15872,
+            "posterior_path": "results/runs/baseline/union3+desi/lcdm-epsilon/posterior.npz",
+            "posterior_sha256": "d7937139fffe8a1982c8f4a5ca4d0f7f59b1a36ea2ce47b49adadcfea4d618be",
+            "summary_path": "results/runs/baseline/union3+desi/lcdm-epsilon/summary.json",
+            "summary_sha256": "891f91ff28745114e6c54ef155f7b1f9b20dc2fbbd105584ad55865e0418db2c"
+          },
+          "sampled_minimum_chi2": 34.207772465355205
+        },
+        "w0wa": {
+          "minimum_chi2": 28.783253090580644,
+          "minimum_optimizer_status": {
+            "evaluations": 1100,
+            "message": "ABNORMAL: ",
+            "success": false
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 16384,
+            "posterior_path": "results/runs/baseline/union3+desi/w0wa/posterior.npz",
+            "posterior_sha256": "1bdaecdf3ee33f55ae748a2c3fde2efcce1dc864d873f1a0187e2f23abff1814",
+            "summary_path": "results/runs/baseline/union3+desi/w0wa/summary.json",
+            "summary_sha256": "041f8849abe5a4353834237328c138236a64196b7ee8e7ae55ee5e566927ef92"
+          },
+          "sampled_minimum_chi2": 28.81661618255093
+        },
+        "w0wa-epsilon": {
+          "epsilon": {
+            "median": 0.019930407843431586,
+            "q16": -0.017184703239664256,
+            "q84": 0.056628016879897214
+          },
+          "minimum_chi2": 28.431846078440746,
+          "minimum_optimizer_status": {
+            "evaluations": 572,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 16896,
+            "posterior_path": "results/runs/baseline/union3+desi/w0wa-epsilon/posterior.npz",
+            "posterior_sha256": "bb5f4abd61544261e55889441ca014dd3b016be59eb95072737eb7d2703b72ef",
+            "summary_path": "results/runs/baseline/union3+desi/w0wa-epsilon/summary.json",
+            "summary_sha256": "3c2b3282a8de67934f182c72e6bcbb42a22c3192b09f06ae84df33da2a53c2f4"
+          },
+          "sampled_minimum_chi2": 28.711788690577777
+        }
+      },
+      "sample": "union3"
+    },
+    {
+      "curvature_fits": {
+        "delta_de": 5.172277932210953,
+        "lcdm": {
+          "at_omega_m_boundary": false,
+          "chi2": 39.83362024539831,
+          "geometry": [
+            0.2928558288439215,
+            0.04295973608205733
+          ],
+          "parameters": {
+            "H0rd": 10072.15269117579,
+            "Omega_k": 0.04295973608205739,
+            "Omega_m": 0.2928558288439215,
+            "nu": 43.164766142457346
+          },
+          "tilt": 0.0
+        },
+        "w0wa": {
+          "at_omega_m_boundary": false,
+          "chi2": 34.661342313187355,
+          "geometry": [
+            0.32114652028448176,
+            0.006032970066715408,
+            -0.773939588188981,
+            -0.7936573018711174
+          ],
+          "parameters": {
+            "H0rd": 9849.225000575829,
+            "Omega_k": 0.006032970066715437,
+            "Omega_m": 0.32114652028448176,
+            "nu": 43.210369352180635,
+            "w0": -0.773939588188981,
+            "wa": -0.7936573018711175
+          },
+          "tilt": 0.0
+        }
+      },
+      "delta_aic_baseline": 2.4160609578228787,
+      "delta_aic_free_curvature": 1.172277932210953,
+      "delta_aic_free_epsilon": 1.2569172680493708,
+      "delta_chi2_baseline": 6.416060957822879,
+      "delta_chi2_free_curvature": 5.172277932210953,
+      "delta_chi2_free_epsilon": 5.256917268049371,
+      "label": "Union3.1",
+      "runs": {
+        "lcdm": {
+          "minimum_chi2": 41.092608896824814,
+          "minimum_optimizer_status": {
+            "evaluations": 413,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 16128,
+            "posterior_path": "results/runs/baseline/union31+desi/lcdm/posterior.npz",
+            "posterior_sha256": "b74ee9b22aeb2f1ab7805882ff48fae31b2a45b397c8b1abd5a1e137d057a3cd",
+            "summary_path": "results/runs/baseline/union31+desi/lcdm/summary.json",
+            "summary_sha256": "5420e8c272b4d17d0e1cb74635d364bdeb97d16a15cb3dee2098bd46d14d906c"
+          },
+          "sampled_minimum_chi2": 41.09625526393339
+        },
+        "lcdm-epsilon": {
+          "epsilon": {
+            "median": -0.031029925081738352,
+            "q16": -0.052375687983699404,
+            "q84": -0.00989360923563759
+          },
+          "minimum_chi2": 38.925133938312506,
+          "minimum_optimizer_status": {
+            "evaluations": 864,
+            "message": "ABNORMAL: ",
+            "success": false
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 16896,
+            "posterior_path": "results/runs/baseline/union31+desi/lcdm-epsilon/posterior.npz",
+            "posterior_sha256": "06c7e5a9fcfd10c3545e3063e730a172c66e039db5e81cdd1883e19f341092e9",
+            "summary_path": "results/runs/baseline/union31+desi/lcdm-epsilon/summary.json",
+            "summary_sha256": "78d3c63b8ae41b3ce592c3e0611cfc4750ea23740c73d7d4bd0d45f780c24f78"
+          },
+          "sampled_minimum_chi2": 38.94060177980944
+        },
+        "w0wa": {
+          "minimum_chi2": 34.676547939001935,
+          "minimum_optimizer_status": {
+            "evaluations": 616,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 17408,
+            "posterior_path": "results/runs/baseline/union31+desi/w0wa/posterior.npz",
+            "posterior_sha256": "034e3ee9f42c218d33199e574c3f4639ee50416c47e54e81f032c897edd6aaf9",
+            "summary_path": "results/runs/baseline/union31+desi/w0wa/summary.json",
+            "summary_sha256": "88ad0f2e496910c8f4a2d5b82bc3ac04bfc896ac0a4f6c489bb630f03c86a71a"
+          },
+          "sampled_minimum_chi2": 34.74533925271829
+        },
+        "w0wa-epsilon": {
+          "epsilon": {
+            "median": 0.03458604952421035,
+            "q16": -0.0030285649192737796,
+            "q84": 0.07280492067786881
+          },
+          "minimum_chi2": 33.668216670263135,
+          "minimum_optimizer_status": {
+            "evaluations": 1222,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "success": true
+          },
+          "provenance": {
+            "parameter_names": [
+              "Omega_m",
+              "w0",
+              "wa",
+              "epsilon",
+              "H0rd",
+              "nu"
+            ],
+            "posterior_draw_count": 17920,
+            "posterior_path": "results/runs/baseline/union31+desi/w0wa-epsilon/posterior.npz",
+            "posterior_sha256": "3337b74242698ff117c21d743c0323388ff4b8094ad29baaf000b2fab0e8d6d5",
+            "summary_path": "results/runs/baseline/union31+desi/w0wa-epsilon/summary.json",
+            "summary_sha256": "4281bc130d3899dc1c1131216907691ecbba361bae80c67557e0f5bd3d28f167"
+          },
+          "sampled_minimum_chi2": 33.77140604736552
+        }
+      },
+      "sample": "union31"
+    }
+  ],
+  "curvature_provenance": {
+    "controls_path": "results/minima/controls.json",
+    "controls_sha256": "20ac91813d32d4eaa33fa77decadc048154b2b11c5387fd5cad0c67fd512f091",
+    "epsilon_fixed": 0.0
+  },
+  "data_combination": "BAO+SN",
+  "delta_aic_definition": "AIC(LambdaCDM) - AIC(w0waCDM), with the same extension in both models",
+  "delta_aic_penalty": 4.0,
+  "minimum_method": "Refined run-summary minima and saved curvature control minima; no new minimization",
+  "outputs": {
+    "arrows": {
+      "alpha": 0.5,
+      "direction": "baseline to extension",
+      "linewidth": 1.2
+    },
+    "height_inches": 2.5,
+    "marker_colors": {
+      "baseline": "#333333",
+      "free_curvature": "#c9a66b",
+      "free_epsilon": "#7570b3"
+    },
+    "markers": {
+      "baseline": "o",
+      "free_curvature": "D",
+      "free_epsilon": "s"
+    },
+    "pdf": "figures/figure3.pdf",
+    "png": "figures/figure3.png",
+    "png_dpi": 1000,
+    "row_offsets": {
+      "baseline": 0.0,
+      "free_curvature": 0.3,
+      "free_epsilon": 0.0
+    },
+    "shaded_regions": [
+      {
+        "color": "#c8e2ee",
+        "label": "Moderate",
+        "lower": -10.0,
+        "upper": -5.0
+      },
+      {
+        "color": "#dff2f0",
+        "label": "Weak",
+        "lower": -5.0,
+        "upper": -2.0
+      },
+      {
+        "color": "#edf8ef",
+        "label": "Compatible",
+        "lower": -2.0,
+        "upper": 2.0
+      },
+      {
+        "color": "#dff2f0",
+        "label": "Weak",
+        "lower": 2.0,
+        "upper": 5.0
+      },
+      {
+        "color": "#c8e2ee",
+        "label": "Moderate",
+        "lower": 5.0,
+        "upper": 10.0
+      }
+    ],
+    "width_inches": 3.375
+  },
+  "run_root": "results/runs/baseline"
+}

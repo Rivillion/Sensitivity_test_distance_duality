@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 import numpy as np
+from src.release_io import repo_relative
 from src.sampler import compute_getdist_constraints
 ROOT = Path(__file__).resolve().parent.parent
 RUN_ROOT = Path(os.environ.get("SN_BAO_POSTERIOR_ROOT", str(ROOT / "results/runs/baseline")))
@@ -60,9 +61,9 @@ def load_run(run_root: Path, sample: str, model: str, *, include_cc: bool = Fals
         "minimum_optimizer_status": summary.get("maximum_likelihood_optimizer"),
         "sampled_minimum_chi2": sampled_minimum,
         "provenance": {
-            "posterior_path": str(posterior_path.resolve()),
+            "posterior_path": repo_relative(posterior_path),
             "posterior_sha256": hashlib.sha256(posterior_path.read_bytes()).hexdigest(),
-            "summary_path": str(summary_path.resolve()),
+            "summary_path": repo_relative(summary_path),
             "summary_sha256": hashlib.sha256(summary_bytes).hexdigest(),
             "posterior_draw_count": len(samples),
             "parameter_names": names,
@@ -70,7 +71,7 @@ def load_run(run_root: Path, sample: str, model: str, *, include_cc: bool = Fals
     }
     if include_cc:
         result["cc"] = summary["cc"]
-    if model == "lcdm-epsilon":
+    if model in ("lcdm-epsilon", "w0wa-epsilon"):
         if "epsilon" not in names:
             raise ValueError(f"Missing epsilon coordinate: {posterior_path}")
         epsilon = samples[:, names.index("epsilon")]

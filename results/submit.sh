@@ -6,7 +6,7 @@ shift
 case "$FAMILY" in
     baseline) ARRAY=0-37 ;;
     calibration) ARRAY=0-2 ;;
-    robustness) ARRAY=0-15 ;;
+    robustness) ARRAY=0-12 ;;
     *) echo "Unknown inventory: $FAMILY" >&2; exit 2 ;;
 esac
 cd "$RELEASE_ROOT"

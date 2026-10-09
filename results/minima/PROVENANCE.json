@@ -5,8 +5,8 @@
   "fit_count": 228,
   "audit_checks_pass": true,
   "products_sha256": {
-    "controls": "86bd9edafb5921a76fbae2d26d88441ff996e4716c9bf9586d2052ec70f5dddd",
-    "tracers": "fd119b8d697f57f6c0dac010ea586c8c14daba7f402ac7b7673bf8e8d2ca684f",
+    "controls": "20ac91813d32d4eaa33fa77decadc048154b2b11c5387fd5cad0c67fd512f091",
+    "tracers": "2ec8d1326abe47b0e6a465055b03c37ed6dff7c329041dac1af737a487f026ac",
     "cuts": "0b16e1d34830216d0db1f7c5f5ad746cae92d8eef18e5161fdd1ff43d2cf6c3d"
   },
   "original_scientific_source_sha256": {
@@ -22,5 +22,7 @@
     "python -m results.minimize controls",
     "python -m results.minimize tracers",
     "python -m results.minimize cuts"
-  ]
+  ],
+  "pruned_on": "2026-10-08",
+  "pruned_entries": "Entries not used by the manuscript were removed without changing the others: the combined 'LRG1 + LRG2' and 'BGS + LRG1 + LRG2' tracer deletions and the linear-in-z equation-of-state control. products_sha256 refers to the pruned files."
 }

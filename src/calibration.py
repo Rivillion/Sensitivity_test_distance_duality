@@ -5,8 +5,8 @@ import numpy as np
 from src.background import Background, _BatchedBackground
 from src.likelihoods import DESI_BAO, PantheonPlus, _sn_log_shape
 ROOT = Path(__file__).resolve().parent.parent
-RD_CALIBRATION = (147.09, 0.26)  # Mpc; manuscript Table II
-MB_CALIBRATION = (-19.253, 0.027)  # mag; manuscript Table II
+RD_CALIBRATION = (147.09, 0.26)  # Mpc; manuscript Table IX
+MB_CALIBRATION = (-19.253, 0.027)  # mag; manuscript Table IX
 
 def pantheon_and_bao() -> tuple[PantheonPlus, DESI_BAO]:
     data = ROOT / "data"

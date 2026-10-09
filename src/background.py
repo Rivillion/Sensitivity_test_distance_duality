@@ -105,15 +105,11 @@ class Background:
         z_max: float = 2.6,
         n_grid: int = DEFAULT_N_GRID,
         Omega_k: float = 0.0,
-        eos: str = "cpl",
     ) -> None:
         self.Omega_m = self._validate_finite_parameter("Omega_m", Omega_m)
         self.Omega_k = self._validate_finite_parameter("Omega_k", Omega_k)
         self.w0 = self._validate_finite_parameter("w0", w0)
         self.wa = self._validate_finite_parameter("wa", wa)
-        if eos not in ("cpl", "linear"):
-            raise ValueError("eos must be 'cpl' or 'linear'.")
-        self.eos = eos
         self.epsilon = self._validate_finite_parameter("epsilon", epsilon)
         self.alpha = self._validate_finite_parameter("alpha", alpha)
         self.z_max = self._validate_finite_parameter("z_max", z_max)
@@ -274,17 +270,10 @@ class Background:
             matter_density = self.Omega_m * matter_evolution
             curvature_density = self.Omega_k * curvature_evolution
 
-            if self.eos == "linear":
-                redshift = np.expm1(log_one_plus_z)
-                log_dark_energy_evolution = (
-                    3.0 * (1.0 + self.w0 - self.wa) * log_one_plus_z
-                    + 3.0 * self.wa * redshift
-                )
-            else:
-                log_dark_energy_evolution = (
-                    3.0 * (1.0 + self.w0 + self.wa) * log_one_plus_z
-                    - 3.0 * self.wa * redshift_fraction
-                )
+            log_dark_energy_evolution = (
+                3.0 * (1.0 + self.w0 + self.wa) * log_one_plus_z
+                - 3.0 * self.wa * redshift_fraction
+            )
 
             dark_energy_density = self.Omega_de * np.exp(
                 log_dark_energy_evolution

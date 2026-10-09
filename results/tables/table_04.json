@@ -1,39 +1,37 @@
 {
+  "columns": [
+    "Sample",
+    "$\\Delta\\chi^2$",
+    "$\\Delta{\\rm AIC}$"
+  ],
   "rows": [
-    {
-      "sample": "pantheon",
-      "sample_label": "Pantheon$+$",
-      "model": "lcdm",
-      "minimum_chi2": 1399.7953897877405,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.3046382300705255,
-          "q16": 0.29676481050837156,
-          "q84": 0.3126217670003636,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
-      },
-      "optimizer_status": {
-        "evaluations": 133,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm/posterior.npz",
+    [
+      "Pantheon+",
+      "2.00",
+      "0.00"
+    ],
+    [
+      "DES-Dovekie",
+      "3.36",
+      "1.36"
+    ],
+    [
+      "Union3",
+      "5.40",
+      "3.40"
+    ],
+    [
+      "Union3.1",
+      "4.25",
+      "2.25"
+    ]
+  ],
+  "runs": {
+    "pantheon": {
+      "lcdm": {
+        "posterior_path": "results/runs/baseline/pantheon+desi/lcdm/posterior.npz",
         "posterior_sha256": "220276cfb84b39b5f64000d6f5eb0a2f23d706645cbb23e36849a4cbccb861b8",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm/summary.json",
+        "summary_path": "results/runs/baseline/pantheon+desi/lcdm/summary.json",
         "summary_sha256": "478916e821ac645d87f8c81d3d7d520c238f4d65f650140b11e4072722353d08",
         "posterior_draw_count": 16384,
         "parameter_names": [
@@ -41,46 +39,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "pantheon",
-      "sample_label": "Pantheon$+$",
-      "model": "w0wa",
-      "minimum_chi2": 1394.738237451095,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.3028763203380138,
-          "q16": 0.27518944258055855,
-          "q84": 0.3185730849088898,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.8854267635916546,
-          "q16": -0.9439801257199676,
-          "q84": -0.8238810423921006,
-          "sampled": true
-        },
-        "wa": {
-          "median": -0.16211176721876885,
-          "q16": -0.6161548291084058,
-          "q84": 0.38412597901943446,
-          "sampled": true
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
       },
-      "optimizer_status": {
-        "evaluations": 517,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa/posterior.npz",
+      "w0wa": {
+        "posterior_path": "results/runs/baseline/pantheon+desi/w0wa/posterior.npz",
         "posterior_sha256": "fba026a609e9de12fae5a3fbea051f27886b2b04b6311f47dbd4ed8a263184f3",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa/summary.json",
+        "summary_path": "results/runs/baseline/pantheon+desi/w0wa/summary.json",
         "summary_sha256": "218dc67ca25799e4396a7a64414129396a7098142271cca38233c442a9dd4ab2",
         "posterior_draw_count": 17920,
         "parameter_names": [
@@ -90,44 +53,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "pantheon",
-      "sample_label": "Pantheon$+$",
-      "model": "lcdm-epsilon",
-      "minimum_chi2": 1396.741742630488,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.2976062945778731,
-          "q16": 0.28908535855830203,
-          "q84": 0.30646205585034403,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "median": -0.029156473580705555,
-          "q16": -0.04574050816560665,
-          "q84": -0.012726523546622848,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 324,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm-epsilon/posterior.npz",
+      "lcdm-epsilon": {
+        "posterior_path": "results/runs/baseline/pantheon+desi/lcdm-epsilon/posterior.npz",
         "posterior_sha256": "ab5e2bd9c16a0e9c19c234aa838f69b790de662eb417a58fddf944f9602bb0f4",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/lcdm-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/pantheon+desi/lcdm-epsilon/summary.json",
         "summary_sha256": "e11f2373c9df0a9545a5385bc1ccf05860fd0106045f1726d3d9b80f82773a13",
         "posterior_draw_count": 17152,
         "parameter_names": [
@@ -136,48 +66,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "pantheon",
-      "sample_label": "Pantheon$+$",
-      "model": "w0wa-epsilon",
-      "minimum_chi2": 1394.5631191068112,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.30699250762498664,
-          "q16": 0.27584165231140634,
-          "q84": 0.327051971546138,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.854599581330588,
-          "q16": -0.9654690893939049,
-          "q84": -0.7368530164418563,
-          "sampled": true
-        },
-        "wa": {
-          "median": -0.2633015822479283,
-          "q16": -0.8052764019133436,
-          "q84": 0.3787467752289615,
-          "sampled": true
-        },
-        "epsilon": {
-          "median": 0.01014235899559407,
-          "q16": -0.024963035831237712,
-          "q84": 0.04558643195967471,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 1014,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/posterior.npz",
+      "w0wa-epsilon": {
+        "posterior_path": "results/runs/baseline/pantheon+desi/w0wa-epsilon/posterior.npz",
         "posterior_sha256": "d769f25a7d663a6e68ec00f3890d1e45516b04be74f960143ad519712b517449",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/pantheon+desi/w0wa-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/pantheon+desi/w0wa-epsilon/summary.json",
         "summary_sha256": "a9c9bc9ab72c8a83c4f810105f281546daadb79aafd0666feba8e19749aa9e4e",
         "posterior_draw_count": 18432,
         "parameter_names": [
@@ -190,40 +83,11 @@
         ]
       }
     },
-    {
-      "sample": "dovekie",
-      "sample_label": "DES-Dovekie",
-      "model": "lcdm",
-      "minimum_chi2": 1645.277835785426,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.30617994173619945,
-          "q16": 0.29886140597292,
-          "q84": 0.31398276213892495,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
-      },
-      "optimizer_status": {
-        "evaluations": 147,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm/posterior.npz",
+    "dovekie": {
+      "lcdm": {
+        "posterior_path": "results/runs/baseline/dovekie+desi/lcdm/posterior.npz",
         "posterior_sha256": "4cb2496b57d152e99d5696cb1de92865aff89b1202a13174b78f5b1a81f419a1",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm/summary.json",
+        "summary_path": "results/runs/baseline/dovekie+desi/lcdm/summary.json",
         "summary_sha256": "0bc949b53aca8c6b15650600aa3dbe79bfb3ca518eab93d9636f354ade1a8107",
         "posterior_draw_count": 16128,
         "parameter_names": [
@@ -231,46 +95,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "dovekie",
-      "sample_label": "DES-Dovekie",
-      "model": "w0wa",
-      "minimum_chi2": 1638.11984836567,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.3132086109343628,
-          "q16": 0.2951691944031849,
-          "q84": 0.3264968416577987,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.8454573563352215,
-          "q16": -0.9105767997003693,
-          "q84": -0.7734056723579905,
-          "sampled": true
-        },
-        "wa": {
-          "median": -0.5093703310333311,
-          "q16": -0.9700129042222563,
-          "q84": -0.011988877229901718,
-          "sampled": true
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
       },
-      "optimizer_status": {
-        "evaluations": 825,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa/posterior.npz",
+      "w0wa": {
+        "posterior_path": "results/runs/baseline/dovekie+desi/w0wa/posterior.npz",
         "posterior_sha256": "c88a0feb36c732296caa66d11133751a8a0c269719904a213bd59866e82d7617",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa/summary.json",
+        "summary_path": "results/runs/baseline/dovekie+desi/w0wa/summary.json",
         "summary_sha256": "f89fdc3bcbbcd102276b2163bf7cfc2da5b17fcc934a56441319ebe17db4b82c",
         "posterior_draw_count": 17664,
         "parameter_names": [
@@ -280,44 +109,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "dovekie",
-      "sample_label": "DES-Dovekie",
-      "model": "lcdm-epsilon",
-      "minimum_chi2": 1641.480452390878,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.29743010196127384,
-          "q16": 0.2888221241900193,
-          "q84": 0.30595820062700785,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "median": -0.028514916752387987,
-          "q16": -0.043401969086822034,
-          "q84": -0.013545124850437573,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 306,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm-epsilon/posterior.npz",
+      "lcdm-epsilon": {
+        "posterior_path": "results/runs/baseline/dovekie+desi/lcdm-epsilon/posterior.npz",
         "posterior_sha256": "0c57e137cd83bd671d64d771811269ef694d1f4b92d0512db247461016d8714b",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/lcdm-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/dovekie+desi/lcdm-epsilon/summary.json",
         "summary_sha256": "105b761f18e416112e4233251f2341dbbaf21db7d2702e4095f9486db60b8cbd",
         "posterior_draw_count": 17152,
         "parameter_names": [
@@ -326,48 +122,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "dovekie",
-      "sample_label": "DES-Dovekie",
-      "model": "w0wa-epsilon",
-      "minimum_chi2": 1637.404368577776,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.32279482158391193,
-          "q16": 0.3021716552995824,
-          "q84": 0.34128733903876346,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.762478892075388,
-          "q16": -0.8859402685932838,
-          "q84": -0.6327569748225605,
-          "sampled": true
-        },
-        "wa": {
-          "median": -0.7360778413764324,
-          "q16": -1.2543987753364179,
-          "q84": -0.19426742880864323,
-          "sampled": true
-        },
-        "epsilon": {
-          "median": 0.025248633604038506,
-          "q16": -0.007989775026918777,
-          "q84": 0.05738946720753069,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 754,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa-epsilon/posterior.npz",
+      "w0wa-epsilon": {
+        "posterior_path": "results/runs/baseline/dovekie+desi/w0wa-epsilon/posterior.npz",
         "posterior_sha256": "fa56e6e806f835e01b94f334a84de3bf9b71c8c3be147ae850d5e588d23fafbc",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/dovekie+desi/w0wa-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/dovekie+desi/w0wa-epsilon/summary.json",
         "summary_sha256": "7b9355313e36542afde2587126d6eefa688b27a2963eccab476286d195658c6e",
         "posterior_draw_count": 18176,
         "parameter_names": [
@@ -380,40 +139,11 @@
         ]
       }
     },
-    {
-      "sample": "union3",
-      "sample_label": "Union3",
-      "model": "lcdm",
-      "minimum_chi2": 38.8139089226633,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.3038061863793675,
-          "q16": 0.2957061177999186,
-          "q84": 0.31238761283541266,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
-      },
-      "optimizer_status": {
-        "evaluations": 98,
-        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm/posterior.npz",
+    "union3": {
+      "lcdm": {
+        "posterior_path": "results/runs/baseline/union3+desi/lcdm/posterior.npz",
         "posterior_sha256": "376d0bc4362ff5e1c84d2a6a6dd3eff610a18248591581d1d2866f7c065289cd",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm/summary.json",
+        "summary_path": "results/runs/baseline/union3+desi/lcdm/summary.json",
         "summary_sha256": "105868d7e7aaa0c9d8b787209c74013858752c6f31fbd5e18e318e820a03b25c",
         "posterior_draw_count": 15104,
         "parameter_names": [
@@ -421,46 +151,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "union3",
-      "sample_label": "Union3",
-      "model": "w0wa",
-      "minimum_chi2": 28.783253090580644,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.33045700445451726,
-          "q16": 0.31237904935488947,
-          "q84": 0.34587089521798575,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.6994732775381349,
-          "q16": -0.8096244207176895,
-          "q84": -0.5819550374882807,
-          "sampled": true
-        },
-        "wa": {
-          "median": -0.9993776055824135,
-          "q16": -1.562062147487191,
-          "q84": -0.4304952683293126,
-          "sampled": true
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
       },
-      "optimizer_status": {
-        "evaluations": 1100,
-        "message": "ABNORMAL: ",
-        "success": false
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa/posterior.npz",
+      "w0wa": {
+        "posterior_path": "results/runs/baseline/union3+desi/w0wa/posterior.npz",
         "posterior_sha256": "1bdaecdf3ee33f55ae748a2c3fde2efcce1dc864d873f1a0187e2f23abff1814",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa/summary.json",
+        "summary_path": "results/runs/baseline/union3+desi/w0wa/summary.json",
         "summary_sha256": "041f8849abe5a4353834237328c138236a64196b7ee8e7ae55ee5e566927ef92",
         "posterior_draw_count": 16384,
         "parameter_names": [
@@ -470,44 +165,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "union3",
-      "sample_label": "Union3",
-      "model": "lcdm-epsilon",
-      "minimum_chi2": 34.18371501069539,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.29770211970337207,
-          "q16": 0.28910329717530614,
-          "q84": 0.306209938492174,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "median": -0.04821706572453832,
-          "q16": -0.07042916450703218,
-          "q84": -0.025623551374471254,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 315,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm-epsilon/posterior.npz",
+      "lcdm-epsilon": {
+        "posterior_path": "results/runs/baseline/union3+desi/lcdm-epsilon/posterior.npz",
         "posterior_sha256": "d7937139fffe8a1982c8f4a5ca4d0f7f59b1a36ea2ce47b49adadcfea4d618be",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/lcdm-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/union3+desi/lcdm-epsilon/summary.json",
         "summary_sha256": "891f91ff28745114e6c54ef155f7b1f9b20dc2fbbd105584ad55865e0418db2c",
         "posterior_draw_count": 15872,
         "parameter_names": [
@@ -516,48 +178,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "union3",
-      "sample_label": "Union3",
-      "model": "w0wa-epsilon",
-      "minimum_chi2": 28.431846078440746,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.33833473225321675,
-          "q16": 0.31470196236849146,
-          "q84": 0.35998782864306667,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.6288874262078776,
-          "q16": -0.7997348126861596,
-          "q84": -0.4546139688013078,
-          "sampled": true
-        },
-        "wa": {
-          "median": -1.2019621008559978,
-          "q16": -1.877927050631973,
-          "q84": -0.5204356846194962,
-          "sampled": true
-        },
-        "epsilon": {
-          "median": 0.019930407843431586,
-          "q16": -0.017184703239664256,
-          "q84": 0.056628016879897214,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 572,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa-epsilon/posterior.npz",
+      "w0wa-epsilon": {
+        "posterior_path": "results/runs/baseline/union3+desi/w0wa-epsilon/posterior.npz",
         "posterior_sha256": "bb5f4abd61544261e55889441ca014dd3b016be59eb95072737eb7d2703b72ef",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union3+desi/w0wa-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/union3+desi/w0wa-epsilon/summary.json",
         "summary_sha256": "3c2b3282a8de67934f182c72e6bcbb42a22c3192b09f06ae84df33da2a53c2f4",
         "posterior_draw_count": 16896,
         "parameter_names": [
@@ -570,40 +195,11 @@
         ]
       }
     },
-    {
-      "sample": "union31",
-      "sample_label": "Union3.1",
-      "model": "lcdm",
-      "minimum_chi2": 41.092608896824814,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.3020850929669203,
-          "q16": 0.29402822584838784,
-          "q84": 0.3102279059266614,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
-      },
-      "optimizer_status": {
-        "evaluations": 413,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm/posterior.npz",
+    "union31": {
+      "lcdm": {
+        "posterior_path": "results/runs/baseline/union31+desi/lcdm/posterior.npz",
         "posterior_sha256": "b74ee9b22aeb2f1ab7805882ff48fae31b2a45b397c8b1abd5a1e137d057a3cd",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm/summary.json",
+        "summary_path": "results/runs/baseline/union31+desi/lcdm/summary.json",
         "summary_sha256": "5420e8c272b4d17d0e1cb74635d364bdeb97d16a15cb3dee2098bd46d14d906c",
         "posterior_draw_count": 16128,
         "parameter_names": [
@@ -611,46 +207,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "union31",
-      "sample_label": "Union3.1",
-      "model": "w0wa",
-      "minimum_chi2": 34.676547939001935,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.3218038652988797,
-          "q16": 0.30229885022850644,
-          "q84": 0.3371098102293151,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.7748596289446104,
-          "q16": -0.8766292387350325,
-          "q84": -0.6694446640762877,
-          "sampled": true
-        },
-        "wa": {
-          "median": -0.7692574349112626,
-          "q16": -1.319862928017292,
-          "q84": -0.182955213642638,
-          "sampled": true
-        },
-        "epsilon": {
-          "fixed": 0.0,
-          "sampled": false
-        }
       },
-      "optimizer_status": {
-        "evaluations": 616,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa/posterior.npz",
+      "w0wa": {
+        "posterior_path": "results/runs/baseline/union31+desi/w0wa/posterior.npz",
         "posterior_sha256": "034e3ee9f42c218d33199e574c3f4639ee50416c47e54e81f032c897edd6aaf9",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa/summary.json",
+        "summary_path": "results/runs/baseline/union31+desi/w0wa/summary.json",
         "summary_sha256": "88ad0f2e496910c8f4a2d5b82bc3ac04bfc896ac0a4f6c489bb630f03c86a71a",
         "posterior_draw_count": 17408,
         "parameter_names": [
@@ -660,44 +221,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "union31",
-      "sample_label": "Union3.1",
-      "model": "lcdm-epsilon",
-      "minimum_chi2": 38.925133938312506,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.2975520886302883,
-          "q16": 0.28905394268120344,
-          "q84": 0.3061650104299085,
-          "sampled": true
-        },
-        "w0": {
-          "fixed": -1.0,
-          "sampled": false
-        },
-        "wa": {
-          "fixed": 0.0,
-          "sampled": false
-        },
-        "epsilon": {
-          "median": -0.031029925081738352,
-          "q16": -0.052375687983699404,
-          "q84": -0.00989360923563759,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 864,
-        "message": "ABNORMAL: ",
-        "success": false
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm-epsilon/posterior.npz",
+      "lcdm-epsilon": {
+        "posterior_path": "results/runs/baseline/union31+desi/lcdm-epsilon/posterior.npz",
         "posterior_sha256": "06c7e5a9fcfd10c3545e3063e730a172c66e039db5e81cdd1883e19f341092e9",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/lcdm-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/union31+desi/lcdm-epsilon/summary.json",
         "summary_sha256": "78d3c63b8ae41b3ce592c3e0611cfc4750ea23740c73d7d4bd0d45f780c24f78",
         "posterior_draw_count": 16896,
         "parameter_names": [
@@ -706,48 +234,11 @@
           "H0rd",
           "nu"
         ]
-      }
-    },
-    {
-      "sample": "union31",
-      "sample_label": "Union3.1",
-      "model": "w0wa-epsilon",
-      "minimum_chi2": 33.668216670263135,
-      "coordinates": {
-        "Omega_m": {
-          "median": 0.335345939757031,
-          "q16": 0.31216547464598815,
-          "q84": 0.3565021152302148,
-          "sampled": true
-        },
-        "w0": {
-          "median": -0.6587212762124937,
-          "q16": -0.8209120588841201,
-          "q84": -0.48780883822962284,
-          "sampled": true
-        },
-        "wa": {
-          "median": -1.120528621591565,
-          "q16": -1.7616827369727162,
-          "q84": -0.4423729526850546,
-          "sampled": true
-        },
-        "epsilon": {
-          "median": 0.03458604952421035,
-          "q16": -0.0030285649192737796,
-          "q84": 0.07280492067786881,
-          "sampled": true
-        }
       },
-      "optimizer_status": {
-        "evaluations": 1222,
-        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
-        "success": true
-      },
-      "provenance": {
-        "posterior_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa-epsilon/posterior.npz",
+      "w0wa-epsilon": {
+        "posterior_path": "results/runs/baseline/union31+desi/w0wa-epsilon/posterior.npz",
         "posterior_sha256": "3337b74242698ff117c21d743c0323388ff4b8094ad29baaf000b2fab0e8d6d5",
-        "summary_path": "/home/mikel/Desktop/Code/SN_BAO_tension/Sensitivity_test_distance_duality/results/runs/baseline/union31+desi/w0wa-epsilon/summary.json",
+        "summary_path": "results/runs/baseline/union31+desi/w0wa-epsilon/summary.json",
         "summary_sha256": "4281bc130d3899dc1c1131216907691ecbba361bae80c67557e0f5bd3d28f167",
         "posterior_draw_count": 17920,
         "parameter_names": [
@@ -760,7 +251,6 @@
         ]
       }
     }
-  ],
-  "include_cc": false,
-  "quantile_method": "GetDist weighted equal-tail percentiles; ignore_rows=0"
+  },
+  "definition": "Delta chi2 = min chi2(LambdaCDM+epsilon) - min chi2(w0waCDM); Delta AIC = Delta chi2 - 2"
 }

@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from scipy.linalg import cholesky, solve_triangular
-from scipy.optimize import brentq, minimize, minimize_scalar
+from scipy.optimize import minimize
 
 from src.background import Background
 from src.likelihoods import DESI_BAO, PantheonPlus
@@ -34,8 +34,6 @@ BLOCKS: dict[str, tuple[int, ...]] = {
     "ELG2": (7, 8),
     "QSO": (9, 10),
     "Lyalpha": (11, 12),
-    "LRG1 + LRG2": (1, 2, 3, 4),
-    "BGS + LRG1 + LRG2": (0, 1, 2, 3, 4),
 }
 
 @dataclass(frozen=True)
@@ -114,7 +112,6 @@ def total_chi2(
     fixed_epsilon: float = 0.0,
     return_epsilon: bool = False,
     curvature_on: bool = False,
-    eos: str = "cpl",
     tilt_bounds: tuple[float, float] | None = None,
     cc: object | None = None,
 ) -> float | tuple[float, float]:
@@ -134,7 +131,6 @@ def total_chi2(
             epsilon=fixed_epsilon,
             alpha=1.0,
             Omega_k=omega_k,
-            eos=eos,
         )
         sn_chi2, epsilon = sn.profiled_linear_nuisances(
             background,
@@ -158,7 +154,6 @@ def fit(
     cpl: bool,
     free_epsilon: bool,
     curvature_on: bool = False,
-    eos: str = "cpl",
     tilt_bounds: tuple[float, float] | None = None,
     cc: object | None = None,
 ) -> Fit:
@@ -188,7 +183,6 @@ def fit(
         cpl=cpl,
         free_epsilon=free_epsilon,
         curvature_on=curvature_on,
-        eos=eos,
         tilt_bounds=tilt_bounds,
         cc=cc,
     )
@@ -244,7 +238,6 @@ def fit(
         free_epsilon=free_epsilon,
         return_epsilon=True,
         curvature_on=curvature_on,
-        eos=eos,
         tilt_bounds=tilt_bounds,
         cc=cc,
     )
@@ -254,34 +247,3 @@ def fit(
     ):
         raise RuntimeError("Profile search did not return a valid bounded minimum")
     return Fit(float(chi2), best, epsilon)
-
-
-def epsilon_profile_interval(
-    sn: PantheonPlus,
-    bao: DESI_BAO,
-    best: Fit,
-) -> tuple[float, float]:
-    """Return Delta-chi2=1 errors with Omega_m re-minimized at fixed epsilon."""
-    om_bounds = PRIOR_BOUNDS["Omega_m"]
-
-    def profile(epsilon: float) -> float:
-        result = minimize_scalar(
-            lambda om: total_chi2(
-                np.array([om]),
-                sn,
-                bao,
-                cpl=False,
-                free_epsilon=False,
-                fixed_epsilon=epsilon,
-            ),
-            bounds=om_bounds,
-            method="bounded",
-            options={"xatol": 1e-10, "maxiter": 500},
-        )
-        return float(result.fun)
-
-    target = best.chi2 + 1.0
-    root_function = lambda epsilon: profile(epsilon) - target
-    lower = brentq(root_function, PRIOR_BOUNDS["epsilon"][0], best.epsilon, xtol=1e-11)
-    upper = brentq(root_function, best.epsilon, PRIOR_BOUNDS["epsilon"][1], xtol=1e-11)
-    return best.epsilon - lower, upper - best.epsilon
