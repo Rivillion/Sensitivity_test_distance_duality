@@ -633,31 +633,36 @@
     },
     "shaded_regions": [
       {
-        "color": "#c8e2ee",
+        "alpha": 0.25,
+        "color": "#43a2ca",
         "label": "Moderate",
         "lower": -10.0,
         "upper": -5.0
       },
       {
-        "color": "#dff2f0",
+        "alpha": 0.25,
+        "color": "#a8ddb5",
         "label": "Weak",
         "lower": -5.0,
         "upper": -2.0
       },
       {
-        "color": "#edf8ef",
+        "alpha": 0.25,
+        "color": "#e0f3db",
         "label": "Compatible",
         "lower": -2.0,
         "upper": 2.0
       },
       {
-        "color": "#dff2f0",
+        "alpha": 0.25,
+        "color": "#a8ddb5",
         "label": "Weak",
         "lower": 2.0,
         "upper": 5.0
       },
       {
-        "color": "#c8e2ee",
+        "alpha": 0.25,
+        "color": "#43a2ca",
         "label": "Moderate",
         "lower": 5.0,
         "upper": 10.0

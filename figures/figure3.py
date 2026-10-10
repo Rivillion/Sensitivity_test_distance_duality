@@ -36,12 +36,14 @@ MODELS = ("lcdm", "w0wa", "lcdm-epsilon", "w0wa-epsilon")
 AIC_PENALTY = 4.0  # two extra CPL parameters
 CURVATURE_OFFSET = 0.3
 ARROW_STYLE = {"linewidth": 1.2, "alpha": 0.50}
+# Jeffreys-scale shading (ColorBrewer GnBu, colourblind safe), drawn with REGION_ALPHA.
+REGION_ALPHA = 0.25
 AIC_REGIONS = (
-    ("Moderate", -10.0, -5.0, "#c8e2ee"),
-    ("Weak", -5.0, -2.0, "#dff2f0"),
-    ("Compatible", -2.0, 2.0, "#edf8ef"),
-    ("Weak", 2.0, 5.0, "#dff2f0"),
-    ("Moderate", 5.0, 10.0, "#c8e2ee"),
+    ("Moderate", -10.0, -5.0, "#43a2ca"),
+    ("Weak", -5.0, -2.0, "#a8ddb5"),
+    ("Compatible", -2.0, 2.0, "#e0f3db"),
+    ("Weak", 2.0, 5.0, "#a8ddb5"),
+    ("Moderate", 5.0, 10.0, "#43a2ca"),
 )
 
 
@@ -111,7 +113,7 @@ def make_figure(baseline, free_epsilon, free_curvature, positions) -> mpl.figure
     axis.set_xlabel(r"$\mathrm{AIC}_{\Lambda{\rm CDM}(+x)} - \mathrm{AIC}_{w_0w_a{\rm CDM}(+x)}$",
                     fontsize=9)
     for _, lower, upper, color in AIC_REGIONS:
-        axis.axvspan(lower, upper, facecolor=color, edgecolor="none", alpha=0.85, zorder=0)
+        axis.axvspan(lower, upper, facecolor=color, edgecolor="none", alpha=REGION_ALPHA, zorder=0)
     # Spans are clipped to the displayed scale without changing its limits.
     axis.set_xlim(-extent, extent)
     axis.axvline(0.0, color="grey", linestyle="--", linewidth=0.8, zorder=0.5)
@@ -123,7 +125,7 @@ def make_figure(baseline, free_epsilon, free_curvature, positions) -> mpl.figure
     legend.get_frame().set_linewidth(0.5)
     region_colors = {label: color for label, _, _, color in AIC_REGIONS}
     figure.legend(
-        handles=[Patch(facecolor=mpl.colors.to_rgba(region_colors[label], 0.85),
+        handles=[Patch(facecolor=mpl.colors.to_rgba(region_colors[label], REGION_ALPHA),
                        edgecolor="0.7", linewidth=0.5, label=label)
                  for label in ("Compatible", "Weak", "Moderate")],
         loc="lower center", bbox_to_anchor=(0.5, 1.01), bbox_transform=axis.transAxes,
@@ -157,7 +159,8 @@ def main() -> None:
     provenance["outputs"] = {
         "pdf": repo_relative(OUTPUT), "png": repo_relative(PREVIEW), "png_dpi": PREVIEW_DPI,
         "width_inches": width_inches, "height_inches": height_inches,
-        "shaded_regions": [{"label": label, "lower": lower, "upper": upper, "color": color}
+        "shaded_regions": [{"label": label, "lower": lower, "upper": upper, "color": color,
+                            "alpha": REGION_ALPHA}
                            for label, lower, upper, color in AIC_REGIONS],
         "markers": {"baseline": "o", "free_epsilon": "s", "free_curvature": "D"},
         "marker_colors": {"baseline": DARK, "free_epsilon": PURPLE, "free_curvature": GOLD},
