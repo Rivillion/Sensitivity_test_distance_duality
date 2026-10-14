@@ -16,18 +16,21 @@ If you use any of the above codes or the figures in a published work please cite
 <br>*Sensitivity of calibration-free DESI DR2 BAO–supernova constraints to a distance-duality tilt*
 <br>Stéphane Fay, Mikel Artola, Leandros Perivolaropoulos
 
+INSPIRE: [3214333](https://inspirehep.net/literature/3214333)
+
 arXiv: [2610.16496](https://arxiv.org/abs/2610.16496) [astro-ph.CO]
 
 DOI: [10.48550/arXiv.2610.16496](https://doi.org/10.48550/arXiv.2610.16496)
 
 ```bibtex
-@article{Fay:2026tilt,
+@article{Fay:2026dsa,
     author        = "Fay, St\'ephane and Artola, Mikel and Perivolaropoulos, Leandros",
     title         = "{Sensitivity of calibration-free DESI DR2 BAO--supernova constraints to a distance-duality tilt}",
     eprint        = "2610.16496",
     archivePrefix = "arXiv",
     primaryClass  = "astro-ph.CO",
     doi           = "10.48550/arXiv.2610.16496",
+    month         = "10",
     year          = "2026"
 }
 ```
