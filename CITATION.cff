@@ -36,3 +36,6 @@ preferred-citation:
     - type: other
       value: "arXiv:2610.16496"
       description: "arXiv preprint (astro-ph.CO)"
+    - type: other
+      value: "INSPIRE-HEP:3214333"
+      description: "INSPIRE-HEP literature record"
