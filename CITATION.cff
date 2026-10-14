@@ -19,3 +19,20 @@ keywords:
   - DESI
   - supernovae
   - cosmic chronometers
+preferred-citation:
+  type: article
+  title: "Sensitivity of calibration-free DESI DR2 BAO–supernova constraints to a distance-duality tilt"
+  authors:
+    - family-names: "Fay"
+      given-names: "Stéphane"
+    - family-names: "Artola"
+      given-names: "Mikel"
+    - family-names: "Perivolaropoulos"
+      given-names: "Leandros"
+  year: 2026
+  doi: "10.48550/arXiv.2610.16496"
+  url: "https://arxiv.org/abs/2610.16496"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.16496"
+      description: "arXiv preprint (astro-ph.CO)"
