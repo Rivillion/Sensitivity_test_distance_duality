@@ -592,20 +592,20 @@
   ],
   "discard_exploration": true,
   "effective_sample_size": 10033.22757467712,
-  "height_inch": 2.5,
+  "height_inch": 3.0500000000000007,
   "layout_margins_inch": {
     "bottom": 0.47,
-    "gap": 0.82,
+    "gap": 1.3740000000000006,
     "left": 0.6,
     "right": 0.04,
     "top": 0.24
   },
   "nlive": 3000,
   "panel_size_inch": [
-    1.90125,
-    1.79
+    2.493,
+    2.3400000000000003
   ],
-  "plotting_script_sha256": "b9872270f53d3eda49bfbe5ffd89026f10aa409a290192452cd2fe58a6f048e2",
+  "plotting_script_sha256": "248d9347bb8c8bb80897911a10e8b38f351b147e55b12fb326b24af671baf997",
   "point": "Dark diamond: exact CDDR at (alpha, epsilon)=(1,0)",
   "posterior_draws": 16896,
   "posterior_path": "results/runs/calibration/joint/lcdm-epsilon/posterior.npz",
@@ -624,5 +624,5 @@
     "matplotlib": "3.11.1",
     "numpy": "2.5.1"
   },
-  "width_inch": 5.2625
+  "width_inch": 7.0
 }

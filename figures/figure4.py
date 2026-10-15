@@ -37,11 +37,14 @@ RESIDUAL_INPUTS = ("Pantheon+SH0ES.dat", "Pantheon+SH0ES_STAT+SYS.cov",
                    "desi_gaussian_bao_ALL_GCcomb_mean.txt", "desi_gaussian_bao_ALL_GCcomb_cov.txt")
 # Panel layout in inches: left margin, gap between panels, right and bottom
 # margins, and room above for the title. Fixed in inches so the text keeps
-# its space at the fixed font sizes; the figure size follows from them.
-PANEL_WIDTH = 1.90125
-PANEL_HEIGHT = 1.79
-MARGINS = {"left": .6, "gap": .82, "right": .04, "bottom": .47, "top": .24}
-WIDTH = MARGINS["left"] + 2 * PANEL_WIDTH + MARGINS["gap"] + MARGINS["right"]
+# its space at the fixed font sizes. The figure spans the two-column PRD width;
+# the panels take 90% of the width a 0.82 in gap would leave them, and the
+# remainder widens the gap between them.
+WIDTH = 7.0
+MARGINS = {"left": .6, "right": .04, "bottom": .47, "top": .24}
+PANEL_WIDTH = .9 * (WIDTH - MARGINS["left"] - .82 - MARGINS["right"]) / 2
+PANEL_HEIGHT = .9 * 2.6
+MARGINS["gap"] = WIDTH - MARGINS["left"] - 2 * PANEL_WIDTH - MARGINS["right"]
 HEIGHT = MARGINS["bottom"] + PANEL_HEIGHT + MARGINS["top"]
 LABEL_SIZE = 9
 TICK_SIZE = 8
