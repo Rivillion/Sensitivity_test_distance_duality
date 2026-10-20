@@ -17,12 +17,12 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from figures.common import (DARK, FIGURE_DIR, GOLD, PURPLE, ROOT, SAMPLE_KEYS, SAMPLE_LABELS,
+from figures.common import (DARK, FIGURE_DIR, GOLD, PURPLE, TEAL, ROOT, SAMPLE_KEYS, SAMPLE_LABELS,
                             STYLE, compilation_positions, format_compilation_axis, write_values)
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyArrowPatch, Patch
+from matplotlib.patches import FancyArrowPatch
 import numpy as np
 
 from src.posterior_io import RUN_ROOT, load_run
@@ -34,17 +34,23 @@ PREVIEW_DPI = 1000
 MINIMA_DIR = Path(os.environ.get("SN_BAO_MINIMA_DIR", str(ROOT / "results/minima")))
 MODELS = ("lcdm", "w0wa", "lcdm-epsilon", "w0wa-epsilon")
 AIC_PENALTY = 4.0  # two extra CPL parameters
-CURVATURE_OFFSET = 0.3
-ARROW_STYLE = {"linewidth": 1.2, "alpha": 0.50}
-# Jeffreys-scale shading (ColorBrewer GnBu, colourblind safe), drawn with REGION_ALPHA.
-REGION_ALPHA = 0.25
-AIC_REGIONS = (
-    ("Moderate", -10.0, -5.0, "#43a2ca"),
-    ("Weak", -5.0, -2.0, "#a8ddb5"),
-    ("Compatible", -2.0, 2.0, "#e0f3db"),
-    ("Weak", 2.0, 5.0, "#a8ddb5"),
-    ("Moderate", 5.0, 10.0, "#43a2ca"),
-)
+CURVATURE_OFFSET = 0.15
+EPSILON_OFFSET = -CURVATURE_OFFSET  # free epsilon sits on the other side of the baseline
+# Row padding above the first and below the last compilation; the top leaves room for the
+# model names in the panel corners.
+ROW_PADDING = {"top": 0.70, "bottom": 0.38}
+ARROW_STYLE = {"linewidth": 1.2, "alpha": 0.5}
+# Delta AIC labels: right of the baseline points, left of the extension points.
+LABEL_STYLE = {"fontsize": 7.5, "format": "{:.2f}", "offset_points": 4.0}
+LABEL_ROOM = 1.5  # axis units kept free beyond the outermost point for its label
+# Sides of zero favoured by each model: (fill, text). ColorBrewer RdBu (colourblind safe);
+# the fills are its lightest classes blended halfway to white.
+ZERO_LINE_STYLE = {"color": "grey", "linestyle": "--", "linewidth": 0.8, "zorder": 0.5}
+ZERO_LINE_GAP_POINTS = 1.5  # clearance between the zero line and a label crossing it
+# Optical correction for the legend: vertical shift of each entry's text in points
+# (positive is up). The subscript in Omega_k makes that entry look raised.
+LEGEND_TEXT_SHIFT_POINTS = {"Baseline": 0.0, "Free epsilon": 0.0, "Free Omega_k": -1.0}
+FAVORED_REGIONS = {"lcdm": ("#feede3", "#b2182b"), "w0wa": ("#e8f2f7", "#2166ac")}
 
 
 def collect_results(run_root: Path = RUN_ROOT, minima_dir: Path = MINIMA_DIR) -> tuple[tuple, dict]:
@@ -84,65 +90,92 @@ def collect_results(run_root: Path = RUN_ROOT, minima_dir: Path = MINIMA_DIR) ->
     return values, provenance
 
 
+def draw_zero_line(axis, labels) -> None:
+    """Draw the dashed zero line, interrupted wherever a value label crosses it.
+
+    The gaps let the background shading show through behind the text. Call this once the
+    axis limits are final, since the label extents are measured in data coordinates.
+    """
+    renderer = axis.figure.canvas.get_renderer()
+    to_data = axis.transData.inverted()
+    pad = ZERO_LINE_GAP_POINTS * axis.figure.dpi / 72.0
+    gaps = []
+    for label in labels:
+        # Only labels whose text crosses zero open a gap; the clearance is vertical.
+        box = label.get_window_extent(renderer)
+        box = box.from_extents(box.x0, box.y0 - pad, box.x1, box.y1 + pad).transformed(to_data)
+        if min(box.x0, box.x1) < 0.0 < max(box.x0, box.x1):
+            gaps.append(sorted((box.y0, box.y1)))
+    start, stop = sorted(axis.get_ylim())
+    for low, high in sorted(gaps):
+        if low > start:
+            axis.plot([0.0, 0.0], [start, low], **ZERO_LINE_STYLE)
+        start = max(start, high)
+    if start < stop:
+        axis.plot([0.0, 0.0], [start, stop], **ZERO_LINE_STYLE)
+
+
 def make_figure(baseline, free_epsilon, free_curvature, positions) -> mpl.figure.Figure:
     """Build the single panel comparing dark-energy AIC improvements."""
     baseline, free_epsilon, free_curvature = (
         np.asarray(v) - AIC_PENALTY for v in (baseline, free_epsilon, free_curvature))
     figure = plt.figure(figsize=(3.375, 2.5))
-    # Leave a narrow margin above the panel for the shading legend.
+    # Leave a narrow margin above the panel for the legend.
     axis = figure.add_axes([0.24, 0.18, 0.75, 0.73])
 
     # Both extension arrows branch from the baseline point.
     for y, fixed, free, curved in zip(positions, baseline, free_epsilon, free_curvature, strict=True):
-        for endpoint, color in (((free, y), PURPLE), ((curved, y + CURVATURE_OFFSET), GOLD)):
+        for endpoint, color in (((free, y + EPSILON_OFFSET), PURPLE), ((curved, y + CURVATURE_OFFSET), GOLD)):
             axis.add_patch(FancyArrowPatch((fixed, y), endpoint, arrowstyle="-|>",
                                            mutation_scale=7.0, color=color, shrinkA=2,
                                            shrinkB=2, zorder=1, **ARROW_STYLE))
     marker_style = {"s": 20, "edgecolors": "black", "linewidths": 0.5, "zorder": 3}
-    axis.scatter(baseline, positions, marker="o", color=DARK, label="Baseline", **marker_style)
-    axis.scatter(free_epsilon, positions, marker="s", facecolors=PURPLE,
+    axis.scatter(baseline, positions, marker="D", color=TEAL, label="Baseline", **marker_style)
+    axis.scatter(free_epsilon, positions + EPSILON_OFFSET, marker="o", facecolors=PURPLE,
                  label=r"Free $\epsilon$", **marker_style)
-    axis.scatter(free_curvature, positions + CURVATURE_OFFSET, marker="D", color=GOLD,
+    axis.scatter(free_curvature, positions + CURVATURE_OFFSET, marker="s", color=GOLD,
                  label=r"Free $\Omega_k$", **marker_style)
+    offset = LABEL_STYLE["offset_points"]
+    labels = []
+    for xs, ys, side in ((baseline, positions, 1.0), (free_epsilon, positions + EPSILON_OFFSET, -1.0),
+                         (free_curvature, positions + CURVATURE_OFFSET, -1.0)):
+        for x, y in zip(xs, ys, strict=True):
+            labels.append(axis.annotate(
+                LABEL_STYLE["format"].format(x).replace("-", "\u2212"), (x, y),
+                xytext=(side * offset, 0.0), textcoords="offset points",
+                ha="left" if side > 0 else "right", va="center",
+                fontsize=LABEL_STYLE["fontsize"], zorder=4))
 
     values = np.concatenate((baseline, free_epsilon, free_curvature))
-    extent = max(7.0, float(np.ceil(np.max(np.abs(values)) + 0.5)))
-    major_extent = 2.0 * np.floor(extent / 2.0)
-    axis.set_xlim(-extent, extent)
-    axis.set_xticks(np.arange(-major_extent, major_extent + 1.0, 2.0))
-    axis.set_xlabel(r"$\mathrm{AIC}_{\Lambda{\rm CDM}(+x)} - \mathrm{AIC}_{w_0w_a{\rm CDM}(+x)}$",
+    # Each side is fitted to its outermost point plus room for that point's label.
+    lower = float(np.floor(np.min(values) - LABEL_ROOM))
+    upper = float(np.ceil(np.max(values) + LABEL_ROOM))
+    axis.set_xlim(lower, upper)
+    axis.set_xticks(np.arange(2.0 * np.ceil(lower / 2.0), upper + 1.0, 2.0))
+    axis.set_xlabel(r"$\Delta\mathrm{AIC}_{x} = \mathrm{AIC}_{\Lambda{\rm CDM}(+x)} - \mathrm{AIC}_{w_0w_a{\rm CDM}(+x)}$",
                     fontsize=9)
-    for _, lower, upper, color in AIC_REGIONS:
-        axis.axvspan(lower, upper, facecolor=color, edgecolor="none", alpha=REGION_ALPHA, zorder=0)
-    # Spans are clipped to the displayed scale without changing its limits.
-    axis.set_xlim(-extent, extent)
-    axis.axvline(0.0, color="grey", linestyle="--", linewidth=0.8, zorder=0.5)
+    axis.axvspan(lower, 0.0, facecolor=FAVORED_REGIONS["lcdm"][0], edgecolor="none", zorder=0)
+    axis.axvspan(0.0, upper, facecolor=FAVORED_REGIONS["w0wa"][0], edgecolor="none", zorder=0)
 
-    legend = axis.legend(loc="lower left", frameon=True, fancybox=False, edgecolor="k",
-                         bbox_to_anchor=(0.015, 0.02), fontsize=9, framealpha=1,
-                         handlelength=1.0, handletextpad=0.4, borderaxespad=0.0,
+    legend = axis.legend(loc="lower center", frameon=False, bbox_to_anchor=(0.5, 0.99), ncol=3,
+                         fontsize=9, handlelength=1.0, handletextpad=0.4, borderaxespad=0.0,
                          columnspacing=1.2)
-    legend.get_frame().set_linewidth(0.5)
-    region_colors = {label: color for label, _, _, color in AIC_REGIONS}
-    figure.legend(
-        handles=[Patch(facecolor=mpl.colors.to_rgba(region_colors[label], REGION_ALPHA),
-                       edgecolor="0.7", linewidth=0.5, label=label)
-                 for label in ("Compatible", "Weak", "Moderate")],
-        loc="lower center", bbox_to_anchor=(0.5, 1.01), bbox_transform=axis.transAxes,
-        ncol=3, frameon=False, fontsize=9, handlelength=1.75, handletextpad=0.4,
-        columnspacing=1.3, borderpad=0.25, borderaxespad=0.0,
-    )
+    for text, shift in zip(legend.get_texts(), LEGEND_TEXT_SHIFT_POINTS.values(), strict=True):
+        text.set_transform(text.get_transform() + mpl.transforms.ScaledTranslation(
+            0.0, shift / 72.0, figure.dpi_scale_trans))
     format_compilation_axis(axis, positions)
-    integer_ticks = np.arange(-extent, extent + 1.0)
+    axis.set_ylim(positions[-1] + ROW_PADDING["bottom"], positions[0] - ROW_PADDING["top"])
+    draw_zero_line(axis, labels)
+    integer_ticks = np.arange(lower, upper + 1.0)
     axis.set_xticks(integer_ticks[np.mod(integer_ticks, 2) != 0], minor=True)
     axis.tick_params(axis="x", which="minor", direction="out", length=2.0, width=0.7,
                      labelbottom=False)
     axis.xaxis.set_label_coords(0.5, -0.20)
     axis.xaxis.label.set_verticalalignment("center")
-    axis.text(0.05, 0.925, r"$\leftarrow$ favors $\Lambda$CDM", transform=axis.transAxes,
-              ha="left", va="center", fontsize=8, clip_on=False)
-    axis.text(0.95, 0.925, r"favors $w_0w_a{\rm CDM}$ $\rightarrow$", transform=axis.transAxes,
-              ha="right", va="center", fontsize=8, clip_on=False)
+    axis.text(0.02, 0.96, r"$\Lambda$CDM", transform=axis.transAxes, ha="left", va="top",
+              fontsize=8, color=FAVORED_REGIONS["lcdm"][1])
+    axis.text(0.98, 0.96, r"$w_0w_a{\rm CDM}$", transform=axis.transAxes, ha="right", va="top",
+              fontsize=8, color=FAVORED_REGIONS["w0wa"][1])
     return figure
 
 
@@ -159,12 +192,16 @@ def main() -> None:
     provenance["outputs"] = {
         "pdf": repo_relative(OUTPUT), "png": repo_relative(PREVIEW), "png_dpi": PREVIEW_DPI,
         "width_inches": width_inches, "height_inches": height_inches,
-        "shaded_regions": [{"label": label, "lower": lower, "upper": upper, "color": color,
-                            "alpha": REGION_ALPHA}
-                           for label, lower, upper, color in AIC_REGIONS],
-        "markers": {"baseline": "o", "free_epsilon": "s", "free_curvature": "D"},
-        "marker_colors": {"baseline": DARK, "free_epsilon": PURPLE, "free_curvature": GOLD},
-        "row_offsets": {"baseline": 0.0, "free_epsilon": 0.0, "free_curvature": CURVATURE_OFFSET},
+        "point_labels": {"quantity": "delta_aic", **LABEL_STYLE,
+                         "side": {"baseline": "right", "free_epsilon": "left",
+                                  "free_curvature": "left"}},
+        "favored_regions": {model: {"fill": fill, "text": text}
+                            for model, (fill, text) in FAVORED_REGIONS.items()},
+        "markers": {"baseline": "D", "free_epsilon": "o", "free_curvature": "s"},
+        "marker_colors": {"baseline": TEAL, "free_epsilon": PURPLE, "free_curvature": GOLD},
+        "row_padding": ROW_PADDING,
+        "legend_text_shift_points": LEGEND_TEXT_SHIFT_POINTS,
+        "row_offsets": {"baseline": 0.0, "free_epsilon": EPSILON_OFFSET, "free_curvature": CURVATURE_OFFSET},
         "arrows": {"direction": "baseline to extension", **ARROW_STYLE},
     }
     value_output = write_values(OUTPUT, provenance)

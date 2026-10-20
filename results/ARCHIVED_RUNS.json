@@ -77,6 +77,8 @@
   "results/runs/baseline/union31+desi/w0wa/summary.json": "88ad0f2e496910c8f4a2d5b82bc3ac04bfc896ac0a4f6c489bb630f03c86a71a",
   "results/runs/calibration/bao/lcdm/posterior.npz": "331728a1abe3d0b4820593f2a6ecd59d1454709d6de324303ca4552070964785",
   "results/runs/calibration/bao/lcdm/summary.json": "acfa9554734fe7faa7f578f2277ec03c52dc69615cc4c90ac47172d4120cb213",
+  "results/runs/calibration/joint-alpha1/lcdm-epsilon/posterior.npz": "821951ad39a369d151c286ed66dbfd5028f86e0f5ebead9824081f2d38bd38ab",
+  "results/runs/calibration/joint-alpha1/lcdm-epsilon/summary.json": "459fd86818b011ab15d3619fbd2468763a289979d532ba40b19928ee4502e842",
   "results/runs/calibration/joint/lcdm-epsilon/posterior.npz": "e912721c2d9fceefd1f3e83c26fba5229745e97dace806c30e07628dde2b67fc",
   "results/runs/calibration/joint/lcdm-epsilon/summary.json": "befb67783e379239bfeb17d93aad25e2b97fabab9548795106bdcfc13bf95327",
   "results/runs/calibration/pantheon/lcdm/posterior.npz": "451631594a98f83659a5c31e0a6d1552f80c290ef76e5cc171ac6d7e4e52ee42",

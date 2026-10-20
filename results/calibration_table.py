@@ -43,17 +43,25 @@ def main(run_root=OUTPUT_ROOT, output_dir=ROOT / "results/tables"):
         records[case] = {"posterior_sha256": sha256(directory / "posterior.npz"),
                          "summary_sha256": sha256(directory / "summary.json"),
                          "minimum_chi2": summary["minimum_chi2"], "nlive": summary["nlive"]}
+        if "calibrated_best_fit" in summary:
+            records[case]["calibrated_best_fit"] = summary["calibrated_best_fit"]
     ratio = constraints["bao"]["H0"]["median"] / constraints["pantheon"]["H0"]["median"]
     alpha = constraints["joint"]["alpha"]
     # alpha < 1: measure the distance to exact CDDR with the upper half-width.
     alpha_sigma = (1 - alpha["median"]) / alpha["plus"]
+    # Exact CDDR normalization: the calibration offset is carried by epsilon alone.
+    epsilon_unit_alpha = constraints["joint-alpha1"]["epsilon"]
+    unit_alpha_fit = records["joint-alpha1"]["calibrated_best_fit"]
+    delta_chi2_unit_alpha = (unit_alpha_fit["data_chi2"] + unit_alpha_fit["calibration_chi2"]
+                             - records["joint"]["minimum_chi2"])
     separation = abs(moments["pantheon"]["mean"] - moments["bao"]["mean"]) / math.hypot(moments["pantheon"]["std"], moments["bao"]["std"])
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     result = {"constraints": constraints, "H0_moments": moments, "runs": records,
               "H0_difference_sigma_gaussian": separation, "separate_fit_median_ratio": ratio,
               "separate_fit_magnitude_offset": 5 * math.log10(ratio), "rho_a_epsilon": rho,
-              "alpha_deviation_from_unity_sigma": alpha_sigma}
+              "alpha_deviation_from_unity_sigma": alpha_sigma,
+              "epsilon_unit_alpha": epsilon_unit_alpha, "delta_chi2_unit_alpha": delta_chi2_unit_alpha}
     (output / "section4b.json").write_text(json.dumps(result, indent=2, allow_nan=False) + "\n")
     tex = [r"\begin{tabular}{lc}", r"Quantity & Posterior median and 68\% interval \\", r"\hline"]
     for label, case, name, digits in ((r"$H_0^{\rm BAO}$", "bao", "H0", 2),
@@ -70,6 +78,10 @@ def main(run_root=OUTPUT_ROOT, output_dir=ROOT / "results/tables"):
         f"{alpha_sigma:.2f} sigma below exact CDDR.\n\n"
         f"Ratio of separate H0 medians: {ratio:.8f}; magnitude offset: {5*math.log10(ratio):.8f} mag.\n\n"
         f"Joint weighted correlation of 5 log10(alpha) and epsilon: {rho:.6f}.\n\n"
+        f"Joint epsilon at fixed alpha = 1: {epsilon_unit_alpha['median']:.3f} "
+        f"+{epsilon_unit_alpha['plus']:.3f} -{epsilon_unit_alpha['minus']:.3f} "
+        f"(16th-84th percentiles {epsilon_unit_alpha['lower_68']:.3f} to {epsilon_unit_alpha['upper_68']:.3f}); "
+        f"best-fit chi-square increase over free alpha, including the calibration terms: {delta_chi2_unit_alpha:.2f}.\n\n"
         "The ratio of separate medians is a descriptive normalization. The joint alpha interval is computed separately from the joint draws. H0 is in km/s/Mpc. Gaussian calibrations are priors and are excluded from the data chi-square.\n")
     print(f"Wrote calibrated quantities to {output}")
     return result

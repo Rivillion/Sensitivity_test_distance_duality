@@ -26,7 +26,7 @@ from src.calibration import (
     pantheon_and_bao, sn_intercept, RD_CALIBRATION, MB_CALIBRATION,
 )
 from src.sampler import PROJECT_ROOT, write_json_atomic
-from src.sample_section4b import CASES, OUTPUT_ROOT, derived_coordinates
+from src.sample_section4b import ALPHA_FIXED_CASES, CASES, OUTPUT_ROOT, derived_coordinates
 
 
 def compare_runs(reference, run_root):
@@ -51,7 +51,8 @@ def compare_runs(reference, run_root):
             record = {"posterior_draws": len(w), "effective_sample_size": summary["effective_sample_size"],
                       "derived_coordinate_check": "passed", "calibration_prior_checks": {}}
             ess = summary["effective_sample_size"]
-            for name in calibrations:
+            # At fixed alpha the data constrain the calibrations through nu.
+            for name in () if case in ALPHA_FIXED_CASES else calibrations:
                 x = samples[:, names.index(name)]
                 mean, std = float(w@x), float(np.sqrt(w@(x-w@x)**2))
                 specification = summary["priors"][name]
@@ -59,7 +60,7 @@ def compare_runs(reference, run_root):
                 if abs(shift) > 5*specification["sigma"]/math.sqrt(ess) or abs(std/specification["sigma"]-1) > .05:
                     raise RuntimeError(f"Gaussian calibration posterior disagrees with factorized prior: {case}/{name}")
                 record["calibration_prior_checks"][name] = {"mean": mean, "std": std, "mean_shift": shift}
-            if case != "joint":
+            if case in ("bao", "pantheon"):
                 delta = {key: summary["H0_moments"][key]-reference[case][key] for key in ("mean", "std")}
                 if abs(delta["mean"]) > 5*reference[case]["std"]/math.sqrt(ess) or abs(delta["std"]) > .05*reference[case]["std"]:
                     raise RuntimeError(f"Production H0 posterior disagrees with independent quadrature: {case}")

@@ -21,7 +21,7 @@ FAMILY="${1:?Missing inventory: baseline, calibration or robustness}"
 OUTPUT_ROOT="${2:?Missing persistent output root}"
 TASK_ID="${SLURM_ARRAY_TASK_ID:?Missing array task ID}"
 if [[ "$FAMILY" == calibration ]]; then
-    CASES=(bao pantheon joint)
+    CASES=(bao pantheon joint joint-alpha1)
     exec srun --ntasks=1 "$PYTHON_EXECUTABLE" -u -m results.sample_calibration \
         --only "${CASES[$TASK_ID]}" --cores "${SLURM_CPUS_PER_TASK:-4}" --output-root "$OUTPUT_ROOT"
 else

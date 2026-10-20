@@ -17,3 +17,6 @@ results/reruns/
 /data/raw/sn/union3/mu_mat_union3_cosmo=2_mu.fits
 /data/raw/sn/union3/mu_mat_union3.1_UNITY1.8_template_cosmo=2_0_mu.fits
 .download-*.tmp
+
+# Local copy of the manuscript (available from arXiv/INSPIRE)
+/Sensitivity_of_calibration_free_DESI_DR2_BAO__supernova_constraints_to_a_distance_duality_tilt.pdf
