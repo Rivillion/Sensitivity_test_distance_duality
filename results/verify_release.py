@@ -1,4 +1,4 @@
-"""Verify inputs, 54 completed posteriors, and saved likelihood evaluations."""
+"""Verify inputs, 55 completed posteriors, and saved likelihood evaluations."""
 import argparse
 import json
 from pathlib import Path

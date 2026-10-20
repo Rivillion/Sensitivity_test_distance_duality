@@ -4,13 +4,15 @@ import unittest
 import numpy as np
 
 from src.background import Background, c_kms
-from src.sample_section4b import case_prior, derived_coordinates
+from src.sample_section4b import (
+    UnitAlphaLikelihood, case_prior, derived_coordinates, unit_alpha_intercept,
+)
 from src.sampler import initialize_likelihoods
 
 
 class Section4BTests(unittest.TestCase):
     def test_gaussian_calibrations_are_sampled(self):
-        for case in ("bao", "pantheon", "joint"):
+        for case in ("bao", "pantheon", "joint", "joint-alpha1"):
             prior, names, specs = case_prior(case)
             physical = prior.unit_to_physical(np.full((1, len(names)), .5))
             for name in ("r_d", "M_B"):
@@ -53,6 +55,26 @@ class Section4BTests(unittest.TestCase):
         # Independent calibrations are priors; they cannot be double-counted.
         changed = dict(params, r_d=149., M_B=-19.3)
         self.assertEqual(likelihood(params), likelihood(changed))
+
+    def test_unit_alpha_ties_nu_to_calibrations(self):
+        _, names, _ = case_prior("joint-alpha1")
+        self.assertEqual(names, ("Omega_m", "epsilon", "H0rd", "r_d", "M_B"))
+        h0, rd, mb = np.array([67., 69., 71.]), np.array([146.8, 147.09, 147.4]), np.array([-19.28, -19.253, -19.22])
+        nu = unit_alpha_intercept(h0*rd, rd, mb)
+        derived = derived_coordinates(np.column_stack((h0*rd, nu, rd, mb)), ("H0rd", "nu", "r_d", "M_B"), "joint")
+        np.testing.assert_allclose(derived["alpha"], 1, rtol=1e-13)
+        fixed = derived_coordinates(np.column_stack((h0*rd, rd, mb)), ("H0rd", "r_d", "M_B"), "joint-alpha1")
+        np.testing.assert_allclose(fixed["nu"], nu, rtol=1e-13)
+        self.assertNotIn("alpha", fixed)
+
+        likelihood = initialize_likelihoods(("pantheon", "desi"), zmin=.01)
+        params = dict(Omega_m=.30, epsilon=-.05, H0rd=69.*147.09, r_d=147.09, M_B=-19.253)
+        explicit = likelihood(dict(params, nu=unit_alpha_intercept(params["H0rd"], params["r_d"], params["M_B"])))
+        self.assertEqual(UnitAlphaLikelihood(likelihood)(params), explicit)
+        batch = {k: np.repeat(v, 2) for k, v in params.items()}
+        np.testing.assert_allclose(UnitAlphaLikelihood(likelihood)(batch), explicit, atol=1e-9, rtol=0)
+        # At alpha = 1 the calibrations change the SN prediction.
+        self.assertNotEqual(UnitAlphaLikelihood(likelihood)(dict(params, M_B=-19.3)), explicit)
 
 
 if __name__ == "__main__":

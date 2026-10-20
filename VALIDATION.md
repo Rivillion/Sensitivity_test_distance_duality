@@ -1,5 +1,14 @@
 # Release validation
 
+## Fixed-normalization calibrated fit, 2026-10-16
+
+Added a fourth calibrated Sec. IV.B run, `joint-alpha1`: the joint DESI DR2 + Pantheon+ LambdaCDM + epsilon fit at alpha = 1, with nu derived from H0rd, r_d and M_B (seed 20261007, 3,000 live points, effective sample size 10,167). The existing three calibrated archives and their seeds are unchanged. Checked with Python 3.14 and the pinned dependencies:
+
+- **48 tests passed**, including a new check that the tied intercept gives alpha = 1 and that the fixed-alpha likelihood equals the explicit one.
+- Input checksums and all **55 published posteriors** passed full verification: 38 baseline, 4 calibrated and 13 robustness. The largest log-likelihood or minimum chi-square discrepancy was unchanged at **7.45e-9**.
+- The data-only minimum chi-square of the new run, 1396.7417426, equals that of the free-alpha joint fit. The best fit including the calibration terms has data chi-square 1401.235 and calibration chi-square 11.391, an increase of 15.88.
+- Table regeneration changed only the Sec. IV.B JSON and Markdown summaries (`section4b.json`, `section4b.md`, `tables.md`); `section4b.tex` and all other tables are byte-identical. The quadrature audit gained the derived-coordinate check of the new run; its other entries are unchanged. Figures do not read the new run.
+
 ## Manuscript-order revision, 2026-10-08
 
 Figure scripts, table exports and the robustness inventory were reorganized to follow the final manuscript numbering. Unused parts were removed: the two combined tracer-deletion posteriors and their minima, the DES-Dovekie zmin=0.025 rerun that duplicated the baseline, the linear equation-of-state control, the `ladder`, `cc-ladder` and `information` minimization commands, and an unused profile-interval helper. Checked with Python 3.14 and the pinned dependencies:

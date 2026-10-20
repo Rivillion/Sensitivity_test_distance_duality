@@ -75,6 +75,12 @@
       "effective_sample_size": 10033.22757467712,
       "posterior_draws": 16896
     },
+    "joint-alpha1": {
+      "calibration_prior_checks": {},
+      "derived_coordinate_check": "passed",
+      "effective_sample_size": 10166.514728021351,
+      "posterior_draws": 16896
+    },
     "pantheon": {
       "H0_quantile_differences": {
         "median": -0.008232111681920173,

@@ -12,7 +12,7 @@ Python 3.14 virtualenv at `.venv`; run everything as modules from the repository
 python data/download_data.py              # fetch the 8 upstream inputs (hash-checked); --check for offline verification
 python -m unittest discover -s tests -v   # full test suite (fast, ~4 s)
 python -m unittest tests.test_manuscript_tables.ManuscriptTableTests.test_table_vii_cutoffs   # single test
-python -m results.verify_release          # input hashes, all 54 archived runs, likelihood re-evaluations, saved minima
+python -m results.verify_release          # input hashes, all 55 archived runs, likelihood re-evaluations, saved minima
 python -m results.verify_release --checksums-only
 python -m results.check_calibration --compare-runs
 python -m results.make_tables             # all tables -> results/tables/
@@ -28,7 +28,7 @@ Pipeline: **likelihoods → sampler/minimizer → archived products → tables/f
 - `src/background.py`: flat/curved expansion history and distances (w0wa CPL dark energy, Omega_k).
 - `src/likelihoods.py`: one class per dataset (`PantheonPlus`, `DES_Dovekie`, `UnionBinned`, `DESI_BAO`, `CosmicChronometer`). The distance-duality tilt `eta(z) = alpha (1+z)^epsilon` enters the SN distances; in the calibration-free analysis the BAO amplitude (`H0rd`) and SN offset (`nu`) are sampled explicitly and later marginalized.
 - `src/sampler.py`: Nautilus nested-sampling engine shared by all drivers (`CombinedLikelihood`, priors in `build_prior`, run directories, resume signatures, GetDist constraints). Each run writes `posterior.npz` + `summary.json` (+ a git-ignored `sampler.hdf5` checkpoint).
-- Drivers in `results/`: `sample_baseline.py` (inventory `jobs_baseline.json`, 38 runs), `sample_calibration.py` → `src/sample_section4b.py` (3 calibrated Sec. IV.B runs with Gaussian r_d / M_B priors from `src/calibration.py`), `sample_robustness.py` → `src/robustness.py` (inventory `jobs_robustness.json`, 13 runs; `group` is `tracer` or `cut`). `submit.sh`/`sampling.slurm` wrap these as SLURM arrays.
+- Drivers in `results/`: `sample_baseline.py` (inventory `jobs_baseline.json`, 38 runs), `sample_calibration.py` → `src/sample_section4b.py` (4 calibrated Sec. IV.B runs with Gaussian r_d / M_B priors from `src/calibration.py`; `joint-alpha1` fixes alpha = 1 and derives nu from the calibrations), `sample_robustness.py` → `src/robustness.py` (inventory `jobs_robustness.json`, 13 runs; `group` is `tracer` or `cut`). `submit.sh`/`sampling.slurm` wrap these as SLURM arrays.
 - `src/profile_fits.py` + `src/minima.py` (CLI `results/minimize.py`): profiled multistart minimization for Tables V–VII, the Figure 3 curvature points, and the non-SN values. Products are in `results/minima/*.json` with `PROVENANCE.json`. Profiling is only valid for minimum chi-square, never for posterior intervals; intervals always come from the weighted draws.
 - `src/posterior_io.py` loads a run (`load_run`) for tables/figures; `src/release_io.py` handles hashing, input verification, run validation and the `repo_relative`/`resolve` path helpers.
 - `results/make_tables.py` writes every table in manuscript numbering (`table_01`, `table_03`–`table_10`; Table II is a convention and is not generated) plus `section4a.json` and, via `calibration_table.py`, `section4b.*`. `posterior_tables.py` builds the REVTeX `table*` environments for Tables VIII and X.

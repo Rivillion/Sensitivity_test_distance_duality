@@ -2,7 +2,7 @@
 
 These instructions explain how to install the environment, regenerate every figure and table of **Sensitivity of calibration-free DESI DR2 BAO-supernova constraints to a distance-duality tilt** (Stéphane Fay, Mikel Artola and Leandros Perivolaropoulos) from the archived posteriors, rerun the inference, and validate the release. See the [README](README.md) for the paper abstract and citation.
 
-This release contains the current explicit-calibration likelihoods, all **54 completed 3,000-live-point posterior datasets**, the five manuscript figures, and generators for Tables I and III-X and the Section IV.A and IV.B quantities. Table II (Jeffreys' scale for the AIC) is a convention and is not generated. Table IX is exported from the priors in `src/sampler.py` and the Gaussian calibrations in `src/calibration.py`. Section V is outside the scripted reproduction scope. Script and output numbers follow the manuscript.
+This release contains the current explicit-calibration likelihoods, all **55 completed 3,000-live-point posterior datasets**, the five manuscript figures, and generators for Tables I and III-X and the Section IV.A and IV.B quantities. Table II (Jeffreys' scale for the AIC) is a convention and is not generated. Table IX is exported from the priors in `src/sampler.py` and the Gaussian calibrations in `src/calibration.py`. Section V is outside the scripted reproduction scope. Script and output numbers follow the manuscript.
 
 ## Install
 
@@ -44,7 +44,7 @@ The five `figures/figureN.py` scripts can also be run individually, for example 
 | Table IX: priors | `results/make_tables.py` | `results/tables/table_09.tex` |
 | Table X: BAO+SN posteriors | `results/make_tables.py`, `results/posterior_tables.py` | `results/tables/table_10.tex` |
 | Section IV.A: BAO/CC constraints and BAO+SN+CC significances | `results/make_tables.py` | `results/tables/section4a.json` |
-| Section IV.B: calibrated H0, alpha and Eq. (21) | `results/calibration_table.py` | `results/tables/section4b.{tex,json,md}` |
+| Section IV.B: calibrated H0, alpha, Eq. (21) and epsilon at alpha = 1 | `results/calibration_table.py` | `results/tables/section4b.{tex,json,md}` |
 
 Tables VIII and X are complete REVTeX `table*` environments. The other `.tex` files are tabular fragments that can be inserted into the manuscript's table environments. Each figure writes a `figureN_values.json` record with its plotted values and provenance. Figure 4 also saves its density grid. Shared colours, typography and paths live in `figures/common.py`.
 
@@ -59,7 +59,7 @@ Table VII quotes the baseline LambdaCDM + epsilon posterior in the first row of 
 There are three disjoint job inventories, with some intentionally repeated baselines:
 
 - **38 baseline fits:** four models, four SN compilations, with and without CC, plus LCDM/CPL fits to BAO alone, CC alone, and BAO+CC.
-- **3 calibrated fits:** BAO, Pantheon+, and their joint fit, sampling independent Gaussian sound-horizon and absolute-magnitude calibrations.
+- **4 calibrated fits:** BAO, Pantheon+, and their joint fit, sampling independent Gaussian sound-horizon and absolute-magnitude calibrations, plus the joint fit at fixed alpha = 1 (`joint-alpha1`). There the SN intercept nu = M_B + 25 + 5 log10(c r_d / H0rd) follows from the sampled calibrations, so the normalization mismatch is carried by epsilon alone. Its data-only minimum chi-square equals that of the free-alpha fit; `summary.json` also records the best fit including the calibration terms.
 - **13 robustness fits:** LCDM+epsilon with Pantheon+ single BAO tracer deletions and Pantheon+/DES-Dovekie redshift cuts.
 
 Use separate output directories to compare new draws with the archived results:
@@ -128,7 +128,7 @@ python -m results.verify_release
 python -m results.check_calibration --compare-runs
 ```
 
-The verification command checks input hashes, all 54 run archives and configurations, representative full-likelihood evaluations from each posterior, and every saved optimized minimum. The calibration check independently integrates the separate H0 posteriors, including the Jacobian induced by the uniform H0rd prior, and checks sampled Gaussian calibrations and derived coordinates.
+The verification command checks input hashes, all 55 run archives and configurations, representative full-likelihood evaluations from each posterior, and every saved optimized minimum. The calibration check independently integrates the separate H0 posteriors, including the Jacobian induced by the uniform H0rd prior, and checks sampled Gaussian calibrations and derived coordinates.
 
 Archived summaries retain their original metadata, including historical execution paths and source hashes, to preserve their bytes. Current scripts locate files relative to this repository, verify input hashes, and do not read those recorded paths. `results/ARCHIVED_RUNS.json` pins the exact original posterior and summary bytes. It remains fixed if you generate new runs; use separate roots and update the archive manifest deliberately for a future release.
 

@@ -612,62 +612,55 @@
       "direction": "baseline to extension",
       "linewidth": 1.2
     },
+    "favored_regions": {
+      "lcdm": {
+        "fill": "#feede3",
+        "text": "#b2182b"
+      },
+      "w0wa": {
+        "fill": "#e8f2f7",
+        "text": "#2166ac"
+      }
+    },
     "height_inches": 2.5,
+    "legend_text_shift_points": {
+      "Baseline": 0.0,
+      "Free Omega_k": -1.0,
+      "Free epsilon": 0.0
+    },
     "marker_colors": {
-      "baseline": "#333333",
+      "baseline": "#77b5b6",
       "free_curvature": "#c9a66b",
       "free_epsilon": "#7570b3"
     },
     "markers": {
-      "baseline": "o",
-      "free_curvature": "D",
-      "free_epsilon": "s"
+      "baseline": "D",
+      "free_curvature": "s",
+      "free_epsilon": "o"
     },
     "pdf": "figures/figure3.pdf",
     "png": "figures/figure3.png",
     "png_dpi": 1000,
+    "point_labels": {
+      "fontsize": 7.5,
+      "format": "{:.2f}",
+      "offset_points": 4.0,
+      "quantity": "delta_aic",
+      "side": {
+        "baseline": "right",
+        "free_curvature": "left",
+        "free_epsilon": "left"
+      }
+    },
     "row_offsets": {
       "baseline": 0.0,
-      "free_curvature": 0.3,
-      "free_epsilon": 0.0
+      "free_curvature": 0.15,
+      "free_epsilon": -0.15
     },
-    "shaded_regions": [
-      {
-        "alpha": 0.25,
-        "color": "#43a2ca",
-        "label": "Moderate",
-        "lower": -10.0,
-        "upper": -5.0
-      },
-      {
-        "alpha": 0.25,
-        "color": "#a8ddb5",
-        "label": "Weak",
-        "lower": -5.0,
-        "upper": -2.0
-      },
-      {
-        "alpha": 0.25,
-        "color": "#e0f3db",
-        "label": "Compatible",
-        "lower": -2.0,
-        "upper": 2.0
-      },
-      {
-        "alpha": 0.25,
-        "color": "#a8ddb5",
-        "label": "Weak",
-        "lower": 2.0,
-        "upper": 5.0
-      },
-      {
-        "alpha": 0.25,
-        "color": "#43a2ca",
-        "label": "Moderate",
-        "lower": 5.0,
-        "upper": 10.0
-      }
-    ],
+    "row_padding": {
+      "bottom": 0.38,
+      "top": 0.7
+    },
     "width_inches": 3.375
   },
   "run_root": "results/runs/baseline"
